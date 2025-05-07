@@ -53,32 +53,6 @@ public class PerkStorageRecipe extends CustomRecipe {
 
     @Override
     public ItemStack assemble(CraftingInput input, HolderLookup.Provider provider) {
-//        List<Item> list = Lists.newArrayList();
-//        ItemStack itemstack = ItemStack.EMPTY;
-//
-//        for(int i = 0; i < input.size(); ++i) {
-//            ItemStack itemstack1 = input.getItem(i);
-//            if (!itemstack1.isEmpty()) {
-//                if (itemstack1.is(ModTags.Items.PERKS_TAG)) {
-//                    if (!itemstack.isEmpty()) {
-//                        return ItemStack.EMPTY;
-//                    }
-//
-//                    itemstack = itemstack1.copy();
-//                } else {
-//                    Item var8 = itemstack1.getItem();
-//                    if (!(var8 instanceof Item)) {
-//                        return ItemStack.EMPTY;
-//                    }
-//
-//                    Item dyeitem = (Item) var8;
-//                    list.add(dyeitem);
-//                }
-//            }
-//        }
-//
-//        return !itemstack.isEmpty() && !list.isEmpty() ? DyedItemColor.applyDyes(itemstack, list) : ItemStack.EMPTY;
-
         ItemStack perkItem = ItemStack.EMPTY;
         ItemStack perkHolder = ItemStack.EMPTY;
 

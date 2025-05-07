@@ -59,11 +59,16 @@ public class PerkHolderItem extends Item {
         tooltipComponents.add(Component.literal("Stored Perks:"));
 
         // Iterate through the handler slots to add stored perks to the tooltip
-        for (int i = 0; i < handler.getSlots(); i++) {
-            ItemStack perk = handler.getStackInSlot(i);
-            if (!perk.isEmpty()) {
-                tooltipComponents.add(Component.literal("- " + perk.getDisplayName().getString()));
-            }
+//        for (int i = 0; i < handler.getSlots(); i++) {
+//            ItemStack perk = handler.getStackInSlot(i);
+//            if (!perk.isEmpty()) {
+//                tooltipComponents.add(Component.literal("- " + perk.getDisplayName().getString()));
+//            }
+//        }
+        String storedPerk = stack.get(ModDataComponents.STORED_PERK);
+        if (storedPerk != null) {
+            tooltipComponents.add(Component.literal("Stored Perk: " + storedPerk));
         }
+
     }
 }

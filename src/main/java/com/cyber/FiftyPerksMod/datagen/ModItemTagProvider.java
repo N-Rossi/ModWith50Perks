@@ -1,6 +1,8 @@
 package com.cyber.FiftyPerksMod.datagen;
 
 import com.cyber.FiftyPerksMod.FiftyPerksMod;
+import com.cyber.FiftyPerksMod.item.ModItems;
+import com.cyber.FiftyPerksMod.util.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
@@ -18,12 +20,8 @@ public class ModItemTagProvider extends ItemTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
-//        tag(ModTags.Items.TRANSFORMABLE_ITEMS)
-//                .add(ModItems.BISMUTH.get())
-//                .add(ModItems.RAW_BISMUTH.get())
-//                .add(Items.COAL)
-//                .add(Items.STICK)
-//                .add(Items.COMPASS);
+        tag(ModTags.Items.PERK_HOLDER_TAG)
+                .add(ModItems.PERK_HOLDER.get());
 
     }
 }

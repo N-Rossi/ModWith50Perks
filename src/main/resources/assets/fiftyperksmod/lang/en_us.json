@@ -7,5 +7,16 @@
   "block.fiftyperksmod.deepslate_gallium_ore": "Deepslate Gallium Ore",
 
   "item.fiftyperksmod.gallium_ingot": "Gallium Ingot",
-  "item.fiftyperksmod.raw_gallium": "Raw Gallium"
+  "item.fiftyperksmod.raw_gallium": "Raw Gallium",
+
+  "item.minecraft.potion.effect.fiftyperks_slimey_potion": "Slimey Potion",
+  "item.minecraft.splash_potion.effect.fiftyperks_slimey_potion": "Slimey Splash Potion",
+  "item.minecraft.lingering_potion.effect.fiftyperks_slimey_potion": "Slimey Lingering Potion",
+
+  "item.minecraft.potion.effect.fiftyperks_juggernog_potion": "Juggernog Potion",
+  "item.minecraft.splash_potion.effect.fiftyperks_juggernog_potion": "Juggernog Splash Potion",
+  "item.minecraft.lingering_potion.effect.fiftyperks_juggernog_potion": "Juggernog Lingering Potion",
+
+  "effect.fiftyperksmod.slimey": "Slimey",
+  "effect.fiftyperksmod.jug_perk": "Juggernog"
 }

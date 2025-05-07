@@ -33,6 +33,8 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
                 block -> createMultipleOreDrops(ModBlocks.GALLIUM_ORE.get(), ModItems.RAW_GALLIUM.get(), 1, 5));
         add(ModBlocks.NETHER_GALLIUM_ORE.get(),
                 block -> createMultipleOreDrops(ModBlocks.NETHER_GALLIUM_ORE.get(), ModItems.RAW_GALLIUM.get(), 3, 7));
+        add(ModBlocks.DEEPSLATE_GALLIUM_ORE.get(),
+                block -> createMultipleOreDrops(ModBlocks.DEEPSLATE_GALLIUM_ORE.get(), ModItems.RAW_GALLIUM.get(), 1, 5));
     }
 
     protected LootTable.Builder createMultipleOreDrops(Block pBlock, Item item, float minDrops, float maxDrops) {

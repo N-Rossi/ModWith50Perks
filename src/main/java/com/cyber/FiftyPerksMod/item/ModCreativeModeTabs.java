@@ -23,6 +23,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.GALLIUM_BLOCK);
                         output.accept(ModBlocks.GALLIUM_ORE);
                         output.accept(ModBlocks.NETHER_GALLIUM_ORE);
+                        output.accept(ModBlocks.DEEPSLATE_GALLIUM_ORE);
                     }).build());
     public static void register(IEventBus eventBus) {
         CREATIVE_MODE_TAB.register(eventBus);

@@ -27,12 +27,14 @@ public class ModConfiguredFeatures {
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context) {
 //        Ore Gen
         RuleTest stoneReplaceables = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
+        RuleTest deepslateReplaceables = new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
         RuleTest netherrackReplaceables = new BlockMatchTest(Blocks.NETHERRACK);
 
         List<OreConfiguration.TargetBlockState> overworldGalliumOres = List.of(
-                OreConfiguration.target(stoneReplaceables, ModBlocks.GALLIUM_ORE.get().defaultBlockState()));
+                OreConfiguration.target(stoneReplaceables, ModBlocks.GALLIUM_ORE.get().defaultBlockState()), OreConfiguration.target(deepslateReplaceables, ModBlocks.DEEPSLATE_GALLIUM_ORE.get().defaultBlockState()));
 
         register(context, OVERWORLD_GALLIUM_ORE_KEY, Feature.ORE, new OreConfiguration(overworldGalliumOres, 9));
+
         register(context, NETHER_GALLIUM_ORE_KEY, Feature.ORE, new OreConfiguration(netherrackReplaceables,
                 ModBlocks.NETHER_GALLIUM_ORE.get().defaultBlockState(), 9));
     }

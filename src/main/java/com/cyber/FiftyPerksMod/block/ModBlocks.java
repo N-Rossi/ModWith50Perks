@@ -29,6 +29,9 @@ public class ModBlocks {
     public static final DeferredBlock<Block> NETHER_GALLIUM_ORE = registerBlock("nether_gallium_ore", () -> new DropExperienceBlock(
             UniformInt.of(1, 5),
             BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(3.0F, 3.0F)));
+    public static final DeferredBlock<Block> DEEPSLATE_GALLIUM_ORE = registerBlock("deepslate_gallium_ore", () -> new DropExperienceBlock(
+            UniformInt.of(3, 7),
+            BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(4.5F, 3.0F)));
 
     private  static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_gallium": {
+      "conditions": {
+        "items": [
+          {
+            "items": "fiftyperksmod:gallium_ingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "fiftyperksmod:gallium_block"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_gallium"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "fiftyperksmod:gallium_block"
+    ]
+  }
+}

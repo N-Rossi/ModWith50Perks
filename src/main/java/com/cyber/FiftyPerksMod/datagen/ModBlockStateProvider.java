@@ -17,6 +17,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.GALLIUM_BLOCK);
         blockWithItem(ModBlocks.GALLIUM_ORE);
         blockWithItem(ModBlocks.NETHER_GALLIUM_ORE);
+        blockWithItem(ModBlocks.DEEPSLATE_GALLIUM_ORE);
     }
 
     private void blockWithItem(DeferredBlock<?> deferredBlock) {

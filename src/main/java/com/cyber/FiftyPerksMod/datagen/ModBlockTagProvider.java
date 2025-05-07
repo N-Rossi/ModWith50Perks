@@ -21,10 +21,12 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ModBlocks.GALLIUM_BLOCK.get())
                 .add(ModBlocks.GALLIUM_ORE.get())
-                .add(ModBlocks.NETHER_GALLIUM_ORE.get());
+                .add(ModBlocks.NETHER_GALLIUM_ORE.get())
+                .add(ModBlocks.DEEPSLATE_GALLIUM_ORE.get());
 
         tag(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.GALLIUM_ORE.get())
+                .add(ModBlocks.DEEPSLATE_GALLIUM_ORE.get())
                 .add(ModBlocks.NETHER_GALLIUM_ORE.get());
 
     }

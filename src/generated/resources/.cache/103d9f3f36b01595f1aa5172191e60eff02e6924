@@ -1,0 +1,7 @@
+// 1.21.1	2025-05-06T19:34:24.5496395	Registries
+316a3defe70164f817eaf5953bf17c82c26d1d43 data/fiftyperksmod/neoforge/biome_modifier/add_gallium_ore.json
+fccb59eb2979566e923063b8bd43a031d746bcb1 data/fiftyperksmod/neoforge/biome_modifier/add_nether_gallium_ore.json
+f0076962ba54cefc0ea65d3acb770f525b4ddd12 data/fiftyperksmod/worldgen/configured_feature/gallium_ore.json
+63db5eaf36a5f2b16d0cfc71e29b7c1fd51bab43 data/fiftyperksmod/worldgen/configured_feature/nether_gallium_ore.json
+e8cdae04e37a6246c2d75a1ef3fdd662c5c17fb5 data/fiftyperksmod/worldgen/placed_feature/gallium_ore_placed.json
+cd1d9297cc1feb0caf169ade8d4950a6c644fbfa data/fiftyperksmod/worldgen/placed_feature/nether_gallium_ore_placed.json

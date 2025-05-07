@@ -11,6 +11,7 @@ public class ModItems {
 
     public static final DeferredItem<Item> GALLIUM_INGOT = ITEMS.register("gallium_ingot", () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> RAW_GALLIUM = ITEMS.register("raw_gallium", () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> PERK_HOLDER = ITEMS.register("perk_holder", () -> new Item(new Item.Properties()));
 
 
     public static void register(IEventBus eventBus) {

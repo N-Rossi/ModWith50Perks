@@ -1,0 +1,9 @@
+{
+  "slots": [
+    {
+      "name": "perk_holder",
+      "size": 1,
+      "icon": "fiftyperksmod:textures/item/perk_holder.png"
+    }
+  ]
+}

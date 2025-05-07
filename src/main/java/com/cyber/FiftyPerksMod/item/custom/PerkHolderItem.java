@@ -1,6 +1,7 @@
 package com.cyber.FiftyPerksMod.item.custom;
 
 import com.cyber.FiftyPerksMod.FiftyPerksMod;
+import com.cyber.FiftyPerksMod.effect.ModEffects;
 import com.cyber.FiftyPerksMod.util.ModDataComponents;
 import com.cyber.FiftyPerksMod.util.ModTags;
 import net.minecraft.core.Holder;
@@ -11,16 +12,21 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.neoforged.neoforge.items.ItemStackHandler;
+import top.theillusivec4.curios.api.SlotContext;
+import top.theillusivec4.curios.api.type.capability.ICurio;
+import top.theillusivec4.curios.api.type.capability.ICurioItem;
 
 import java.util.List;
 import java.util.Optional;
 
 /** TODO Make the item able to hold perks. on right click open gui OR place in crafting table with perks. Place holder in table alone to extract all perks from it. */
-public class PerkHolderItem extends Item {
+public class PerkHolderItem extends Item implements ICurioItem {
     private static final int SLOT_COUNT = 4;
 
     public PerkHolderItem(Properties properties) {
@@ -72,8 +78,31 @@ public class PerkHolderItem extends Item {
             String perkName = parts.length > 1 ? parts[1] : storedPerk;
             Item perkItem = BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath(FiftyPerksMod.MOD_ID, perkName));
             ItemStack perkStack = new ItemStack(perkItem);
-            tooltipComponents.add(Component.literal("Stored Perk: " + perkStack.getHoverName().getString()));
+            tooltipComponents.add(Component.literal(perkStack.getHoverName().getString()));
+        }
+    }
+
+
+
+    @Override
+    public void curioTick(SlotContext slotContext, ItemStack stack) {
+        Player player = (Player) slotContext.entity();
+//        ItemStack stack = slotContext.stack();
+
+        String storedPerk = stack.get(ModDataComponents.STORED_PERK);
+
+        switch (storedPerk) {
+            case "fiftyperksmod:juggernog_perk" -> {
+                if (!player.hasEffect(ModEffects.JUG_PERK_EFFECT)) {
+                    player.addEffect(new MobEffectInstance(ModEffects.JUG_PERK_EFFECT, 210, 0, true, false));
+                }
+            }
+            default -> {
+                // Optional: log or ignore unknown perks
+                System.out.println("");
+            }
         }
 
     }
+
 }

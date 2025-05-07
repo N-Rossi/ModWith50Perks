@@ -3,10 +3,12 @@ package com.cyber.FiftyPerksMod.datagen;
 import com.cyber.FiftyPerksMod.FiftyPerksMod;
 import com.cyber.FiftyPerksMod.block.ModBlocks;
 import com.cyber.FiftyPerksMod.item.ModItems;
+import com.cyber.FiftyPerksMod.recipe.PerkStorageRecipe;
 import io.netty.util.internal.SuppressJava6Requirement;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.ItemLike;
 import net.neoforged.neoforge.common.conditions.IConditionBuilder;
@@ -37,6 +39,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         oreSmelting(recipeOutput, GALLIUM_SMELTABLES, RecipeCategory.MISC, ModItems.GALLIUM_INGOT.get(), 0.25f, 200, "GALLIUM");
         oreBlasting(recipeOutput, GALLIUM_SMELTABLES, RecipeCategory.MISC, ModItems.GALLIUM_INGOT.get(), 0.25f, 100, "GALLIUM");
+
+        SpecialRecipeBuilder.special(PerkStorageRecipe::new)
+                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(FiftyPerksMod.MOD_ID, "perk_storage"));
     }
 
     protected static void oreSmelting(RecipeOutput recipeOutput, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult,

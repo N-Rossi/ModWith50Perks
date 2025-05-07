@@ -1,10 +1,12 @@
 package com.cyber.FiftyPerksMod.util;
 
 import com.cyber.FiftyPerksMod.FiftyPerksMod;
+import com.mojang.serialization.Codec;
 import net.minecraft.core.component.DataComponentType;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.RegistryFriendlyByteBuf;
+import net.minecraft.network.codec.ByteBufCodecs;
 import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.world.item.Item;
 import net.neoforged.bus.api.IEventBus;
@@ -31,6 +33,14 @@ public class ModDataComponents {
                                     buf.writeNbt(value);
                                 }
                             })
+                            .build()
+    );
+
+    public static final DeferredHolder<DataComponentType<?>, DataComponentType<String>> STORED_PERK =
+            DATA_COMPONENTS.register("stored_perk", () ->
+                    new DataComponentType.Builder<String>()
+                            .persistent(Codec.STRING)
+                            .networkSynchronized(ByteBufCodecs.STRING_UTF8)
                             .build()
             );
 

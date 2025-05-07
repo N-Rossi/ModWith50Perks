@@ -17,7 +17,8 @@ public class ModTags {
     }
 
     public static class Items {
-        public static final TagKey<Item> PERK_HOLDER_TAG = createTag("perkholder");
+        public static final TagKey<Item> PERK_HOLDER_TAG = createTag("perk_holder");
+        public static final TagKey<Item> PERKS_TAG = createTag("perks");
 
         private static TagKey<Item> createTag(String name) {
             return ItemTags.create(ResourceLocation.fromNamespaceAndPath(FiftyPerksMod.MOD_ID, name));

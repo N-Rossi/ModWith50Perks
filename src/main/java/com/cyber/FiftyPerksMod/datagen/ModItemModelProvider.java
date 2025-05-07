@@ -16,5 +16,6 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.GALLIUM_INGOT.get());
         basicItem(ModItems.RAW_GALLIUM.get());
         basicItem(ModItems.PERK_HOLDER.get());
+        basicItem(ModItems.JUGGERNOG_PERK.get());
     }
 }

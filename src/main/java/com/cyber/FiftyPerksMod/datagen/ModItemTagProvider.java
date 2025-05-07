@@ -23,5 +23,8 @@ public class ModItemTagProvider extends ItemTagsProvider {
         tag(ModTags.Items.PERK_HOLDER_TAG)
                 .add(ModItems.PERK_HOLDER.get());
 
+        tag(ModTags.Items.PERKS_TAG)
+                .add(ModItems.JUGGERNOG_PERK.get());
+
     }
 }

@@ -25,6 +25,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.NETHER_GALLIUM_ORE);
                         output.accept(ModBlocks.DEEPSLATE_GALLIUM_ORE);
                         output.accept(ModItems.PERK_HOLDER);
+                        output.accept(ModItems.JUGGERNOG_PERK);
 
                     }).build());
     public static void register(IEventBus eventBus) {

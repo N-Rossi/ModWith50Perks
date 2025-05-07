@@ -1,2 +1,3 @@
-// 1.21.1	2025-05-06T22:58:39.0372795	Tags for minecraft:item mod id fiftyperksmod
-b8d6532772f4391f77b81b3e85bf4e2b70bf5243 data/fiftyperksmod/tags/item/perkholder.json
+// 1.21.1	2025-05-07T08:16:02.1306663	Tags for minecraft:item mod id fiftyperksmod
+a28be36645804c0ad757f17bb5d149d032327f97 data/fiftyperksmod/tags/item/perks.json
+b8d6532772f4391f77b81b3e85bf4e2b70bf5243 data/fiftyperksmod/tags/item/perk_holder.json

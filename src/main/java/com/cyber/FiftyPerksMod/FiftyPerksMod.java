@@ -5,6 +5,8 @@ import com.cyber.FiftyPerksMod.effect.ModEffects;
 import com.cyber.FiftyPerksMod.item.ModCreativeModeTabs;
 import com.cyber.FiftyPerksMod.item.ModItems;
 import com.cyber.FiftyPerksMod.potion.ModPotions;
+import com.cyber.FiftyPerksMod.util.ModDataComponents;
+import com.cyber.FiftyPerksMod.recipe.ModRecipes;
 import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
 import org.slf4j.Logger;
 
@@ -52,6 +54,9 @@ public class FiftyPerksMod
 
         ModEffects.register(modEventBus);
         ModPotions.register(modEventBus);
+
+        ModDataComponents.register(modEventBus);
+        ModRecipes.register(modEventBus);
 
 
         modEventBus.addListener(this::addCreative);

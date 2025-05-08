@@ -18,5 +18,6 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.PERK_HOLDER.get());
         basicItem(ModItems.JUGGERNOG_PERK.get());
         basicItem(ModItems.SPEEDCOLA_PERK.get());
+        basicItem(ModItems.STAMINUP_PERK.get());
     }
 }

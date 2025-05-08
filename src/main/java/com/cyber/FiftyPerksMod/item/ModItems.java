@@ -17,6 +17,7 @@ public class ModItems {
     /** Perks */
     public static final DeferredItem<Item> JUGGERNOG_PERK = ITEMS.register("juggernog_perk", () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> SPEEDCOLA_PERK = ITEMS.register("speedcola_perk", () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> STAMINUP_PERK = ITEMS.register("staminup_perk", () -> new Item(new Item.Properties()));
 
 
 

@@ -25,7 +25,8 @@ public class ModItemTagProvider extends ItemTagsProvider {
 
         tag(ModTags.Items.PERKS_TAG)
                 .add(ModItems.JUGGERNOG_PERK.get())
-                .add(ModItems.SPEEDCOLA_PERK.get());
+                .add(ModItems.SPEEDCOLA_PERK.get())
+                .add(ModItems.STAMINUP_PERK.get());
 
     }
 }

@@ -27,6 +27,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.PERK_HOLDER);
                         output.accept(ModItems.JUGGERNOG_PERK);
                         output.accept(ModItems.SPEEDCOLA_PERK);
+                        output.accept(ModItems.STAMINUP_PERK);
 
                     }).build());
     public static void register(IEventBus eventBus) {

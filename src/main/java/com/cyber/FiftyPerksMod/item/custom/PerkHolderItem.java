@@ -101,10 +101,15 @@ public class PerkHolderItem extends Item implements ICurioItem {
             switch (perkId) {
                 case "fiftyperksmod:juggernog_perk" -> {
                     if (!player.hasEffect(ModEffects.JUG_PERK_EFFECT)) {
-                        player.addEffect(new MobEffectInstance(ModEffects.JUG_PERK_EFFECT, 210, 0, true, false));
+                        player.addEffect(new MobEffectInstance(ModEffects.JUG_PERK_EFFECT, 25000, 0, true, false));
                     }
                 }
                 case "fiftyperksmod:speedcola_perk" -> {
+                    if (!player.hasEffect(MobEffects.DIG_SPEED)) {
+                        player.addEffect(new MobEffectInstance(MobEffects.DIG_SPEED, 210, 0, true, false));
+                    }
+                }
+                case "fiftyperksmod:staminup_perk" -> {
                     if (!player.hasEffect(MobEffects.MOVEMENT_SPEED)) {
                         player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 210, 0, true, false));
                     }

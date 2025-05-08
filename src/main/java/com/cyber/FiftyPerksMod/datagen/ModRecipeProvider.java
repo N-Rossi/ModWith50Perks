@@ -11,6 +11,8 @@ import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.block.Blocks;
+import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.common.conditions.IConditionBuilder;
 
 import java.util.List;
@@ -39,6 +41,15 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         oreSmelting(recipeOutput, ELEMENT115_SMELTABLES, RecipeCategory.MISC, ModItems.ELEMENT115_INGOT.get(), 0.25f, 200, "ELEMENT115");
         oreBlasting(recipeOutput, ELEMENT115_SMELTABLES, RecipeCategory.MISC, ModItems.ELEMENT115_INGOT.get(), 0.25f, 100, "ELEMENT115");
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ELEMETNT115_CRYSTAL.get())
+                .pattern("GEG")
+                .pattern("EDE")
+                .pattern("GEG")
+                .define('E', ModItems.ELEMENT115_INGOT.get())
+                .define('G', Tags.Items.GLASS_BLOCKS)
+                .define('D', Blocks.DIAMOND_BLOCK)
+                .unlockedBy("has_element115", has(ModItems.ELEMENT115_INGOT)).save(recipeOutput);
 
         /** Recipe for Perk Holder */
         SpecialRecipeBuilder.special(PerkStorageRecipe::new)

@@ -24,6 +24,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.ELEMENT115_ORE);
                         output.accept(ModBlocks.NETHER_ELEMENT115_ORE);
                         output.accept(ModBlocks.DEEPSLATE_ELEMENT115_ORE);
+                        output.accept(ModItems.ELEMETNT115_CRYSTAL);
                         output.accept(ModItems.PERK_HOLDER);
                         output.accept(ModItems.JUGGERNOG_PERK);
                         output.accept(ModItems.SPEEDCOLA_PERK);

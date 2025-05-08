@@ -1,4 +1,4 @@
-// 1.21.1	2025-05-07T21:37:39.4200023	Recipes
+// 1.21.1	2025-05-07T21:43:37.00053	Recipes
 8ae9d315a74238bde9a0d8d3ca9cb47d2c4e6053 data/fiftyperksmod/advancement/recipes/misc/element115_block.json
 67a3ed7925f28a60e3dd2ff383bbb935a2efc023 data/fiftyperksmod/advancement/recipes/misc/element115_crystal.json
 b5eeb47ced639a14ca9a56c32e339a883d4fd01c data/fiftyperksmod/advancement/recipes/misc/element115_ingot.json
@@ -34,7 +34,7 @@ a4489816089b2a6beab56daea5ddb6fd9cebb0d3 data/fiftyperksmod/recipe/juggernog_per
 02dda70ba449e97547b8990ac68685d778e51a1d data/fiftyperksmod/recipe/perk_storage.json
 f051606e53a3e6d61aef51f3e48920fe5c925142 data/fiftyperksmod/recipe/raw_element115.json
 a66fb728c9c96513fb791866f00d35c6ffaf68a1 data/fiftyperksmod/recipe/raw_element115_block.json
-092d34ef4a46506295707deacb39d3aeeb498841 data/fiftyperksmod/recipe/speedcola_crystal.json
+b2bd4fdf04a366670b39a860aade0bd792ee2562 data/fiftyperksmod/recipe/speedcola_crystal.json
 b4ef964d417af823de1d76ff8229885496254751 data/fiftyperksmod/recipe/speedcola_perk.json
 0343ed41ddbf29c5cf8532508a85aa1c659b68d8 data/fiftyperksmod/recipe/staminup_crystal.json
 5b3bcc6fac025a75481d0a2890c75da0a0cbdf57 data/fiftyperksmod/recipe/staminup_perk.json

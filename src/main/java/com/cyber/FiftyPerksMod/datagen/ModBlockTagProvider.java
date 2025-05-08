@@ -20,15 +20,15 @@ public class ModBlockTagProvider extends BlockTagsProvider {
     @Override
     protected void addTags(HolderLookup.Provider provider) {
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
-                .add(ModBlocks.GALLIUM_BLOCK.get())
-                .add(ModBlocks.GALLIUM_ORE.get())
-                .add(ModBlocks.NETHER_GALLIUM_ORE.get())
-                .add(ModBlocks.DEEPSLATE_GALLIUM_ORE.get());
+                .add(ModBlocks.ELEMENT115_BLOCK.get())
+                .add(ModBlocks.ELEMENT115_ORE.get())
+                .add(ModBlocks.NETHER_ELEMENT115_ORE.get())
+                .add(ModBlocks.DEEPSLATE_ELEMENT115_ORE.get());
 
         tag(BlockTags.NEEDS_IRON_TOOL)
-                .add(ModBlocks.GALLIUM_ORE.get())
-                .add(ModBlocks.DEEPSLATE_GALLIUM_ORE.get())
-                .add(ModBlocks.NETHER_GALLIUM_ORE.get());
+                .add(ModBlocks.ELEMENT115_ORE.get())
+                .add(ModBlocks.DEEPSLATE_ELEMENT115_ORE.get())
+                .add(ModBlocks.NETHER_ELEMENT115_ORE.get());
 
     }
 }

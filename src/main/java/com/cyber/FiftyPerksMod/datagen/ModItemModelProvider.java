@@ -13,8 +13,8 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
-        basicItem(ModItems.GALLIUM_INGOT.get());
-        basicItem(ModItems.RAW_GALLIUM.get());
+        basicItem(ModItems.ELEMENT115_INGOT.get());
+        basicItem(ModItems.RAW_ELEMENT115.get());
         basicItem(ModItems.PERK_HOLDER.get());
         basicItem(ModItems.JUGGERNOG_PERK.get());
         basicItem(ModItems.SPEEDCOLA_PERK.get());

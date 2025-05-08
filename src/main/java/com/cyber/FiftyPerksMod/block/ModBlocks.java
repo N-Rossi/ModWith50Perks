@@ -22,14 +22,14 @@ public class ModBlocks {
 
     /**    use .noLootTable if item should not drop anything upon breaking */
 
-    public static final DeferredBlock<Block> GALLIUM_BLOCK = registerBlock("gallium_block", () -> new Block(BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops().sound(SoundType.METAL)));
-    public static final DeferredBlock<Block> GALLIUM_ORE = registerBlock("gallium_ore", () -> new DropExperienceBlock(
+    public static final DeferredBlock<Block> ELEMENT115_BLOCK = registerBlock("element115_block", () -> new Block(BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops().sound(SoundType.METAL)));
+    public static final DeferredBlock<Block> ELEMENT115_ORE = registerBlock("element115_ore", () -> new DropExperienceBlock(
             ConstantInt.of(0),
             BlockBehaviour.Properties.of().mapColor(MapColor.STONE).requiresCorrectToolForDrops().strength(3.0F, 3.0F)));
-    public static final DeferredBlock<Block> NETHER_GALLIUM_ORE = registerBlock("nether_gallium_ore", () -> new DropExperienceBlock(
+    public static final DeferredBlock<Block> NETHER_ELEMENT115_ORE = registerBlock("nether_element115_ore", () -> new DropExperienceBlock(
             UniformInt.of(1, 5),
             BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(3.0F, 3.0F)));
-    public static final DeferredBlock<Block> DEEPSLATE_GALLIUM_ORE = registerBlock("deepslate_gallium_ore", () -> new DropExperienceBlock(
+    public static final DeferredBlock<Block> DEEPSLATE_ELEMENT115_ORE = registerBlock("deepslate_element115_ore", () -> new DropExperienceBlock(
             UniformInt.of(3, 7),
             BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(4.5F, 3.0F)));
 

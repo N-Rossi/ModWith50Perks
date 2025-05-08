@@ -16,15 +16,15 @@ import java.util.List;
 
 public class ModPlacedFeatures {
 
-    public static final ResourceKey<PlacedFeature> GALLIUM_ORE_PLACED_KEY = registerKey("gallium_ore_placed");
-    public static final ResourceKey<PlacedFeature> NETHER_GALLIUM_ORE_PLACED_KEY = registerKey("nether_gallium_ore_placed");
+    public static final ResourceKey<PlacedFeature> ELEMENT115_ORE_PLACED_KEY = registerKey("element115_ore_placed");
+    public static final ResourceKey<PlacedFeature> NETHER_ELEMENT115_ORE_PLACED_KEY = registerKey("nether_element115_ore_placed");
     public static void bootstrap(BootstrapContext<PlacedFeature> context) {
         var configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
-        register(context, GALLIUM_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.OVERWORLD_GALLIUM_ORE_KEY),
+        register(context, ELEMENT115_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.OVERWORLD_ELEMENT115_ORE_KEY),
                 ModOrePlacement.commonOrePlacement(15, HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(80))));
 
-        register(context, NETHER_GALLIUM_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.NETHER_GALLIUM_ORE_KEY),
+        register(context, NETHER_ELEMENT115_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.NETHER_ELEMENT115_ORE_KEY),
                 ModOrePlacement.commonOrePlacement(16, HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(80))));
     }
 

@@ -10,8 +10,8 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(FiftyPerksMod.MOD_ID);
 
-    public static final DeferredItem<Item> GALLIUM_INGOT = ITEMS.register("gallium_ingot", () -> new Item(new Item.Properties()));
-    public static final DeferredItem<Item> RAW_GALLIUM = ITEMS.register("raw_gallium", () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> ELEMENT115_INGOT = ITEMS.register("element115_ingot", () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> RAW_ELEMENT115 = ITEMS.register("raw_element115", () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> PERK_HOLDER = ITEMS.register("perk_holder", () -> new PerkHolderItem(new Item.Properties()));
 
     /** Perks */

@@ -123,6 +123,12 @@ public abstract class BasicPerkHolderItem extends Item implements ICurioItem {
                         player.addEffect(new MobEffectInstance(MobEffects.ABSORPTION, 210, 0, true, false));
                     }
                 }
+                case "fiftyperksmod:phdflopper_perk" -> {
+                    MobEffectInstance currentEffect = player.getEffect(MobEffects.FIRE_RESISTANCE);
+                    if (currentEffect == null || currentEffect.getDuration() <= 15) {
+                        player.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 210, 0, true, false));
+                    }
+                }
                 case "fiftyperksmod:doubletap_perk" -> {
                     AttributeInstance attackSpeed = player.getAttribute(Attributes.ATTACK_SPEED);
                     if(attackSpeed != null && attackSpeed.getModifier(getDoubleTapModifierId()) == null) {

@@ -1,4 +1,4 @@
-// 1.21.1	2025-05-08T15:35:15.5823165	Recipes
+// 1.21.1	2025-05-08T15:52:29.1138315	Recipes
 c25e98c7accca7bda0444e4e2af157807fe995e8 data/fiftyperksmod/advancement/recipes/misc/doubletap_crystal.json
 db950403a855fc4ae50ebbf105dd94f40d266b5a data/fiftyperksmod/advancement/recipes/misc/doubletap_perk.json
 8ae9d315a74238bde9a0d8d3ca9cb47d2c4e6053 data/fiftyperksmod/advancement/recipes/misc/element115_block.json
@@ -16,6 +16,8 @@ e13ee87bab953a34d0a97c226c236a43c8c1f6d7 data/fiftyperksmod/advancement/recipes/
 1068e7c4f8189329d16aa5cf9746e61f765cea36 data/fiftyperksmod/advancement/recipes/misc/juggernog_perk.json
 644c456a8866286df4a23d792ba0df5b8f419587 data/fiftyperksmod/advancement/recipes/misc/perk_holder.json
 0cd9cbaccac413a7d396b192932b36ad23a30023 data/fiftyperksmod/advancement/recipes/misc/perk_holder_tier2.json
+c4ce0943602b10cf6e35ae7000aeeabcce5633d6 data/fiftyperksmod/advancement/recipes/misc/phdflopper_crystal.json
+c787931479625bb3634313f373e4edd8f7076631 data/fiftyperksmod/advancement/recipes/misc/phdflopper_perk.json
 0a5db73315279a45a77af04be53f68fe7c241335 data/fiftyperksmod/advancement/recipes/misc/raw_element115.json
 4efc048a74d72334738db39a2318859b56b1bad1 data/fiftyperksmod/advancement/recipes/misc/raw_element115_block.json
 654e1620fbc919a10afbc8a6dc8dd64d2317b58f data/fiftyperksmod/advancement/recipes/misc/speedcola_crystal.json
@@ -42,6 +44,8 @@ a4489816089b2a6beab56daea5ddb6fd9cebb0d3 data/fiftyperksmod/recipe/juggernog_per
 f318f31eec6583f40befcf3c87892c3a2edc055d data/fiftyperksmod/recipe/perk_holder.json
 83e3be1bb607f253f3ebf48156dea41a73a0f8ab data/fiftyperksmod/recipe/perk_holder_tier2.json
 02dda70ba449e97547b8990ac68685d778e51a1d data/fiftyperksmod/recipe/perk_storage.json
+03ddc35a6415cd306bc75dd065e3028080646134 data/fiftyperksmod/recipe/phdflopper_crystal.json
+2cd82799bc04299cf2f1b02d0e9088c917f40bcd data/fiftyperksmod/recipe/phdflopper_perk.json
 f051606e53a3e6d61aef51f3e48920fe5c925142 data/fiftyperksmod/recipe/raw_element115.json
 a66fb728c9c96513fb791866f00d35c6ffaf68a1 data/fiftyperksmod/recipe/raw_element115_block.json
 b2bd4fdf04a366670b39a860aade0bd792ee2562 data/fiftyperksmod/recipe/speedcola_crystal.json

@@ -1,10 +1,12 @@
 {
   "values": [
     "fiftyperksmod:element115_crystal",
+    "fiftyperksmod:basic_perk_crystal",
     "fiftyperksmod:staminup_crystal",
     "fiftyperksmod:speedcola_crystal",
     "fiftyperksmod:juggernog_crystal",
     "fiftyperksmod:doubletap_crystal",
-    "fiftyperksmod:victorioustortoise_crystal"
+    "fiftyperksmod:victorioustortoise_crystal",
+    "fiftyperksmod:phdflopper_crystal"
   ]
 }

@@ -133,6 +133,16 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('N', Items.NETHERITE_SWORD)
                 .unlockedBy("has_element115_block", has(ModBlocks.ELEMENT115_BLOCK)).save(recipeOutput);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.PHDFLOPPER_CRYSTAL.get())
+                .pattern("DED")
+                .pattern("EGE")
+                .pattern("DFD")
+                .define('E', ModBlocks.ELEMENT115_BLOCK.get())
+                .define('G', Items.ORANGE_DYE)
+                .define('D', Items.DIAMOND)
+                .define('F', Items.FIRE_CHARGE)
+                .unlockedBy("has_element115_block", has(ModBlocks.ELEMENT115_BLOCK)).save(recipeOutput);
+
 
         /** Perk Recipes */
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.JUGGERNOG_PERK.get())
@@ -184,6 +194,16 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('C', ModItems.DOUBLETAP_CRYSTAL)
                 .define('W', Items.WATER_BUCKET)
                 .unlockedBy("has_doubletap_crystal", has(ModItems.DOUBLETAP_CRYSTAL.get())).save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.PHDFLOPPER_PERK.get())
+                .pattern("ENE")
+                .pattern("CWC")
+                .pattern("CCC")
+                .define('E', Blocks.EMERALD_BLOCK)
+                .define('N', Blocks.NETHERITE_BLOCK)
+                .define('C', ModItems.PHDFLOPPER_CRYSTAL)
+                .define('W', Items.WATER_BUCKET)
+                .unlockedBy("has_phdflopper_crystal", has(ModItems.PHDFLOPPER_CRYSTAL.get())).save(recipeOutput);
 
 
 

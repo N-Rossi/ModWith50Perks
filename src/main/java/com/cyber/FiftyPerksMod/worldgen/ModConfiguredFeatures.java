@@ -21,8 +21,8 @@ import java.util.List;
 public class ModConfiguredFeatures {
 //    CF -> PF -> BM
 
-    public static final ResourceKey<ConfiguredFeature<?, ?>> OVERWORLD_GALLIUM_ORE_KEY = registerKey("gallium_ore");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> NETHER_GALLIUM_ORE_KEY = registerKey("nether_gallium_ore");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> OVERWORLD_ELEMENT115_ORE_KEY = registerKey("element115_ore");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> NETHER_ELEMENT115_ORE_KEY = registerKey("nether_element115_ore");
 
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context) {
 //        Ore Gen
@@ -30,13 +30,13 @@ public class ModConfiguredFeatures {
         RuleTest deepslateReplaceables = new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
         RuleTest netherrackReplaceables = new BlockMatchTest(Blocks.NETHERRACK);
 
-        List<OreConfiguration.TargetBlockState> overworldGalliumOres = List.of(
-                OreConfiguration.target(stoneReplaceables, ModBlocks.GALLIUM_ORE.get().defaultBlockState()), OreConfiguration.target(deepslateReplaceables, ModBlocks.DEEPSLATE_GALLIUM_ORE.get().defaultBlockState()));
+        List<OreConfiguration.TargetBlockState> overworldELEMENT115Ores = List.of(
+                OreConfiguration.target(stoneReplaceables, ModBlocks.ELEMENT115_ORE.get().defaultBlockState()), OreConfiguration.target(deepslateReplaceables, ModBlocks.DEEPSLATE_ELEMENT115_ORE.get().defaultBlockState()));
 
-        register(context, OVERWORLD_GALLIUM_ORE_KEY, Feature.ORE, new OreConfiguration(overworldGalliumOres, 9));
+        register(context, OVERWORLD_ELEMENT115_ORE_KEY, Feature.ORE, new OreConfiguration(overworldELEMENT115Ores, 9));
 
-        register(context, NETHER_GALLIUM_ORE_KEY, Feature.ORE, new OreConfiguration(netherrackReplaceables,
-                ModBlocks.NETHER_GALLIUM_ORE.get().defaultBlockState(), 9));
+        register(context, NETHER_ELEMENT115_ORE_KEY, Feature.ORE, new OreConfiguration(netherrackReplaceables,
+                ModBlocks.NETHER_ELEMENT115_ORE.get().defaultBlockState(), 9));
     }
 
     public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name) {

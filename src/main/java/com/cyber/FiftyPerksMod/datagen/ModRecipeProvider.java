@@ -23,23 +23,24 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
     @Override
     protected void buildRecipes(RecipeOutput recipeOutput) {
-        List<ItemLike> GALLIUM_SMELTABLES = List.of(ModItems.RAW_GALLIUM,
-                ModBlocks.GALLIUM_ORE, ModBlocks.NETHER_GALLIUM_ORE, ModBlocks.DEEPSLATE_GALLIUM_ORE);
+        List<ItemLike> ELEMENT115_SMELTABLES = List.of(ModItems.RAW_ELEMENT115,
+                ModBlocks.ELEMENT115_ORE, ModBlocks.NETHER_ELEMENT115_ORE, ModBlocks.DEEPSLATE_ELEMENT115_ORE);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.GALLIUM_BLOCK.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.ELEMENT115_BLOCK.get())
                 .pattern("BBB")
                 .pattern("BBB")
                 .pattern("BBB")
-                .define('B', ModItems.GALLIUM_INGOT.get())
-                .unlockedBy("has_gallium", has(ModItems.GALLIUM_INGOT)).save(recipeOutput);
+                .define('B', ModItems.ELEMENT115_INGOT.get())
+                .unlockedBy("has_element115", has(ModItems.ELEMENT115_INGOT)).save(recipeOutput);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.GALLIUM_INGOT.get(), 9)
-                .requires(ModBlocks.GALLIUM_BLOCK)
-                .unlockedBy("has_gallium_block", has(ModBlocks.GALLIUM_BLOCK)).save(recipeOutput);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.ELEMENT115_INGOT.get(), 9)
+                .requires(ModBlocks.ELEMENT115_BLOCK)
+                .unlockedBy("has_element115_block", has(ModBlocks.ELEMENT115_BLOCK)).save(recipeOutput);
 
-        oreSmelting(recipeOutput, GALLIUM_SMELTABLES, RecipeCategory.MISC, ModItems.GALLIUM_INGOT.get(), 0.25f, 200, "GALLIUM");
-        oreBlasting(recipeOutput, GALLIUM_SMELTABLES, RecipeCategory.MISC, ModItems.GALLIUM_INGOT.get(), 0.25f, 100, "GALLIUM");
+        oreSmelting(recipeOutput, ELEMENT115_SMELTABLES, RecipeCategory.MISC, ModItems.ELEMENT115_INGOT.get(), 0.25f, 200, "ELEMENT115");
+        oreBlasting(recipeOutput, ELEMENT115_SMELTABLES, RecipeCategory.MISC, ModItems.ELEMENT115_INGOT.get(), 0.25f, 100, "ELEMENT115");
 
+        /** Recipe for Perk Holder */
         SpecialRecipeBuilder.special(PerkStorageRecipe::new)
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(FiftyPerksMod.MOD_ID, "perk_storage"));
     }

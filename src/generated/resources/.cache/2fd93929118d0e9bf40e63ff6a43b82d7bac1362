@@ -1,3 +1,3 @@
-// 1.21.1	2025-05-06T19:25:55.6201494	Tags for minecraft:block mod id fiftyperksmod
-dafa720a1a80aac9c7fe7cb10e8ea3de34123b24 data/minecraft/tags/block/mineable/pickaxe.json
-12e35c23c0099d01d97d673128cfc9b373d87a42 data/minecraft/tags/block/needs_iron_tool.json
+// 1.21.1	2025-05-07T19:58:14.2418371	Tags for minecraft:block mod id fiftyperksmod
+5d0cb9fb7aef559fb0e6aa09664492f100b0ec33 data/minecraft/tags/block/mineable/pickaxe.json
+36cdeff6469a9facff715a867c65d3555837e13a data/minecraft/tags/block/needs_iron_tool.json

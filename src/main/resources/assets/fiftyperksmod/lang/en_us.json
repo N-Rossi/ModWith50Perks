@@ -1,15 +1,16 @@
 {
   "creativetab.fiftyperksmod.fifty_perks_tab": "Expanded Storage",
 
-  "block.fiftyperksmod.gallium_block": "Block of Gallium",
-  "block.fiftyperksmod.gallium_ore": "Gallium Ore",
-  "block.fiftyperksmod.nether_gallium_ore": "Nether Gallium Ore",
-  "block.fiftyperksmod.deepslate_gallium_ore": "Deepslate Gallium Ore",
+  "block.fiftyperksmod.element115_block": "Block of Element 115",
+  "block.fiftyperksmod.element115_ore": "Element 115 Ore",
+  "block.fiftyperksmod.nether_element115_ore": "Nether Element 115 Ore",
+  "block.fiftyperksmod.deepslate_element115_ore": "Deepslate Element 115 Ore",
 
-  "item.fiftyperksmod.gallium_ingot": "Gallium Ingot",
-  "item.fiftyperksmod.raw_gallium": "Raw Gallium",
+  "item.fiftyperksmod.element115_ingot": "Element 115 Ingot",
+  "item.fiftyperksmod.raw_element115": "Raw element 115",
   "item.fiftyperksmod.perk_holder": "Perk Holder",
   "item.fiftyperksmod.juggernog_perk": "Juggernog Perk",
+  "item.fiftyperksmod.speedcola_perk": "Speedcola Perk",
 
   "item.minecraft.potion.effect.fiftyperks_slimey_potion": "Slimey Potion",
   "item.minecraft.splash_potion.effect.fiftyperks_slimey_potion": "Slimey Splash Potion",

@@ -14,10 +14,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
-        blockWithItem(ModBlocks.GALLIUM_BLOCK);
-        blockWithItem(ModBlocks.GALLIUM_ORE);
-        blockWithItem(ModBlocks.NETHER_GALLIUM_ORE);
-        blockWithItem(ModBlocks.DEEPSLATE_GALLIUM_ORE);
+        blockWithItem(ModBlocks.ELEMENT115_BLOCK);
+        blockWithItem(ModBlocks.ELEMENT115_ORE);
+        blockWithItem(ModBlocks.NETHER_ELEMENT115_ORE);
+        blockWithItem(ModBlocks.DEEPSLATE_ELEMENT115_ORE);
     }
 
     private void blockWithItem(DeferredBlock<?> deferredBlock) {

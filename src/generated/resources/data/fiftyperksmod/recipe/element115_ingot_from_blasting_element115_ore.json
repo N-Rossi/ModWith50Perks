@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.25,
+  "group": "ELEMENT115",
+  "ingredient": {
+    "item": "fiftyperksmod:element115_ore"
+  },
+  "result": {
+    "count": 1,
+    "id": "fiftyperksmod:element115_ingot"
+  }
+}

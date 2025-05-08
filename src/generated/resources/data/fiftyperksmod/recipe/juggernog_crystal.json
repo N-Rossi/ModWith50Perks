@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "D": {
+      "item": "minecraft:diamond"
+    },
+    "E": {
+      "item": "fiftyperksmod:element115_block"
+    },
+    "R": {
+      "item": "minecraft:red_dye"
+    }
+  },
+  "pattern": [
+    "DED",
+    "ERE",
+    "DED"
+  ],
+  "result": {
+    "count": 1,
+    "id": "fiftyperksmod:juggernog_crystal"
+  }
+}

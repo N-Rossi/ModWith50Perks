@@ -9,6 +9,7 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Blocks;
@@ -53,7 +54,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         oreSmelting(recipeOutput, ELEMENT115_SMELTABLES, RecipeCategory.MISC, ModItems.ELEMENT115_INGOT.get(), 0.25f, 200, "ELEMENT115");
         oreBlasting(recipeOutput, ELEMENT115_SMELTABLES, RecipeCategory.MISC, ModItems.ELEMENT115_INGOT.get(), 0.25f, 100, "ELEMENT115");
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ELEMETNT115_CRYSTAL.get())
+        /** Crystals */
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ELEMENT115_CRYSTAL.get())
                 .pattern("GEG")
                 .pattern("EDE")
                 .pattern("GEG")
@@ -62,7 +64,26 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('D', Blocks.DIAMOND_BLOCK)
                 .unlockedBy("has_element115", has(ModItems.ELEMENT115_INGOT)).save(recipeOutput);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.JUGGERNOG_CRYSTAL.get())
+                .pattern("DED")
+                .pattern("ERE")
+                .pattern("DED")
+                .define('E', ModBlocks.ELEMENT115_BLOCK.get())
+                .define('R', Items.RED_DYE)
+                .define('D', Items.DIAMOND)
+                .unlockedBy("has_element115_block", has(ModBlocks.ELEMENT115_BLOCK)).save(recipeOutput);
+
         /** Perk Recipes */
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.JUGGERNOG_PERK.get())
+                .pattern("DED")
+                .pattern("CWC")
+                .pattern("CCC")
+                .define('E', Blocks.EMERALD_BLOCK)
+                .define('D', Blocks.DIAMOND_BLOCK)
+                .define('C', ModItems.JUGGERNOG_CRYSTAL)
+                .define('W', Items.WATER_BUCKET)
+                .unlockedBy("has_juggernog_crystal", has(ModItems.JUGGERNOG_CRYSTAL.get())).save(recipeOutput);
+
 
 
         /** Recipe for Perk Holder */

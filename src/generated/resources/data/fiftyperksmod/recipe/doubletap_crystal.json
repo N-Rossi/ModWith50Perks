@@ -2,9 +2,6 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "A": {
-      "item": "minecraft:enchanted_golden_apple"
-    },
     "D": {
       "item": "minecraft:diamond"
     },
@@ -13,12 +10,15 @@
     },
     "G": {
       "item": "minecraft:orange_dye"
+    },
+    "N": {
+      "item": "minecraft:netherite_sword"
     }
   },
   "pattern": [
     "DED",
     "EGE",
-    "DAD"
+    "DND"
   ],
   "result": {
     "count": 1,

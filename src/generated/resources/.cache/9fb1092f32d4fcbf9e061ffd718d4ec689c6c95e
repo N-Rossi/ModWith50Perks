@@ -1,4 +1,4 @@
-// 1.21.1	2025-05-08T15:03:25.4042837	Recipes
+// 1.21.1	2025-05-08T15:23:37.7985612	Recipes
 c25e98c7accca7bda0444e4e2af157807fe995e8 data/fiftyperksmod/advancement/recipes/misc/doubletap_crystal.json
 db950403a855fc4ae50ebbf105dd94f40d266b5a data/fiftyperksmod/advancement/recipes/misc/doubletap_perk.json
 8ae9d315a74238bde9a0d8d3ca9cb47d2c4e6053 data/fiftyperksmod/advancement/recipes/misc/element115_block.json
@@ -22,7 +22,7 @@ f42e5fe799933e9538518aee516b562c04a8f7fb data/fiftyperksmod/advancement/recipes/
 5dbbce13a051693843084e120f4f412762569115 data/fiftyperksmod/advancement/recipes/misc/staminup_perk.json
 27cb26bc8d8f35a9bcfde27b1a9cffbcc11881d3 data/fiftyperksmod/advancement/recipes/misc/victorioustortoise_crystal.json
 6a212faa73b7e4079dd0b598da36b04be5ad340b data/fiftyperksmod/advancement/recipes/misc/victorioustortoise_perk.json
-1e5b056da5e2eafdb0df4db51a95d7099dad55dd data/fiftyperksmod/recipe/doubletap_crystal.json
+23d9fb8d6ef030b4439ef5803c6451a947723468 data/fiftyperksmod/recipe/doubletap_crystal.json
 a08dab36103f916a1e2d7072a740ec36cc79e363 data/fiftyperksmod/recipe/doubletap_perk.json
 258567b26eea425a9100e1651cb9a524fb125e3d data/fiftyperksmod/recipe/element115_block.json
 0357a9c71c73ff343829a2499da012437aa8dd11 data/fiftyperksmod/recipe/element115_crystal.json

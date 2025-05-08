@@ -1,5 +1,6 @@
 package com.cyber.FiftyPerksMod.recipe;
 
+import com.cyber.FiftyPerksMod.item.custom.BasicPerkHolderItem;
 import com.cyber.FiftyPerksMod.item.custom.PerkHolderItem;
 import com.cyber.FiftyPerksMod.util.ModDataComponents;
 import com.cyber.FiftyPerksMod.util.ModTags;
@@ -65,7 +66,7 @@ public class PerkStorageRecipe extends CustomRecipe {
                         return ItemStack.EMPTY; // Only 1 perk allowed
                     }
                     perkItem = stack;
-                } else if (stack.getItem() instanceof PerkHolderItem) {
+                } else if (stack.getItem() instanceof BasicPerkHolderItem) {
                     if (!perkHolder.isEmpty()) {
                         return ItemStack.EMPTY; // Only 1 holder allowed
                     }
@@ -78,10 +79,8 @@ public class PerkStorageRecipe extends CustomRecipe {
             ItemStack result = perkHolder.copy();
             result.setCount(1);
 
-//            String perkId = perkItem.getItem().builtInRegistryHolder().key().location().toString();
-//            result.set(ModDataComponents.STORED_PERK.get(), perkId);
-
-            ItemStackHandler handler = PerkHolderItem.getHandler(result, provider);
+            BasicPerkHolderItem holderItem = (BasicPerkHolderItem) result.getItem();
+            ItemStackHandler handler = holderItem.getHandler(result, provider);
 
             for (int slot = 0; slot < handler.getSlots(); slot++) {
                 if (handler.getStackInSlot(slot).isEmpty()) {
@@ -90,7 +89,7 @@ public class PerkStorageRecipe extends CustomRecipe {
                 }
             }
 
-            PerkHolderItem.saveHandler(result, handler, provider);
+            holderItem.saveHandler(result, handler, provider);
 
 
             return result;

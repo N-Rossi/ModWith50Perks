@@ -35,9 +35,20 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('B', ModItems.ELEMENT115_INGOT.get())
                 .unlockedBy("has_element115", has(ModItems.ELEMENT115_INGOT)).save(recipeOutput);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.RAW_ELEMENT115_BLOCK.get())
+                .pattern("BBB")
+                .pattern("BBB")
+                .pattern("BBB")
+                .define('B', ModItems.RAW_ELEMENT115.get())
+                .unlockedBy("has_element115", has(ModItems.RAW_ELEMENT115)).save(recipeOutput);
+
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.ELEMENT115_INGOT.get(), 9)
                 .requires(ModBlocks.ELEMENT115_BLOCK)
                 .unlockedBy("has_element115_block", has(ModBlocks.ELEMENT115_BLOCK)).save(recipeOutput);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.RAW_ELEMENT115.get(), 9)
+                .requires(ModBlocks.RAW_ELEMENT115_BLOCK)
+                .unlockedBy("has_raw_element115_block", has(ModBlocks.RAW_ELEMENT115_BLOCK)).save(recipeOutput);
 
         oreSmelting(recipeOutput, ELEMENT115_SMELTABLES, RecipeCategory.MISC, ModItems.ELEMENT115_INGOT.get(), 0.25f, 200, "ELEMENT115");
         oreBlasting(recipeOutput, ELEMENT115_SMELTABLES, RecipeCategory.MISC, ModItems.ELEMENT115_INGOT.get(), 0.25f, 100, "ELEMENT115");
@@ -50,6 +61,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('G', Tags.Items.GLASS_BLOCKS)
                 .define('D', Blocks.DIAMOND_BLOCK)
                 .unlockedBy("has_element115", has(ModItems.ELEMENT115_INGOT)).save(recipeOutput);
+
+        /** Perk Recipes */
+
 
         /** Recipe for Perk Holder */
         SpecialRecipeBuilder.special(PerkStorageRecipe::new)

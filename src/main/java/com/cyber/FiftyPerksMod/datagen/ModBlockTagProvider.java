@@ -21,6 +21,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
     protected void addTags(HolderLookup.Provider provider) {
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ModBlocks.ELEMENT115_BLOCK.get())
+                .add(ModBlocks.RAW_ELEMENT115_BLOCK.get())
                 .add(ModBlocks.ELEMENT115_ORE.get())
                 .add(ModBlocks.NETHER_ELEMENT115_ORE.get())
                 .add(ModBlocks.DEEPSLATE_ELEMENT115_ORE.get());

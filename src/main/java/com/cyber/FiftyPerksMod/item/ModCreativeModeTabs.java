@@ -21,6 +21,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.ELEMENT115_INGOT);
                         output.accept(ModItems.RAW_ELEMENT115);
                         output.accept(ModBlocks.ELEMENT115_BLOCK);
+                        output.accept(ModBlocks.RAW_ELEMENT115_BLOCK);
                         output.accept(ModBlocks.ELEMENT115_ORE);
                         output.accept(ModBlocks.NETHER_ELEMENT115_ORE);
                         output.accept(ModBlocks.DEEPSLATE_ELEMENT115_ORE);

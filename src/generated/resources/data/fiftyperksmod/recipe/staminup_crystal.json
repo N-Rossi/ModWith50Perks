@@ -2,26 +2,26 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "C": {
-      "item": "minecraft:netherite_chestplate"
-    },
     "D": {
       "item": "minecraft:diamond"
     },
     "E": {
       "item": "fiftyperksmod:element115_block"
     },
-    "R": {
-      "item": "minecraft:red_dye"
+    "G": {
+      "item": "minecraft:orange_dye"
+    },
+    "P": {
+      "item": "minecraft:netherite_pickaxe"
     }
   },
   "pattern": [
     "DED",
-    "ERE",
-    "DCD"
+    "EGE",
+    "DPD"
   ],
   "result": {
     "count": 1,
-    "id": "fiftyperksmod:juggernog_crystal"
+    "id": "fiftyperksmod:staminup_crystal"
   }
 }

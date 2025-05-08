@@ -3,7 +3,7 @@
   "category": "misc",
   "key": {
     "C": {
-      "item": "fiftyperksmod:juggernog_crystal"
+      "item": "fiftyperksmod:speedcola_crystal"
     },
     "E": {
       "item": "minecraft:emerald_block"
@@ -22,6 +22,6 @@
   ],
   "result": {
     "count": 1,
-    "id": "fiftyperksmod:juggernog_perk"
+    "id": "fiftyperksmod:speedcola_perk"
   }
 }

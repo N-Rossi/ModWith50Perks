@@ -14,6 +14,8 @@ public class ModItems {
     public static final DeferredItem<Item> RAW_ELEMENT115 = ITEMS.register("raw_element115", () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> ELEMENT115_CRYSTAL = ITEMS.register("element115_crystal", () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> JUGGERNOG_CRYSTAL = ITEMS.register("juggernog_crystal", () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> SPEEDCOLA_CRYSTAL = ITEMS.register("speedcola_crystal", () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> STAMINUP_CRYSTAL = ITEMS.register("staminup_crystal", () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> PERK_HOLDER = ITEMS.register("perk_holder", () -> new PerkHolderItem(new Item.Properties()));
 
     /** Perks */

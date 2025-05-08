@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_staminup_crystal": {
+      "conditions": {
+        "items": [
+          {
+            "items": "fiftyperksmod:staminup_crystal"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "fiftyperksmod:staminup_perk"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_staminup_crystal"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "fiftyperksmod:staminup_perk"
+    ]
+  }
+}

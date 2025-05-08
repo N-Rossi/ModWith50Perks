@@ -67,22 +67,64 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.JUGGERNOG_CRYSTAL.get())
                 .pattern("DED")
                 .pattern("ERE")
-                .pattern("DED")
+                .pattern("DCD")
                 .define('E', ModBlocks.ELEMENT115_BLOCK.get())
                 .define('R', Items.RED_DYE)
                 .define('D', Items.DIAMOND)
+                .define('C', Items.NETHERITE_CHESTPLATE)
                 .unlockedBy("has_element115_block", has(ModBlocks.ELEMENT115_BLOCK)).save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.SPEEDCOLA_CRYSTAL.get())
+                .pattern("DED")
+                .pattern("EGE")
+                .pattern("DSD")
+                .define('E', ModBlocks.ELEMENT115_BLOCK.get())
+                .define('G', Items.LIME_DYE)
+                .define('D', Items.DIAMOND)
+                .define('S', Items.SUGAR)
+                .unlockedBy("has_element115_block", has(ModBlocks.ELEMENT115_BLOCK)).save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.STAMINUP_CRYSTAL.get())
+                .pattern("DED")
+                .pattern("EGE")
+                .pattern("DPD")
+                .define('E', ModBlocks.ELEMENT115_BLOCK.get())
+                .define('G', Items.ORANGE_DYE)
+                .define('D', Items.DIAMOND)
+                .define('P', Items.NETHERITE_PICKAXE)
+                .unlockedBy("has_element115_block", has(ModBlocks.ELEMENT115_BLOCK)).save(recipeOutput);
+
 
         /** Perk Recipes */
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.JUGGERNOG_PERK.get())
-                .pattern("DED")
+                .pattern("ENE")
                 .pattern("CWC")
                 .pattern("CCC")
                 .define('E', Blocks.EMERALD_BLOCK)
-                .define('D', Blocks.DIAMOND_BLOCK)
+                .define('N', Blocks.NETHERITE_BLOCK)
                 .define('C', ModItems.JUGGERNOG_CRYSTAL)
                 .define('W', Items.WATER_BUCKET)
                 .unlockedBy("has_juggernog_crystal", has(ModItems.JUGGERNOG_CRYSTAL.get())).save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.SPEEDCOLA_PERK.get())
+                .pattern("ENE")
+                .pattern("CWC")
+                .pattern("CCC")
+                .define('E', Blocks.EMERALD_BLOCK)
+                .define('N', Blocks.NETHERITE_BLOCK)
+                .define('C', ModItems.SPEEDCOLA_CRYSTAL)
+                .define('W', Items.WATER_BUCKET)
+                .unlockedBy("has_speedcola_crystal", has(ModItems.SPEEDCOLA_CRYSTAL.get())).save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.STAMINUP_PERK.get())
+                .pattern("ENE")
+                .pattern("CWC")
+                .pattern("CCC")
+                .define('E', Blocks.EMERALD_BLOCK)
+                .define('N', Blocks.NETHERITE_BLOCK)
+                .define('C', ModItems.STAMINUP_CRYSTAL)
+                .define('W', Items.WATER_BUCKET)
+                .unlockedBy("has_staminup_crystal", has(ModItems.STAMINUP_CRYSTAL.get())).save(recipeOutput);
 
 
 

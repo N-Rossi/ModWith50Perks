@@ -25,6 +25,8 @@ public class ModItemTagProvider extends ItemTagsProvider {
 
         tag(ModTags.Items.CRYSTALS_TAG)
                 .add(ModItems.ELEMENT115_CRYSTAL.get())
+                .add(ModItems.STAMINUP_CRYSTAL.get())
+                .add(ModItems.SPEEDCOLA_CRYSTAL.get())
                 .add(ModItems.JUGGERNOG_CRYSTAL.get());
 
         tag(ModTags.Items.PERKS_TAG)

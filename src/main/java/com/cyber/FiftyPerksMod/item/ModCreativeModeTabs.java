@@ -21,12 +21,18 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.ELEMENT115_INGOT);
                         output.accept(ModItems.RAW_ELEMENT115);
                         output.accept(ModBlocks.ELEMENT115_BLOCK);
+                        output.accept(ModBlocks.RAW_ELEMENT115_BLOCK);
                         output.accept(ModBlocks.ELEMENT115_ORE);
                         output.accept(ModBlocks.NETHER_ELEMENT115_ORE);
                         output.accept(ModBlocks.DEEPSLATE_ELEMENT115_ORE);
+                        output.accept(ModItems.ELEMENT115_CRYSTAL);
+                        output.accept(ModItems.JUGGERNOG_CRYSTAL);
+                        output.accept(ModItems.SPEEDCOLA_CRYSTAL);
+                        output.accept(ModItems.STAMINUP_CRYSTAL);
                         output.accept(ModItems.PERK_HOLDER);
                         output.accept(ModItems.JUGGERNOG_PERK);
                         output.accept(ModItems.SPEEDCOLA_PERK);
+                        output.accept(ModItems.STAMINUP_PERK);
 
                     }).build());
     public static void register(IEventBus eventBus) {

@@ -13,10 +13,10 @@ public class ModPotions {
     public static final DeferredRegister<Potion> POTIONS =
             DeferredRegister.create(BuiltInRegistries.POTION, FiftyPerksMod.MOD_ID);
 
-    public static final Holder<Potion> SLIMEY_POTION = POTIONS.register("fiftyperks_slimey_potion",
-            () -> new Potion(new MobEffectInstance(ModEffects.SLIMEY_EFFECT, 1200, 0)));
-    public static final Holder<Potion> JUGGERNOG_POTION = POTIONS.register("fiftyperks_juggernog_potion",
-            () -> new Potion(new MobEffectInstance(ModEffects.JUG_PERK_EFFECT, 10, 0)));
+//    public static final Holder<Potion> SLIMEY_POTION = POTIONS.register("fiftyperks_slimey_potion",
+//            () -> new Potion(new MobEffectInstance(ModEffects.SLIMEY_EFFECT, 1200, 0)));
+//    public static final Holder<Potion> JUGGERNOG_POTION = POTIONS.register("fiftyperks_juggernog_potion",
+//            () -> new Potion(new MobEffectInstance(ModEffects.JUG_PERK_EFFECT, 10, 0)));
 
     public static void register(IEventBus eventBus) {
         POTIONS.register(eventBus);

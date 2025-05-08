@@ -23,6 +23,9 @@ public class ModBlocks {
     /**    use .noLootTable if item should not drop anything upon breaking */
 
     public static final DeferredBlock<Block> ELEMENT115_BLOCK = registerBlock("element115_block", () -> new Block(BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops().sound(SoundType.METAL)));
+    public static final DeferredBlock<Block> RAW_ELEMENT115_BLOCK = registerBlock("raw_element115_block", () -> new Block(BlockBehaviour.Properties.of().strength(5F, 6F).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+
+
     public static final DeferredBlock<Block> ELEMENT115_ORE = registerBlock("element115_ore", () -> new DropExperienceBlock(
             ConstantInt.of(0),
             BlockBehaviour.Properties.of().mapColor(MapColor.STONE).requiresCorrectToolForDrops().strength(3.0F, 3.0F)));

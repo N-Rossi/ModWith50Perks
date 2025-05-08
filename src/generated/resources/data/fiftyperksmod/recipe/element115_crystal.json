@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "D": {
+      "item": "minecraft:diamond_block"
+    },
+    "E": {
+      "item": "fiftyperksmod:element115_ingot"
+    },
+    "G": {
+      "tag": "c:glass_blocks"
+    }
+  },
+  "pattern": [
+    "GEG",
+    "EDE",
+    "GEG"
+  ],
+  "result": {
+    "count": 1,
+    "id": "fiftyperksmod:element115_crystal"
+  }
+}

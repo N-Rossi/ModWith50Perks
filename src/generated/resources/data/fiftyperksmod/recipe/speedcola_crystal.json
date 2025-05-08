@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "D": {
+      "item": "minecraft:diamond"
+    },
+    "E": {
+      "item": "fiftyperksmod:element115_block"
+    },
+    "G": {
+      "item": "minecraft:lime_dye"
+    },
+    "S": {
+      "item": "minecraft:sugar"
+    }
+  },
+  "pattern": [
+    "DED",
+    "EGE",
+    "DSD"
+  ],
+  "result": {
+    "count": 1,
+    "id": "fiftyperksmod:speedcola_crystal"
+  }
+}

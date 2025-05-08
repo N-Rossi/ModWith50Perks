@@ -9,8 +9,11 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.block.Blocks;
+import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.common.conditions.IConditionBuilder;
 
 import java.util.List;
@@ -33,12 +36,97 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('B', ModItems.ELEMENT115_INGOT.get())
                 .unlockedBy("has_element115", has(ModItems.ELEMENT115_INGOT)).save(recipeOutput);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.RAW_ELEMENT115_BLOCK.get())
+                .pattern("BBB")
+                .pattern("BBB")
+                .pattern("BBB")
+                .define('B', ModItems.RAW_ELEMENT115.get())
+                .unlockedBy("has_element115", has(ModItems.RAW_ELEMENT115)).save(recipeOutput);
+
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.ELEMENT115_INGOT.get(), 9)
                 .requires(ModBlocks.ELEMENT115_BLOCK)
                 .unlockedBy("has_element115_block", has(ModBlocks.ELEMENT115_BLOCK)).save(recipeOutput);
 
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.RAW_ELEMENT115.get(), 9)
+                .requires(ModBlocks.RAW_ELEMENT115_BLOCK)
+                .unlockedBy("has_raw_element115_block", has(ModBlocks.RAW_ELEMENT115_BLOCK)).save(recipeOutput);
+
         oreSmelting(recipeOutput, ELEMENT115_SMELTABLES, RecipeCategory.MISC, ModItems.ELEMENT115_INGOT.get(), 0.25f, 200, "ELEMENT115");
         oreBlasting(recipeOutput, ELEMENT115_SMELTABLES, RecipeCategory.MISC, ModItems.ELEMENT115_INGOT.get(), 0.25f, 100, "ELEMENT115");
+
+        /** Crystals */
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ELEMENT115_CRYSTAL.get())
+                .pattern("GEG")
+                .pattern("EDE")
+                .pattern("GEG")
+                .define('E', ModItems.ELEMENT115_INGOT.get())
+                .define('G', Tags.Items.GLASS_BLOCKS)
+                .define('D', Blocks.DIAMOND_BLOCK)
+                .unlockedBy("has_element115", has(ModItems.ELEMENT115_INGOT)).save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.JUGGERNOG_CRYSTAL.get())
+                .pattern("DED")
+                .pattern("ERE")
+                .pattern("DCD")
+                .define('E', ModBlocks.ELEMENT115_BLOCK.get())
+                .define('R', Items.RED_DYE)
+                .define('D', Items.DIAMOND)
+                .define('C', Items.NETHERITE_CHESTPLATE)
+                .unlockedBy("has_element115_block", has(ModBlocks.ELEMENT115_BLOCK)).save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.SPEEDCOLA_CRYSTAL.get())
+                .pattern("DED")
+                .pattern("EGE")
+                .pattern("DSD")
+                .define('E', ModBlocks.ELEMENT115_BLOCK.get())
+                .define('G', Items.LIME_DYE)
+                .define('D', Items.DIAMOND)
+                .define('S', Items.SUGAR)
+                .unlockedBy("has_element115_block", has(ModBlocks.ELEMENT115_BLOCK)).save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.STAMINUP_CRYSTAL.get())
+                .pattern("DED")
+                .pattern("EGE")
+                .pattern("DPD")
+                .define('E', ModBlocks.ELEMENT115_BLOCK.get())
+                .define('G', Items.ORANGE_DYE)
+                .define('D', Items.DIAMOND)
+                .define('P', Items.NETHERITE_PICKAXE)
+                .unlockedBy("has_element115_block", has(ModBlocks.ELEMENT115_BLOCK)).save(recipeOutput);
+
+
+        /** Perk Recipes */
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.JUGGERNOG_PERK.get())
+                .pattern("ENE")
+                .pattern("CWC")
+                .pattern("CCC")
+                .define('E', Blocks.EMERALD_BLOCK)
+                .define('N', Blocks.NETHERITE_BLOCK)
+                .define('C', ModItems.JUGGERNOG_CRYSTAL)
+                .define('W', Items.WATER_BUCKET)
+                .unlockedBy("has_juggernog_crystal", has(ModItems.JUGGERNOG_CRYSTAL.get())).save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.SPEEDCOLA_PERK.get())
+                .pattern("ENE")
+                .pattern("CWC")
+                .pattern("CCC")
+                .define('E', Blocks.EMERALD_BLOCK)
+                .define('N', Blocks.NETHERITE_BLOCK)
+                .define('C', ModItems.SPEEDCOLA_CRYSTAL)
+                .define('W', Items.WATER_BUCKET)
+                .unlockedBy("has_speedcola_crystal", has(ModItems.SPEEDCOLA_CRYSTAL.get())).save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.STAMINUP_PERK.get())
+                .pattern("ENE")
+                .pattern("CWC")
+                .pattern("CCC")
+                .define('E', Blocks.EMERALD_BLOCK)
+                .define('N', Blocks.NETHERITE_BLOCK)
+                .define('C', ModItems.STAMINUP_CRYSTAL)
+                .define('W', Items.WATER_BUCKET)
+                .unlockedBy("has_staminup_crystal", has(ModItems.STAMINUP_CRYSTAL.get())).save(recipeOutput);
+
+
 
         /** Recipe for Perk Holder */
         SpecialRecipeBuilder.special(PerkStorageRecipe::new)

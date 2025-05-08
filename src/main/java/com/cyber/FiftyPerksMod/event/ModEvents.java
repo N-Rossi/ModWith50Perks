@@ -16,7 +16,7 @@ public class ModEvents {
     public static void onBrewingRecipeRegister(RegisterBrewingRecipesEvent event) {
         PotionBrewing.Builder builder = event.getBuilder();
 
-        builder.addMix(Potions.AWKWARD, Items.SLIME_BALL, ModPotions.SLIMEY_POTION);
-        builder.addMix(Potions.AWKWARD, Items.REDSTONE, ModPotions.JUGGERNOG_POTION);
+//        builder.addMix(Potions.AWKWARD, Items.SLIME_BALL, ModPotions.SLIMEY_POTION);
+//        builder.addMix(Potions.AWKWARD, Items.REDSTONE, ModPotions.JUGGERNOG_POTION);
     }
 }

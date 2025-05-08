@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_phdflopper_crystal": {
+      "conditions": {
+        "items": [
+          {
+            "items": "fiftyperksmod:phdflopper_crystal"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "fiftyperksmod:phdflopper_perk"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_phdflopper_crystal"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "fiftyperksmod:phdflopper_perk"
+    ]
+  }
+}

@@ -21,19 +21,25 @@ public class ModItemTagProvider extends ItemTagsProvider {
     @Override
     protected void addTags(HolderLookup.Provider provider) {
         tag(ModTags.Items.PERK_HOLDER_TAG)
-                .add(ModItems.PERK_HOLDER.get());
+                .add(ModItems.PERK_HOLDER.get())
+                .add(ModItems.PERK_HOLDER_TIER2.get());
 
         tag(ModTags.Items.CRYSTALS_TAG)
                 .add(ModItems.ELEMENT115_CRYSTAL.get())
+                .add(ModItems.BASIC_PERK_CRYSTAL.get())
                 .add(ModItems.STAMINUP_CRYSTAL.get())
                 .add(ModItems.SPEEDCOLA_CRYSTAL.get())
                 .add(ModItems.JUGGERNOG_CRYSTAL.get())
-                .add(ModItems.VICTORIOUSTORTOISE_CRYSTAL.get());
+                .add(ModItems.DOUBLETAP_CRYSTAL.get())
+                .add(ModItems.VICTORIOUSTORTOISE_CRYSTAL.get())
+                .add(ModItems.PHDFLOPPER_CRYSTAL.get());
 
         tag(ModTags.Items.PERKS_TAG)
                 .add(ModItems.JUGGERNOG_PERK.get())
                 .add(ModItems.SPEEDCOLA_PERK.get())
                 .add(ModItems.VICTORIOUSTORTOISE_PERK.get())
+                .add(ModItems.DOUBLETAP_PERK.get())
+                .add(ModItems.PHDFLOPPER_PERK.get())
                 .add(ModItems.STAMINUP_PERK.get());
 
     }

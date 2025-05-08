@@ -54,6 +54,25 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         oreSmelting(recipeOutput, ELEMENT115_SMELTABLES, RecipeCategory.MISC, ModItems.ELEMENT115_INGOT.get(), 0.25f, 200, "ELEMENT115");
         oreBlasting(recipeOutput, ELEMENT115_SMELTABLES, RecipeCategory.MISC, ModItems.ELEMENT115_INGOT.get(), 0.25f, 100, "ELEMENT115");
 
+        /** Perk Holders */
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.PERK_HOLDER.get())
+                .pattern(" E ")
+                .pattern("LLL")
+                .pattern("LGL")
+                .define('E', ModItems.ELEMENT115_INGOT.get())
+                .define('G', Tags.Items.GLASS_BLOCKS)
+                .define('L', Items.LEATHER)
+                .unlockedBy("has_element115", has(ModItems.ELEMENT115_INGOT)).save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.PERK_HOLDER_TIER2.get())
+                .pattern("ELE")
+                .pattern("LPL")
+                .pattern("ELE")
+                .define('E', ModBlocks.ELEMENT115_BLOCK.get())
+                .define('P', ModItems.PERK_HOLDER.get())
+                .define('L', Items.LEATHER)
+                .unlockedBy("has_element115", has(ModItems.PERK_HOLDER)).save(recipeOutput);
+
         /** Crystals */
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ELEMENT115_CRYSTAL.get())
                 .pattern("GEG")
@@ -104,6 +123,26 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('A', Items.ENCHANTED_GOLDEN_APPLE)
                 .unlockedBy("has_element115_block", has(ModBlocks.ELEMENT115_BLOCK)).save(recipeOutput);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.DOUBLETAP_CRYSTAL.get())
+                .pattern("DED")
+                .pattern("EGE")
+                .pattern("DND")
+                .define('E', ModBlocks.ELEMENT115_BLOCK.get())
+                .define('G', Items.ORANGE_DYE)
+                .define('D', Items.DIAMOND)
+                .define('N', Items.NETHERITE_SWORD)
+                .unlockedBy("has_element115_block", has(ModBlocks.ELEMENT115_BLOCK)).save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.PHDFLOPPER_CRYSTAL.get())
+                .pattern("DED")
+                .pattern("EGE")
+                .pattern("DFD")
+                .define('E', ModBlocks.ELEMENT115_BLOCK.get())
+                .define('G', Items.ORANGE_DYE)
+                .define('D', Items.DIAMOND)
+                .define('F', Items.FIRE_CHARGE)
+                .unlockedBy("has_element115_block", has(ModBlocks.ELEMENT115_BLOCK)).save(recipeOutput);
+
 
         /** Perk Recipes */
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.JUGGERNOG_PERK.get())
@@ -145,6 +184,26 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('C', ModItems.VICTORIOUSTORTOISE_CRYSTAL)
                 .define('W', Items.WATER_BUCKET)
                 .unlockedBy("has_victorioustortoise_crystal", has(ModItems.VICTORIOUSTORTOISE_CRYSTAL.get())).save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.DOUBLETAP_PERK.get())
+                .pattern("ENE")
+                .pattern("CWC")
+                .pattern("CCC")
+                .define('E', Blocks.EMERALD_BLOCK)
+                .define('N', Blocks.NETHERITE_BLOCK)
+                .define('C', ModItems.DOUBLETAP_CRYSTAL)
+                .define('W', Items.WATER_BUCKET)
+                .unlockedBy("has_doubletap_crystal", has(ModItems.DOUBLETAP_CRYSTAL.get())).save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.PHDFLOPPER_PERK.get())
+                .pattern("ENE")
+                .pattern("CWC")
+                .pattern("CCC")
+                .define('E', Blocks.EMERALD_BLOCK)
+                .define('N', Blocks.NETHERITE_BLOCK)
+                .define('C', ModItems.PHDFLOPPER_CRYSTAL)
+                .define('W', Items.WATER_BUCKET)
+                .unlockedBy("has_phdflopper_crystal", has(ModItems.PHDFLOPPER_CRYSTAL.get())).save(recipeOutput);
 
 
 

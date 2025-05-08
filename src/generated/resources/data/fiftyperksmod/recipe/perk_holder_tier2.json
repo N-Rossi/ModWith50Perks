@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "E": {
+      "item": "fiftyperksmod:element115_block"
+    },
+    "L": {
+      "item": "minecraft:leather"
+    },
+    "P": {
+      "item": "fiftyperksmod:perk_holder"
+    }
+  },
+  "pattern": [
+    "ELE",
+    "LPL",
+    "ELE"
+  ],
+  "result": {
+    "count": 1,
+    "id": "fiftyperksmod:perk_holder_tier2"
+  }
+}

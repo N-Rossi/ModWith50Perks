@@ -1,5 +1,5 @@
 {
-  "creativetab.fiftyperksmod.fifty_perks_tab": "Expanded Storage",
+  "creativetab.fiftyperksmod.fifty_perks_tab": "Mod With 50 Perks",
 
   "block.fiftyperksmod.element115_block": "Block of Element 115",
   "block.fiftyperksmod.raw_element115_block": "Raw Block of Element 115",
@@ -9,16 +9,25 @@
 
   "item.fiftyperksmod.element115_ingot": "Element 115 Ingot",
   "item.fiftyperksmod.raw_element115": "Raw Element 115",
+
   "item.fiftyperksmod.element115_crystal": "Element 115 Crystal",
+  "item.fiftyperksmod.basic_perk_crystal": "Basic Perk Crystal",
   "item.fiftyperksmod.juggernog_crystal": "Juggernog Crystal",
   "item.fiftyperksmod.speedcola_crystal": "Speed Cola Crystal",
+  "item.fiftyperksmod.doubletap_crystal": "Double-Tap Crystal",
   "item.fiftyperksmod.staminup_crystal": "Stamin-Up Crystal",
   "item.fiftyperksmod.victorioustortoise_crystal": "Victorious Tortoise Crystal",
+  "item.fiftyperksmod.phdflopper_crystal": "PHD Flopper Crystal",
+
   "item.fiftyperksmod.perk_holder": "Perk Holder",
+  "item.fiftyperksmod.perk_holder_tier2": "Tier 2 Perk Holder",
+
   "item.fiftyperksmod.juggernog_perk": "Juggernog Perk",
   "item.fiftyperksmod.speedcola_perk": "Speed Cola Perk",
   "item.fiftyperksmod.staminup_perk": "Stamin-Up Perk",
   "item.fiftyperksmod.victorioustortoise_perk": "Victorious Tortoise Perk",
+  "item.fiftyperksmod.doubletap_perk": "Double-Tap Soda Perk",
+  "item.fiftyperksmod.phdflopper_perk": "PHD Flopper Perk",
 
   "effect.fiftyperksmod.slimey": "Slimey",
   "effect.fiftyperksmod.jug_perk": "Juggernog"

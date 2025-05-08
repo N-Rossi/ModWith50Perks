@@ -3,20 +3,14 @@ package com.cyber.FiftyPerksMod.item.custom;
 import com.cyber.FiftyPerksMod.FiftyPerksMod;
 import net.minecraft.resources.ResourceLocation;
 
-/**
- * @Author Cyber
- * Perk Holder Item extends Item and is a Curio Item
- * It holds up to 4 perks and when the Curio is equipped it will give the stored perks' effects to the player
- */
-public class PerkHolderItem extends BasicPerkHolderItem {
+public class Tier2PerkHolderItem extends BasicPerkHolderItem{
 
-    public PerkHolderItem(Properties properties) {
-        super(properties, 4);
+    public Tier2PerkHolderItem(Properties properties) {
+        super(properties, 8);
     }
 
     @Override
     protected ResourceLocation getDoubleTapModifierId() {
         return ResourceLocation.fromNamespaceAndPath(FiftyPerksMod.MOD_ID, "doubletap_attack_speed_advanced");
     }
-
 }

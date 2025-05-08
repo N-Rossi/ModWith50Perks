@@ -15,15 +15,27 @@ public class ModItemModelProvider extends ItemModelProvider {
     protected void registerModels() {
         basicItem(ModItems.ELEMENT115_INGOT.get());
         basicItem(ModItems.RAW_ELEMENT115.get());
+
+        /** Perk Holders */
+        basicItem(ModItems.PERK_HOLDER.get());
+        basicItem(ModItems.PERK_HOLDER_TIER2.get());
+
+        /** Crystals */
         basicItem(ModItems.ELEMENT115_CRYSTAL.get());
+        basicItem(ModItems.BASIC_PERK_CRYSTAL.get());
         basicItem(ModItems.JUGGERNOG_CRYSTAL.get());
         basicItem(ModItems.SPEEDCOLA_CRYSTAL.get());
         basicItem(ModItems.STAMINUP_CRYSTAL.get());
         basicItem(ModItems.VICTORIOUSTORTOISE_CRYSTAL.get());
-        basicItem(ModItems.PERK_HOLDER.get());
+        basicItem(ModItems.DOUBLETAP_CRYSTAL.get());
+        basicItem(ModItems.PHDFLOPPER_CRYSTAL.get());
+
+        /** Perks */
         basicItem(ModItems.JUGGERNOG_PERK.get());
         basicItem(ModItems.SPEEDCOLA_PERK.get());
         basicItem(ModItems.STAMINUP_PERK.get());
         basicItem(ModItems.VICTORIOUSTORTOISE_PERK.get());
+        basicItem(ModItems.DOUBLETAP_PERK.get());
+        basicItem(ModItems.PHDFLOPPER_PERK.get());
     }
 }

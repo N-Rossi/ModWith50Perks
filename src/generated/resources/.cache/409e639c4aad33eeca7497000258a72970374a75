@@ -1,4 +1,4 @@
-// 1.21.1	2025-05-07T21:37:39.4210009	Item Models: fiftyperksmod
+// 1.21.1	2025-05-08T12:08:48.2835953	Item Models: fiftyperksmod
 62fdc1c9724d3f7b5327354cce63c667d909f615 assets/fiftyperksmod/models/item/element115_crystal.json
 3168b2c995d4ab393a2016cdde4f98b35b0e7779 assets/fiftyperksmod/models/item/element115_ingot.json
 e28cf16293feb3fe955cfcdddb3f1d2b4eeb5757 assets/fiftyperksmod/models/item/juggernog_crystal.json
@@ -9,3 +9,5 @@ d405fff6625ee3302fde71a822efe9415ab9f9ed assets/fiftyperksmod/models/item/raw_el
 a542479063b6ec0c0b8107070be7e641c5d4a58c assets/fiftyperksmod/models/item/speedcola_perk.json
 e9401e3631402c3e6d13bd4df9a4dc58eeeeab5f assets/fiftyperksmod/models/item/staminup_crystal.json
 d9a00639cd558d7c99e83f7be9648981e2584844 assets/fiftyperksmod/models/item/staminup_perk.json
+4eb2df1a5dbd8ee7fc17e9bdef1531e5c4c04fc1 assets/fiftyperksmod/models/item/victorioustortoise_crystal.json
+f53f674ec78c3b44f8cb089df992f7eda68b90c8 assets/fiftyperksmod/models/item/victorioustortoise_perk.json

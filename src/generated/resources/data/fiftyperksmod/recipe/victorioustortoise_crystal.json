@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:enchanted_golden_apple"
+    },
+    "D": {
+      "item": "minecraft:diamond"
+    },
+    "E": {
+      "item": "fiftyperksmod:element115_block"
+    },
+    "G": {
+      "item": "minecraft:lime_dye"
+    }
+  },
+  "pattern": [
+    "DED",
+    "EGE",
+    "DAD"
+  ],
+  "result": {
+    "count": 1,
+    "id": "fiftyperksmod:victorioustortoise_crystal"
+  }
+}

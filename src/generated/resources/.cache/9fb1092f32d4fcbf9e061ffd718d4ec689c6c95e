@@ -1,4 +1,4 @@
-// 1.21.1	2025-05-07T21:43:37.00053	Recipes
+// 1.21.1	2025-05-08T12:08:48.282597	Recipes
 8ae9d315a74238bde9a0d8d3ca9cb47d2c4e6053 data/fiftyperksmod/advancement/recipes/misc/element115_block.json
 67a3ed7925f28a60e3dd2ff383bbb935a2efc023 data/fiftyperksmod/advancement/recipes/misc/element115_crystal.json
 b5eeb47ced639a14ca9a56c32e339a883d4fd01c data/fiftyperksmod/advancement/recipes/misc/element115_ingot.json
@@ -18,6 +18,8 @@ e13ee87bab953a34d0a97c226c236a43c8c1f6d7 data/fiftyperksmod/advancement/recipes/
 f42e5fe799933e9538518aee516b562c04a8f7fb data/fiftyperksmod/advancement/recipes/misc/speedcola_perk.json
 58bc4493bc365ea194a91d95c7f4ca2ac9ca3ee4 data/fiftyperksmod/advancement/recipes/misc/staminup_crystal.json
 5dbbce13a051693843084e120f4f412762569115 data/fiftyperksmod/advancement/recipes/misc/staminup_perk.json
+27cb26bc8d8f35a9bcfde27b1a9cffbcc11881d3 data/fiftyperksmod/advancement/recipes/misc/victorioustortoise_crystal.json
+6a212faa73b7e4079dd0b598da36b04be5ad340b data/fiftyperksmod/advancement/recipes/misc/victorioustortoise_perk.json
 258567b26eea425a9100e1651cb9a524fb125e3d data/fiftyperksmod/recipe/element115_block.json
 0357a9c71c73ff343829a2499da012437aa8dd11 data/fiftyperksmod/recipe/element115_crystal.json
 1fb1e3507c2de1b20caa4497491429fd7baf3f8d data/fiftyperksmod/recipe/element115_ingot.json
@@ -38,3 +40,5 @@ b2bd4fdf04a366670b39a860aade0bd792ee2562 data/fiftyperksmod/recipe/speedcola_cry
 b4ef964d417af823de1d76ff8229885496254751 data/fiftyperksmod/recipe/speedcola_perk.json
 0343ed41ddbf29c5cf8532508a85aa1c659b68d8 data/fiftyperksmod/recipe/staminup_crystal.json
 5b3bcc6fac025a75481d0a2890c75da0a0cbdf57 data/fiftyperksmod/recipe/staminup_perk.json
+9b386ad61fad95cdc46c08dceaef6a9b27d2f80a data/fiftyperksmod/recipe/victorioustortoise_crystal.json
+2157253d6dbd26c58dd25097a0dfe2f749c62f79 data/fiftyperksmod/recipe/victorioustortoise_perk.json

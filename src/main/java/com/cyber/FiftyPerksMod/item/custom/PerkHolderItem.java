@@ -4,33 +4,35 @@ import com.cyber.FiftyPerksMod.FiftyPerksMod;
 import com.cyber.FiftyPerksMod.effect.ModEffects;
 import com.cyber.FiftyPerksMod.util.ModDataComponents;
 import com.cyber.FiftyPerksMod.util.ModTags;
-import net.minecraft.client.gui.font.glyphs.BakedGlyph;
-import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.core.registries.Registries;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.ai.attributes.AttributeInstance;
+import net.minecraft.world.entity.ai.attributes.AttributeModifier;
+import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.neoforged.neoforge.items.ItemStackHandler;
 import top.theillusivec4.curios.api.SlotContext;
-import top.theillusivec4.curios.api.type.capability.ICurio;
 import top.theillusivec4.curios.api.type.capability.ICurioItem;
 
 import java.util.List;
-import java.util.Optional;
 
-/** TODO Make the item able to hold perks. on right click open gui OR place in crafting table with perks. Place holder in table alone to extract all perks from it. */
+/**
+ * @Author Cyber
+ * Perk Holder Item extends Item and is a Curio Item
+ * It holds up to 4 perks and when the Curio is equipped it will give the stored perks' effects to the player
+ */
 public class PerkHolderItem extends Item implements ICurioItem {
     private static final int SLOT_COUNT = 4;
+    private static final ResourceLocation DOUBLE_TAP_MODIFIER_ID = ResourceLocation.fromNamespaceAndPath(FiftyPerksMod.MOD_ID, "doubletap_attack_speed");
+
 
     public PerkHolderItem(Properties properties) {
         super(properties);
@@ -71,7 +73,6 @@ public class PerkHolderItem extends Item implements ICurioItem {
     public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
         // Get the item handler for the perk holder
         ItemStackHandler handler = getHandler(stack, context.registries());
-        String storedPerks = stack.get(ModDataComponents.STORED_PERK);
         tooltipComponents.add(Component.literal("Stored Perks:"));
 
         for(int i=0; i < handler.getSlots(); i++) {
@@ -85,12 +86,17 @@ public class PerkHolderItem extends Item implements ICurioItem {
     }
 
 
-
+    /**
+     * Runs on tick when curio is equipped
+     * Adds effects for each perk that is equipped.
+     *
+     * @param slotContext The context for the slot that the ItemStack is in
+     * @param stack       The ItemStack in question
+     */
     @Override
     public void curioTick(SlotContext slotContext, ItemStack stack) {
         Player player = (Player) slotContext.entity();
         ItemStackHandler handler = getHandler(stack, player.level().registryAccess());
-//        String storedPerk = stack.get(ModDataComponents.STORED_PERK);
 
         for(int i=0; i < handler.getSlots(); i++) {
             ItemStack perkStack = handler.getStackInSlot(i);
@@ -123,13 +129,38 @@ public class PerkHolderItem extends Item implements ICurioItem {
                         player.addEffect(new MobEffectInstance(MobEffects.ABSORPTION, 210, 0, true, false));
                     }
                 }
+                case "fiftyperksmod:doubletap_perk" -> {
+                    AttributeInstance attackSpeed = player.getAttribute(Attributes.ATTACK_SPEED);
+                    if(attackSpeed != null && attackSpeed.getModifier(DOUBLE_TAP_MODIFIER_ID) == null) {
+                        attackSpeed.addTransientModifier(new AttributeModifier(
+                                DOUBLE_TAP_MODIFIER_ID,
+                                2,
+                                AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL
+                        ));
+                    }
+                }
                 default -> {
                     System.out.println("Unknown Perk");
                 }
             }
         }
+    }
 
+    /**
+     * Remove Double-Tap on Unequip
+     * @param slotContext Context about the slot that the ItemStack was just unequipped from
+     * @param newStack    The new ItemStack in the slot
+     * @param stack       The ItemStack in question
+     */
+    @Override
+    public void onUnequip(SlotContext slotContext, ItemStack newStack, ItemStack stack) {
+        ICurioItem.super.onUnequip(slotContext, newStack, stack);
+        Player player = (Player) slotContext.entity();
 
+        AttributeInstance attackSpeed = player.getAttribute(Attributes.ATTACK_SPEED);
+        if (attackSpeed != null && attackSpeed.getModifier(DOUBLE_TAP_MODIFIER_ID) != null) {
+            attackSpeed.removeModifier(DOUBLE_TAP_MODIFIER_ID);
+        }
     }
 
 }

@@ -14,6 +14,7 @@ import net.minecraft.world.item.crafting.CustomRecipe;
 import net.minecraft.world.item.crafting.CraftingBookCategory;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.Level;
+import net.neoforged.neoforge.items.ItemStackHandler;
 
 import java.util.List;
 
@@ -77,8 +78,20 @@ public class PerkStorageRecipe extends CustomRecipe {
             ItemStack result = perkHolder.copy();
             result.setCount(1);
 
-            String perkId = perkItem.getItem().builtInRegistryHolder().key().location().toString();
-            result.set(ModDataComponents.STORED_PERK.get(), perkId);
+//            String perkId = perkItem.getItem().builtInRegistryHolder().key().location().toString();
+//            result.set(ModDataComponents.STORED_PERK.get(), perkId);
+
+            ItemStackHandler handler = PerkHolderItem.getHandler(result, provider);
+
+            for (int slot = 0; slot < handler.getSlots(); slot++) {
+                if (handler.getStackInSlot(slot).isEmpty()) {
+                    handler.setStackInSlot(slot, perkItem.copy());
+                    break;
+                }
+            }
+
+            PerkHolderItem.saveHandler(result, handler, provider);
+
 
             return result;
         }

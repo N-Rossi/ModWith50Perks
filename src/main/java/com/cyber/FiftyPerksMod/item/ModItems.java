@@ -13,7 +13,10 @@ public class ModItems {
     public static final DeferredItem<Item> GALLIUM_INGOT = ITEMS.register("gallium_ingot", () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> RAW_GALLIUM = ITEMS.register("raw_gallium", () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> PERK_HOLDER = ITEMS.register("perk_holder", () -> new PerkHolderItem(new Item.Properties()));
+
+    /** Perks */
     public static final DeferredItem<Item> JUGGERNOG_PERK = ITEMS.register("juggernog_perk", () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> SPEEDCOLA_PERK = ITEMS.register("speedcola_perk", () -> new Item(new Item.Properties()));
 
 
 

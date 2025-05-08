@@ -22,17 +22,7 @@ public class ModDataComponents {
             DATA_COMPONENTS.register("perk_inventory", () ->
                     DataComponentType.<CompoundTag>builder()
                             .persistent(CompoundTag.CODEC)
-                            .networkSynchronized(new StreamCodec<RegistryFriendlyByteBuf, CompoundTag>() {
-                                @Override
-                                public CompoundTag decode(RegistryFriendlyByteBuf buf) {
-                                    return buf.readNbt();
-                                }
-
-                                @Override
-                                public void encode(RegistryFriendlyByteBuf buf, CompoundTag value) {
-                                    buf.writeNbt(value);
-                                }
-                            })
+                            .networkSynchronized(ByteBufCodecs.COMPOUND_TAG)
                             .build()
     );
 

@@ -21,7 +21,8 @@ public class ModItemTagProvider extends ItemTagsProvider {
     @Override
     protected void addTags(HolderLookup.Provider provider) {
         tag(ModTags.Items.PERK_HOLDER_TAG)
-                .add(ModItems.PERK_HOLDER.get());
+                .add(ModItems.PERK_HOLDER.get())
+                .add(ModItems.PERK_HOLDER_TIER2.get());
 
         tag(ModTags.Items.CRYSTALS_TAG)
                 .add(ModItems.ELEMENT115_CRYSTAL.get())

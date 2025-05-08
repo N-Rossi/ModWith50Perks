@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_element115": {
+      "conditions": {
+        "items": [
+          {
+            "items": "fiftyperksmod:element115_ingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "fiftyperksmod:perk_holder"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_element115"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "fiftyperksmod:perk_holder"
+    ]
+  }
+}

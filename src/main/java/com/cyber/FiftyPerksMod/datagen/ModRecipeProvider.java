@@ -54,6 +54,25 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         oreSmelting(recipeOutput, ELEMENT115_SMELTABLES, RecipeCategory.MISC, ModItems.ELEMENT115_INGOT.get(), 0.25f, 200, "ELEMENT115");
         oreBlasting(recipeOutput, ELEMENT115_SMELTABLES, RecipeCategory.MISC, ModItems.ELEMENT115_INGOT.get(), 0.25f, 100, "ELEMENT115");
 
+        /** Perk Holders */
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.PERK_HOLDER.get())
+                .pattern(" E ")
+                .pattern("LLL")
+                .pattern("LGL")
+                .define('E', ModItems.ELEMENT115_INGOT.get())
+                .define('G', Tags.Items.GLASS_BLOCKS)
+                .define('L', Items.LEATHER)
+                .unlockedBy("has_element115", has(ModItems.ELEMENT115_INGOT)).save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.PERK_HOLDER_TIER2.get())
+                .pattern("ELE")
+                .pattern("LPL")
+                .pattern("ELE")
+                .define('E', ModBlocks.ELEMENT115_BLOCK.get())
+                .define('P', ModItems.PERK_HOLDER.get())
+                .define('L', Items.LEATHER)
+                .unlockedBy("has_element115", has(ModItems.PERK_HOLDER)).save(recipeOutput);
+
         /** Crystals */
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ELEMENT115_CRYSTAL.get())
                 .pattern("GEG")

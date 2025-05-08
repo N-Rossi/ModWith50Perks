@@ -1,18 +1,13 @@
 package com.cyber.FiftyPerksMod.recipe;
 
 import com.cyber.FiftyPerksMod.item.custom.BasicPerkHolderItem;
-import com.cyber.FiftyPerksMod.item.custom.PerkHolderItem;
-import com.cyber.FiftyPerksMod.util.ModDataComponents;
 import com.cyber.FiftyPerksMod.util.ModTags;
 import com.google.common.collect.Lists;
 import net.minecraft.core.HolderLookup;
-import net.minecraft.world.item.DyeItem;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.component.DyedItemColor;
+import net.minecraft.world.item.crafting.CraftingBookCategory;
 import net.minecraft.world.item.crafting.CraftingInput;
 import net.minecraft.world.item.crafting.CustomRecipe;
-import net.minecraft.world.item.crafting.CraftingBookCategory;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.Level;
 import net.neoforged.neoforge.items.ItemStackHandler;
@@ -41,7 +36,7 @@ public class PerkStorageRecipe extends CustomRecipe {
 
                     itemstack = itemstack1;
                 } else {
-                    if (!(itemstack1.getItem() instanceof PerkHolderItem)) {
+                    if (!(itemstack1.getItem() instanceof BasicPerkHolderItem)) {
                         return false;
                     }
 

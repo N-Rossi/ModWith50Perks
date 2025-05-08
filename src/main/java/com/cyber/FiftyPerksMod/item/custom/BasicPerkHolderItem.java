@@ -77,7 +77,7 @@ public abstract class BasicPerkHolderItem extends Item implements ICurioItem {
                 tooltipComponents.add(Component.literal("- " + perkStack.getHoverName().getString()));
             }
         }
-        tooltipComponents.add(Component.literal("Max Perks: 4"));
+        tooltipComponents.add(Component.literal("Max Perks: " + slotcount));
     }
 
     /**

@@ -2,6 +2,7 @@ package com.cyber.FiftyPerksMod.item;
 
 import com.cyber.FiftyPerksMod.FiftyPerksMod;
 import com.cyber.FiftyPerksMod.item.custom.PerkHolderItem;
+import com.cyber.FiftyPerksMod.item.custom.PerkItem;
 import net.minecraft.world.item.Item;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
@@ -16,12 +17,14 @@ public class ModItems {
     public static final DeferredItem<Item> JUGGERNOG_CRYSTAL = ITEMS.register("juggernog_crystal", () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> SPEEDCOLA_CRYSTAL = ITEMS.register("speedcola_crystal", () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> STAMINUP_CRYSTAL = ITEMS.register("staminup_crystal", () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> VICTORIOUSTORTOISE_CRYSTAL = ITEMS.register("victorioustortoise_crystal", () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> PERK_HOLDER = ITEMS.register("perk_holder", () -> new PerkHolderItem(new Item.Properties()));
 
     /** Perks */
-    public static final DeferredItem<Item> JUGGERNOG_PERK = ITEMS.register("juggernog_perk", () -> new Item(new Item.Properties()));
-    public static final DeferredItem<Item> SPEEDCOLA_PERK = ITEMS.register("speedcola_perk", () -> new Item(new Item.Properties()));
-    public static final DeferredItem<Item> STAMINUP_PERK = ITEMS.register("staminup_perk", () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> JUGGERNOG_PERK = ITEMS.register("juggernog_perk", () -> new PerkItem(new Item.Properties(), "Extra Health"));
+    public static final DeferredItem<Item> SPEEDCOLA_PERK = ITEMS.register("speedcola_perk", () -> new PerkItem(new Item.Properties(), "Mining Speed"));
+    public static final DeferredItem<Item> STAMINUP_PERK = ITEMS.register("staminup_perk", () -> new PerkItem(new Item.Properties(), "Swiftness"));
+    public static final DeferredItem<Item> VICTORIOUSTORTOISE_PERK = ITEMS.register("victorioustortoise_perk", () -> new PerkItem(new Item.Properties(), "Absorption"));
 
 
 

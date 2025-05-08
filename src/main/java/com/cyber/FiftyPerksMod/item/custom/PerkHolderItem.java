@@ -100,23 +100,31 @@ public class PerkHolderItem extends Item implements ICurioItem {
 
             switch (perkId) {
                 case "fiftyperksmod:juggernog_perk" -> {
-                    if (!player.hasEffect(ModEffects.JUG_PERK_EFFECT)) {
-                        player.addEffect(new MobEffectInstance(ModEffects.JUG_PERK_EFFECT, 25000, 0, true, false));
+                    MobEffectInstance currentEffect = player.getEffect(ModEffects.JUG_PERK_EFFECT);
+                    if (currentEffect == null || currentEffect.getDuration() <= 15) {
+                        player.addEffect(new MobEffectInstance(ModEffects.JUG_PERK_EFFECT, 210, 0, true, false));
                     }
                 }
                 case "fiftyperksmod:speedcola_perk" -> {
-                    if (!player.hasEffect(MobEffects.DIG_SPEED)) {
+                    MobEffectInstance currentEffect = player.getEffect(MobEffects.DIG_SPEED);
+                    if (currentEffect == null || currentEffect.getDuration() <= 15) {
                         player.addEffect(new MobEffectInstance(MobEffects.DIG_SPEED, 210, 0, true, false));
                     }
                 }
                 case "fiftyperksmod:staminup_perk" -> {
-                    if (!player.hasEffect(MobEffects.MOVEMENT_SPEED)) {
+                    MobEffectInstance currentEffect = player.getEffect(MobEffects.MOVEMENT_SPEED);
+                    if (currentEffect == null || currentEffect.getDuration() <= 15) {
                         player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 210, 0, true, false));
                     }
                 }
+                case "fiftyperksmod:victorioustortoise_perk" -> {
+                    MobEffectInstance currentEffect = player.getEffect(MobEffects.ABSORPTION);
+                    if (currentEffect == null || currentEffect.getDuration() <= 15) {
+                        player.addEffect(new MobEffectInstance(MobEffects.ABSORPTION, 210, 0, true, false));
+                    }
+                }
                 default -> {
-                    // Optional: log or ignore unknown perks
-                    System.out.println("");
+                    System.out.println("Unknown Perk");
                 }
             }
         }

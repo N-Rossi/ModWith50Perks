@@ -19,9 +19,11 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.JUGGERNOG_CRYSTAL.get());
         basicItem(ModItems.SPEEDCOLA_CRYSTAL.get());
         basicItem(ModItems.STAMINUP_CRYSTAL.get());
+        basicItem(ModItems.VICTORIOUSTORTOISE_CRYSTAL.get());
         basicItem(ModItems.PERK_HOLDER.get());
         basicItem(ModItems.JUGGERNOG_PERK.get());
         basicItem(ModItems.SPEEDCOLA_PERK.get());
         basicItem(ModItems.STAMINUP_PERK.get());
+        basicItem(ModItems.VICTORIOUSTORTOISE_PERK.get());
     }
 }

@@ -1,4 +1,4 @@
-// 1.21.1	2025-05-08T23:14:34.1021577	Recipes
+// 1.21.1	2025-05-09T07:17:25.2096943	Recipes
 6283a439ee6007ca38a063f606c7a2f09b16297a data/fiftyperksmod/advancement/recipes/misc/basic_perk_crystal.json
 efab8a945deae8389e579865eb9934076dea8700 data/fiftyperksmod/advancement/recipes/misc/deadshot_crystal.json
 96bb5ebbe2f11e14dc089beaabae2f3e4022c866 data/fiftyperksmod/advancement/recipes/misc/deadshot_perk.json
@@ -31,6 +31,8 @@ c787931479625bb3634313f373e4edd8f7076631 data/fiftyperksmod/advancement/recipes/
 f42e5fe799933e9538518aee516b562c04a8f7fb data/fiftyperksmod/advancement/recipes/misc/speedcola_perk.json
 58bc4493bc365ea194a91d95c7f4ca2ac9ca3ee4 data/fiftyperksmod/advancement/recipes/misc/staminup_crystal.json
 5dbbce13a051693843084e120f4f412762569115 data/fiftyperksmod/advancement/recipes/misc/staminup_perk.json
+2e74efade9437e0ef4805c060bf5408fb4689d7d data/fiftyperksmod/advancement/recipes/misc/stronghold_crystal.json
+647dfa4f70d2adf43a5c6fab101a839e6b42bcc0 data/fiftyperksmod/advancement/recipes/misc/stronghold_perk.json
 27cb26bc8d8f35a9bcfde27b1a9cffbcc11881d3 data/fiftyperksmod/advancement/recipes/misc/victorioustortoise_crystal.json
 6a212faa73b7e4079dd0b598da36b04be5ad340b data/fiftyperksmod/advancement/recipes/misc/victorioustortoise_perk.json
 4eeb6f09bd81f19d4388d92ce46392d90b14f92b data/fiftyperksmod/advancement/recipes/misc/whoswho_crystal.json
@@ -71,6 +73,8 @@ a66fb728c9c96513fb791866f00d35c6ffaf68a1 data/fiftyperksmod/recipe/raw_element11
 b4ef964d417af823de1d76ff8229885496254751 data/fiftyperksmod/recipe/speedcola_perk.json
 a854ae5649a22ed61bdfc5cd9f9f7f47d3690abb data/fiftyperksmod/recipe/staminup_crystal.json
 5b3bcc6fac025a75481d0a2890c75da0a0cbdf57 data/fiftyperksmod/recipe/staminup_perk.json
+4e3534e20ccfb9f960a8e6343bb69c32635fa309 data/fiftyperksmod/recipe/stronghold_crystal.json
+7fe981f1b447a1cfa6432cbd63f69b1cb9fbe1ca data/fiftyperksmod/recipe/stronghold_perk.json
 a049d015cde6ddf357c8eaaecd46b2cac0c2cdcd data/fiftyperksmod/recipe/victorioustortoise_crystal.json
 2157253d6dbd26c58dd25097a0dfe2f749c62f79 data/fiftyperksmod/recipe/victorioustortoise_perk.json
 468d7300166e29448e45d60ac20d06b606807a39 data/fiftyperksmod/recipe/whoswho_crystal.json

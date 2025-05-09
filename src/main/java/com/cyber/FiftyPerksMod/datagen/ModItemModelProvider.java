@@ -34,6 +34,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.WINTERSWAIL_CRYSTAL.get());
         basicItem(ModItems.DEATHPERCEPTION_CRYSTAL.get());
         basicItem(ModItems.DEADSHOT_CRYSTAL.get());
+        basicItem(ModItems.STRONGHOLD_CRYSTAL.get());
 
         /** Perks */
         basicItem(ModItems.JUGGERNOG_PERK.get());
@@ -47,5 +48,6 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.WINTERSWAIL_PERK.get());
         basicItem(ModItems.DEATHPERCEPTION_PERK.get());
         basicItem(ModItems.DEADSHOT_PERK.get());
+        basicItem(ModItems.STRONGHOLD_PERK.get());
     }
 }

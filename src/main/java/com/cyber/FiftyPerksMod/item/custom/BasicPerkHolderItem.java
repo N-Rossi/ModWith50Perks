@@ -31,6 +31,7 @@ public abstract class BasicPerkHolderItem extends Item implements ICurioItem {
     private final int slotcount;
 
     protected abstract ResourceLocation getDoubleTapModifierId();
+    protected abstract ResourceLocation getStrongholdModifierId();
 
     protected BasicPerkHolderItem(Properties properties, int slotcount) {
         super(properties);
@@ -175,12 +176,28 @@ public abstract class BasicPerkHolderItem extends Item implements ICurioItem {
                         player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 210, 0, true, false));
                     }
                 }
+//                case "fiftyperksmod:stronghold_perk" -> {
+//                    MobEffectInstance currentEffect = player.getEffect(ModEffects.STRONGHOLD_PERK_EFFECT);
+//                    if (currentEffect == null || currentEffect.getDuration() <= 15) {
+//                        player.addEffect(new MobEffectInstance(ModEffects.STRONGHOLD_PERK_EFFECT, 210, 0, true, false));
+//                    }
+//                }
                 case "fiftyperksmod:doubletap_perk" -> {
                     AttributeInstance attackSpeed = player.getAttribute(Attributes.ATTACK_SPEED);
                     if(attackSpeed != null && attackSpeed.getModifier(getDoubleTapModifierId()) == null) {
                         attackSpeed.addTransientModifier(new AttributeModifier(
                                 getDoubleTapModifierId(),
                                 2,
+                                AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL
+                        ));
+                    }
+                }
+                case "fiftyperksmod:stronghold_perk" -> {
+                    AttributeInstance toughness = player.getAttribute(Attributes.ARMOR_TOUGHNESS);
+                    if(toughness != null && toughness.getModifier(getStrongholdModifierId()) == null) {
+                        toughness.addTransientModifier(new AttributeModifier(
+                                getStrongholdModifierId(),
+                                1.25,
                                 AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL
                         ));
                     }
@@ -203,9 +220,15 @@ public abstract class BasicPerkHolderItem extends Item implements ICurioItem {
         ICurioItem.super.onUnequip(slotContext, newStack, stack);
         Player player = (Player) slotContext.entity();
 
+        /** Double Tap */
         AttributeInstance attackSpeed = player.getAttribute(Attributes.ATTACK_SPEED);
         if (attackSpeed != null && attackSpeed.getModifier(getDoubleTapModifierId()) != null) {
             attackSpeed.removeModifier(getDoubleTapModifierId());
+        }
+        /** Stone Cold Stronghold */
+        AttributeInstance toughness = player.getAttribute(Attributes.ARMOR_TOUGHNESS);
+        if (toughness != null && toughness.getModifier(getStrongholdModifierId()) != null) {
+            toughness.removeModifier(getStrongholdModifierId());
         }
     }
 

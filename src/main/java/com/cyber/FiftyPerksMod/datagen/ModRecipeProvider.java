@@ -213,6 +213,17 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('X', ModItems.ELEMENT115_CRYSTAL.get())
                 .unlockedBy("has_element115_block", has(ModBlocks.ELEMENT115_BLOCK)).save(recipeOutput);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.STRONGHOLD_CRYSTAL.get())
+                .pattern("DGD")
+                .pattern("EXE")
+                .pattern("DFD")
+                .define('E', ModBlocks.ELEMENT115_BLOCK.get())
+                .define('G', Items.BROWN_DYE)
+                .define('D', Items.DIAMOND)
+                .define('F', Blocks.EMERALD_BLOCK)
+                .define('X', ModItems.ELEMENT115_CRYSTAL.get())
+                .unlockedBy("has_element115_block", has(ModBlocks.ELEMENT115_BLOCK)).save(recipeOutput);
+
 
         /** Perk Recipes */
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.JUGGERNOG_PERK.get())
@@ -324,6 +335,16 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('C', ModItems.DEADSHOT_CRYSTAL)
                 .define('W', Items.WATER_BUCKET)
                 .unlockedBy("has_deadshot_crystal", has(ModItems.DEADSHOT_CRYSTAL.get())).save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.STRONGHOLD_PERK.get())
+                .pattern("ENE")
+                .pattern("CWC")
+                .pattern("CCC")
+                .define('E', Blocks.EMERALD_BLOCK)
+                .define('N', Blocks.NETHERITE_BLOCK)
+                .define('C', ModItems.STRONGHOLD_CRYSTAL)
+                .define('W', Items.WATER_BUCKET)
+                .unlockedBy("has_strognghold_crystal", has(ModItems.STRONGHOLD_CRYSTAL.get())).save(recipeOutput);
 
 
         /** Recipe for Perk Holder */

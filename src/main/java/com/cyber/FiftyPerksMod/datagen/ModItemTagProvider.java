@@ -37,6 +37,7 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(ModItems.WINTERSWAIL_CRYSTAL.get())
                 .add(ModItems.DEATHPERCEPTION_CRYSTAL.get())
                 .add(ModItems.DEADSHOT_CRYSTAL.get())
+                .add(ModItems.STRONGHOLD_CRYSTAL.get())
                 .add(ModItems.WHOSWHO_CRYSTAL.get());
 
         tag(ModTags.Items.PERKS_TAG)
@@ -50,6 +51,7 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(ModItems.WINTERSWAIL_PERK.get())
                 .add(ModItems.DEATHPERCEPTION_PERK.get())
                 .add(ModItems.DEADSHOT_PERK.get())
+                .add(ModItems.STRONGHOLD_PERK.get())
                 .add(ModItems.STAMINUP_PERK.get());
 
     }

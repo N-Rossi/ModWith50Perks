@@ -23,6 +23,7 @@
   "item.fiftyperksmod.winterswail_crystal": "Winter's Wail Crystal",
   "item.fiftyperksmod.deathperception_crystal": "Death Perception Crystal",
   "item.fiftyperksmod.deadshot_crystal": "Deadshot Daiquiri Crystal",
+  "item.fiftyperksmod.stronghold_crystal": "Stone Cold Stronghold Crystal",
 
   "item.fiftyperksmod.perk_holder": "Perk Holder",
   "item.fiftyperksmod.perk_holder_tier2": "Tier 2 Perk Holder",
@@ -38,7 +39,9 @@
   "item.fiftyperksmod.winterswail_perk": "Winter's Wail Perk",
   "item.fiftyperksmod.deathperception_perk": "Death Perception Perk",
   "item.fiftyperksmod.deadshot_perk": "Deadshot Daiquiri Perk",
+  "item.fiftyperksmod.stronghold_perk": "Stone Cold Stronghold Perk",
 
   "effect.fiftyperksmod.slimey": "Slimey",
-  "effect.fiftyperksmod.jug_perk": "Juggernog"
+  "effect.fiftyperksmod.jug_perk": "Juggernog",
+  "effect.fiftyperksmod.stronghold_perk": "Stone Cold Stronghold"
 }

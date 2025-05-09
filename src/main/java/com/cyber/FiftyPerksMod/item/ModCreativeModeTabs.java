@@ -42,6 +42,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.WINTERSWAIL_CRYSTAL);
                         output.accept(ModItems.DEATHPERCEPTION_CRYSTAL);
                         output.accept(ModItems.DEADSHOT_CRYSTAL);
+                        output.accept(ModItems.STRONGHOLD_CRYSTAL);
 
                         output.accept(ModItems.JUGGERNOG_PERK);
                         output.accept(ModItems.SPEEDCOLA_PERK);
@@ -54,6 +55,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.WINTERSWAIL_PERK);
                         output.accept(ModItems.DEATHPERCEPTION_PERK);
                         output.accept(ModItems.DEADSHOT_PERK);
+                        output.accept(ModItems.STRONGHOLD_PERK);
 
                     }).build());
     public static void register(IEventBus eventBus) {

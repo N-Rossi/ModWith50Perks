@@ -37,6 +37,9 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.STAMINUP_CRYSTAL);
                         output.accept(ModItems.PHDFLOPPER_CRYSTAL);
                         output.accept(ModItems.VICTORIOUSTORTOISE_CRYSTAL);
+                        output.accept(ModItems.QUICKREVIVE_CRYSTAL);
+                        output.accept(ModItems.WHOSWHO_CRYSTAL);
+                        output.accept(ModItems.WINTERSWAIL_CRYSTAL);
 
                         output.accept(ModItems.JUGGERNOG_PERK);
                         output.accept(ModItems.SPEEDCOLA_PERK);
@@ -44,6 +47,9 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.VICTORIOUSTORTOISE_PERK);
                         output.accept(ModItems.DOUBLETAP_PERK);
                         output.accept(ModItems.PHDFLOPPER_PERK);
+                        output.accept(ModItems.QUICKREVIVE_PERK);
+                        output.accept(ModItems.WHOSWHO_PERK);
+                        output.accept(ModItems.WINTERSWAIL_PERK);
 
                     }).build());
     public static void register(IEventBus eventBus) {

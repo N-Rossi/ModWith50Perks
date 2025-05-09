@@ -32,7 +32,10 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(ModItems.JUGGERNOG_CRYSTAL.get())
                 .add(ModItems.DOUBLETAP_CRYSTAL.get())
                 .add(ModItems.VICTORIOUSTORTOISE_CRYSTAL.get())
-                .add(ModItems.PHDFLOPPER_CRYSTAL.get());
+                .add(ModItems.PHDFLOPPER_CRYSTAL.get())
+                .add(ModItems.QUICKREVIVE_CRYSTAL.get())
+                .add(ModItems.WINTERSWAIL_CRYSTAL.get())
+                .add(ModItems.WHOSWHO_CRYSTAL.get());
 
         tag(ModTags.Items.PERKS_TAG)
                 .add(ModItems.JUGGERNOG_PERK.get())
@@ -40,6 +43,9 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(ModItems.VICTORIOUSTORTOISE_PERK.get())
                 .add(ModItems.DOUBLETAP_PERK.get())
                 .add(ModItems.PHDFLOPPER_PERK.get())
+                .add(ModItems.QUICKREVIVE_PERK.get())
+                .add(ModItems.WHOSWHO_PERK.get())
+                .add(ModItems.WINTERSWAIL_PERK.get())
                 .add(ModItems.STAMINUP_PERK.get());
 
     }

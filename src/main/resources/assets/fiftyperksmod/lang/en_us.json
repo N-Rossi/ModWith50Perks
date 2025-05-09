@@ -18,6 +18,9 @@
   "item.fiftyperksmod.staminup_crystal": "Stamin-Up Crystal",
   "item.fiftyperksmod.victorioustortoise_crystal": "Victorious Tortoise Crystal",
   "item.fiftyperksmod.phdflopper_crystal": "PHD Flopper Crystal",
+  "item.fiftyperksmod.quickrevive_crystal": "Quick Revive Crystal",
+  "item.fiftyperksmod.whoswho_crystal": "Who's Who Crystal",
+  "item.fiftyperksmod.winterswail_crystal": "Winter's Wail Crystal",
 
   "item.fiftyperksmod.perk_holder": "Perk Holder",
   "item.fiftyperksmod.perk_holder_tier2": "Tier 2 Perk Holder",
@@ -28,6 +31,9 @@
   "item.fiftyperksmod.victorioustortoise_perk": "Victorious Tortoise Perk",
   "item.fiftyperksmod.doubletap_perk": "Double-Tap Soda Perk",
   "item.fiftyperksmod.phdflopper_perk": "PHD Flopper Perk",
+  "item.fiftyperksmod.quickrevive_perk": "Quick Revive Perk",
+  "item.fiftyperksmod.whoswho_perk": "Who's Who Perk",
+  "item.fiftyperksmod.winterswail_perk": "Winter's Wail Perk",
 
   "effect.fiftyperksmod.slimey": "Slimey",
   "effect.fiftyperksmod.jug_perk": "Juggernog"

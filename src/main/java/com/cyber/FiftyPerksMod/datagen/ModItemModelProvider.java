@@ -29,6 +29,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.VICTORIOUSTORTOISE_CRYSTAL.get());
         basicItem(ModItems.DOUBLETAP_CRYSTAL.get());
         basicItem(ModItems.PHDFLOPPER_CRYSTAL.get());
+        basicItem(ModItems.QUICKREVIVE_CRYSTAL.get());
+        basicItem(ModItems.WHOSWHO_CRYSTAL.get());
+        basicItem(ModItems.WINTERSWAIL_CRYSTAL.get());
 
         /** Perks */
         basicItem(ModItems.JUGGERNOG_PERK.get());
@@ -37,5 +40,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.VICTORIOUSTORTOISE_PERK.get());
         basicItem(ModItems.DOUBLETAP_PERK.get());
         basicItem(ModItems.PHDFLOPPER_PERK.get());
+        basicItem(ModItems.QUICKREVIVE_PERK.get());
+        basicItem(ModItems.WHOSWHO_PERK.get());
+        basicItem(ModItems.WINTERSWAIL_PERK.get());
     }
 }

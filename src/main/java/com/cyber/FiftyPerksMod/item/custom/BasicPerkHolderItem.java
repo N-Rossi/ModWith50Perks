@@ -129,6 +129,24 @@ public abstract class BasicPerkHolderItem extends Item implements ICurioItem {
                         player.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 210, 0, true, false));
                     }
                 }
+                case "fiftyperksmod:quickrevive_perk" -> {
+                    MobEffectInstance currentEffect = player.getEffect(MobEffects.REGENERATION);
+                    if (currentEffect == null || currentEffect.getDuration() <= 15) {
+                        player.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 210, 0, true, false));
+                    }
+                }
+                case "fiftyperksmod:whoswho_perk" -> {
+                    MobEffectInstance currentEffect = player.getEffect(MobEffects.LUCK);
+                    if (currentEffect == null || currentEffect.getDuration() <= 15) {
+                        player.addEffect(new MobEffectInstance(MobEffects.LUCK, 210, 1, true, false));
+                    }
+                }
+                case "fiftyperksmod:winterswail_perk" -> {
+                    MobEffectInstance currentEffect = player.getEffect(MobEffects.JUMP);
+                    if (currentEffect == null || currentEffect.getDuration() <= 15) {
+                        player.addEffect(new MobEffectInstance(MobEffects.JUMP, 210, 1, true, false));
+                    }
+                }
                 case "fiftyperksmod:doubletap_perk" -> {
                     AttributeInstance attackSpeed = player.getAttribute(Attributes.ATTACK_SPEED);
                     if(attackSpeed != null && attackSpeed.getModifier(getDoubleTapModifierId()) == null) {

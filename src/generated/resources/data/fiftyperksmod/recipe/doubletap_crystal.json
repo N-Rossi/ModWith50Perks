@@ -13,11 +13,14 @@
     },
     "N": {
       "item": "minecraft:netherite_sword"
+    },
+    "X": {
+      "item": "fiftyperksmod:element115_crystal"
     }
   },
   "pattern": [
-    "DED",
-    "EGE",
+    "DGD",
+    "EXE",
     "DND"
   ],
   "result": {

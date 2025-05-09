@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "fiftyperksmod:winterswail_perk"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_winterswail_crystal": {
+      "conditions": {
+        "items": [
+          {
+            "items": "fiftyperksmod:winterswail_crystal"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_winterswail_crystal"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "fiftyperksmod:winterswail_perk"
+    ]
+  }
+}

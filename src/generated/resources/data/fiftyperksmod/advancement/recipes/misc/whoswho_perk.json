@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "fiftyperksmod:whoswho_perk"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_whoswho_crystal": {
+      "conditions": {
+        "items": [
+          {
+            "items": "fiftyperksmod:whoswho_crystal"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_whoswho_crystal"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "fiftyperksmod:whoswho_perk"
+    ]
+  }
+}

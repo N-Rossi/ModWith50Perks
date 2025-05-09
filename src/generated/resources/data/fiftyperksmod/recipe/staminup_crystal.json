@@ -13,11 +13,14 @@
     },
     "P": {
       "item": "minecraft:netherite_pickaxe"
+    },
+    "X": {
+      "item": "fiftyperksmod:element115_crystal"
     }
   },
   "pattern": [
-    "DED",
-    "EGE",
+    "DGD",
+    "EXE",
     "DPD"
   ],
   "result": {

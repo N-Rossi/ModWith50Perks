@@ -2,6 +2,7 @@ package com.cyber.FiftyPerksMod.item.custom;
 
 import com.cyber.FiftyPerksMod.FiftyPerksMod;
 import com.cyber.FiftyPerksMod.effect.ModEffects;
+import com.cyber.FiftyPerksMod.recipe.RemovePerkRecipe;
 import com.cyber.FiftyPerksMod.util.ModDataComponents;
 import com.cyber.FiftyPerksMod.util.ModTags;
 import net.minecraft.core.HolderLookup;
@@ -18,6 +19,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.level.Level;
 import net.neoforged.neoforge.items.ItemStackHandler;
 import top.theillusivec4.curios.api.SlotContext;
 import top.theillusivec4.curios.api.type.capability.ICurioItem;
@@ -62,6 +64,20 @@ public abstract class BasicPerkHolderItem extends Item implements ICurioItem {
     public void saveHandler(ItemStack stack, ItemStackHandler handler, HolderLookup.Provider provider) {
         CompoundTag serialized = handler.serializeNBT(provider);
         stack.set(ModDataComponents.PERK_INVENTORY.get(), serialized);
+    }
+
+    @Override
+    public void onCraftedBy(ItemStack stack, Level level, Player player) {
+        super.onCraftedBy(stack, level, player);
+
+        if (!level.isClientSide && Boolean.TRUE.equals(stack.get(ModDataComponents.PERK_WAS_REMOVED))) {
+            ItemStack removed = RemovePerkRecipe.REMOVED_PERK.get();
+            if (removed != null && !removed.isEmpty()) {
+                player.drop(removed, false);
+            }
+            RemovePerkRecipe.REMOVED_PERK.remove(); // Clean it up
+            stack.remove(ModDataComponents.PERK_WAS_REMOVED); // Clean flag
+        }
     }
 
     @Override
@@ -192,5 +208,7 @@ public abstract class BasicPerkHolderItem extends Item implements ICurioItem {
             attackSpeed.removeModifier(getDoubleTapModifierId());
         }
     }
+
+
 
 }

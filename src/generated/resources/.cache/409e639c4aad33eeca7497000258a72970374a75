@@ -1,4 +1,4 @@
-// 1.21.1	2025-05-08T16:01:39.9111154	Item Models: fiftyperksmod
+// 1.21.1	2025-05-08T18:06:03.3096891	Item Models: fiftyperksmod
 186e48384325c65d70df80d46ff7fc403e0a83cf assets/fiftyperksmod/models/item/basic_perk_crystal.json
 87d6f536d841e2ef73604e840660a8d0dba783b4 assets/fiftyperksmod/models/item/doubletap_crystal.json
 2064afb6ce9fd6817528eccd72800c1535213ac2 assets/fiftyperksmod/models/item/doubletap_perk.json
@@ -10,6 +10,8 @@ beea255341885e6d18b78f1c68820ca5801cf45a assets/fiftyperksmod/models/item/jugger
 6651641ef437ff14b12bd40400f552d5f8bf2bc9 assets/fiftyperksmod/models/item/perk_holder_tier2.json
 512bfdac895e6e00065a1fe36fb314ab32566396 assets/fiftyperksmod/models/item/phdflopper_crystal.json
 97806bd52f8d2fe623a9e38a68e84961d325b2d9 assets/fiftyperksmod/models/item/phdflopper_perk.json
+7e750c1714ff723a2e5d563703a1fa52432590e1 assets/fiftyperksmod/models/item/quickrevive_crystal.json
+8723e5b1ff1f9a2edd2780ea2edb36fad1992fae assets/fiftyperksmod/models/item/quickrevive_perk.json
 d405fff6625ee3302fde71a822efe9415ab9f9ed assets/fiftyperksmod/models/item/raw_element115.json
 6995ea41c1b4b915873dcdc7416ab22e7b7736e0 assets/fiftyperksmod/models/item/speedcola_crystal.json
 a542479063b6ec0c0b8107070be7e641c5d4a58c assets/fiftyperksmod/models/item/speedcola_perk.json
@@ -17,3 +19,7 @@ e9401e3631402c3e6d13bd4df9a4dc58eeeeab5f assets/fiftyperksmod/models/item/stamin
 d9a00639cd558d7c99e83f7be9648981e2584844 assets/fiftyperksmod/models/item/staminup_perk.json
 4eb2df1a5dbd8ee7fc17e9bdef1531e5c4c04fc1 assets/fiftyperksmod/models/item/victorioustortoise_crystal.json
 f53f674ec78c3b44f8cb089df992f7eda68b90c8 assets/fiftyperksmod/models/item/victorioustortoise_perk.json
+28894c30a88e5167d2dacf90e46840f919bcc36a assets/fiftyperksmod/models/item/whoswho_crystal.json
+fc05edc8ceed2d3b7740630714463a1442429c66 assets/fiftyperksmod/models/item/whoswho_perk.json
+37faee86cfc186387cef6ae149ee1a1e5603064b assets/fiftyperksmod/models/item/winterswail_crystal.json
+1955db8c61f81f42c4ff4cc6dec9c298457f337b assets/fiftyperksmod/models/item/winterswail_perk.json

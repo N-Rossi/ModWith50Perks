@@ -147,6 +147,18 @@ public abstract class BasicPerkHolderItem extends Item implements ICurioItem {
                         player.addEffect(new MobEffectInstance(MobEffects.JUMP, 210, 1, true, false));
                     }
                 }
+                case "fiftyperksmod:deathperception_perk" -> {
+                    MobEffectInstance currentEffect = player.getEffect(MobEffects.NIGHT_VISION);
+                    if (currentEffect == null || currentEffect.getDuration() <= 15) {
+                        player.addEffect(new MobEffectInstance(MobEffects.NIGHT_VISION, 210, 1, true, false));
+                    }
+                }
+                case "fiftyperksmod:deadshot_perk" -> {
+                    MobEffectInstance currentEffect = player.getEffect(MobEffects.DAMAGE_BOOST);
+                    if (currentEffect == null || currentEffect.getDuration() <= 15) {
+                        player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 210, 0, true, false));
+                    }
+                }
                 case "fiftyperksmod:doubletap_perk" -> {
                     AttributeInstance attackSpeed = player.getAttribute(Attributes.ATTACK_SPEED);
                     if(attackSpeed != null && attackSpeed.getModifier(getDoubleTapModifierId()) == null) {

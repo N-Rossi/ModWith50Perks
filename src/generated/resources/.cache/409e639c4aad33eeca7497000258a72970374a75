@@ -1,5 +1,9 @@
-// 1.21.1	2025-05-08T18:06:03.3096891	Item Models: fiftyperksmod
+// 1.21.1	2025-05-08T19:22:57.1104198	Item Models: fiftyperksmod
 186e48384325c65d70df80d46ff7fc403e0a83cf assets/fiftyperksmod/models/item/basic_perk_crystal.json
+7ac84a54aae12138f6bad161b5a96fbdc0f2b095 assets/fiftyperksmod/models/item/deadshot_crystal.json
+3efa0b3c76dc07f33686e6cdc5d3d240d160870d assets/fiftyperksmod/models/item/deadshot_perk.json
+da60da5992f8f2fc0326999efd168a557fc540b6 assets/fiftyperksmod/models/item/deathperception_crystal.json
+1fd547e01aff90a995e48e84a5ed7f6147aec041 assets/fiftyperksmod/models/item/deathperception_perk.json
 87d6f536d841e2ef73604e840660a8d0dba783b4 assets/fiftyperksmod/models/item/doubletap_crystal.json
 2064afb6ce9fd6817528eccd72800c1535213ac2 assets/fiftyperksmod/models/item/doubletap_perk.json
 62fdc1c9724d3f7b5327354cce63c667d909f615 assets/fiftyperksmod/models/item/element115_crystal.json

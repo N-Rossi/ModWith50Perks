@@ -27,6 +27,8 @@ public class ModItems {
     public static final DeferredItem<Item> QUICKREVIVE_CRYSTAL = ITEMS.register("quickrevive_crystal", () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> WHOSWHO_CRYSTAL = ITEMS.register("whoswho_crystal", () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> WINTERSWAIL_CRYSTAL = ITEMS.register("winterswail_crystal", () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> DEATHPERCEPTION_CRYSTAL = ITEMS.register("deathperception_crystal", () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> DEADSHOT_CRYSTAL = ITEMS.register("deadshot_crystal", () -> new Item(new Item.Properties()));
 
     /** Perk Holders */
     public static final DeferredItem<Item> PERK_HOLDER = ITEMS.register("perk_holder", () -> new PerkHolderItem(new Item.Properties()));
@@ -42,6 +44,8 @@ public class ModItems {
     public static final DeferredItem<Item> QUICKREVIVE_PERK = ITEMS.register("quickrevive_perk", () -> new PerkItem(new Item.Properties(), "Regeneration"));
     public static final DeferredItem<Item> WHOSWHO_PERK = ITEMS.register("whoswho_perk", () -> new PerkItem(new Item.Properties(), "Luck"));
     public static final DeferredItem<Item> WINTERSWAIL_PERK = ITEMS.register("winterswail_perk", () -> new PerkItem(new Item.Properties(), "Jump"));
+    public static final DeferredItem<Item> DEATHPERCEPTION_PERK = ITEMS.register("deathperception_perk", () -> new PerkItem(new Item.Properties(), "Night Vision"));
+    public static final DeferredItem<Item> DEADSHOT_PERK = ITEMS.register("deadshot_perk", () -> new PerkItem(new Item.Properties(), "Strength"));
 
 
     public static void register(IEventBus eventBus) {

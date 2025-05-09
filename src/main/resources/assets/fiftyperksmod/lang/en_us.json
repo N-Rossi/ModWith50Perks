@@ -21,6 +21,8 @@
   "item.fiftyperksmod.quickrevive_crystal": "Quick Revive Crystal",
   "item.fiftyperksmod.whoswho_crystal": "Who's Who Crystal",
   "item.fiftyperksmod.winterswail_crystal": "Winter's Wail Crystal",
+  "item.fiftyperksmod.deathperception_crystal": "Death Perception Crystal",
+  "item.fiftyperksmod.deadshot_crystal": "Deadshot Daiquiri Crystal",
 
   "item.fiftyperksmod.perk_holder": "Perk Holder",
   "item.fiftyperksmod.perk_holder_tier2": "Tier 2 Perk Holder",
@@ -34,6 +36,8 @@
   "item.fiftyperksmod.quickrevive_perk": "Quick Revive Perk",
   "item.fiftyperksmod.whoswho_perk": "Who's Who Perk",
   "item.fiftyperksmod.winterswail_perk": "Winter's Wail Perk",
+  "item.fiftyperksmod.deathperception_perk": "Death Perception Perk",
+  "item.fiftyperksmod.deadshot_perk": "Deadshot Daiquiri Perk",
 
   "effect.fiftyperksmod.slimey": "Slimey",
   "effect.fiftyperksmod.jug_perk": "Juggernog"

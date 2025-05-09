@@ -2,17 +2,17 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "A": {
-      "item": "minecraft:enchanted_golden_apple"
-    },
     "D": {
       "item": "minecraft:diamond"
     },
     "E": {
       "item": "fiftyperksmod:element115_block"
     },
+    "F": {
+      "item": "minecraft:lapis_block"
+    },
     "G": {
-      "item": "minecraft:lime_dye"
+      "item": "minecraft:cyan_dye"
     },
     "X": {
       "item": "fiftyperksmod:element115_crystal"
@@ -21,10 +21,10 @@
   "pattern": [
     "DGD",
     "EXE",
-    "DAD"
+    "DFD"
   ],
   "result": {
     "count": 1,
-    "id": "fiftyperksmod:victorioustortoise_crystal"
+    "id": "fiftyperksmod:whoswho_crystal"
   }
 }

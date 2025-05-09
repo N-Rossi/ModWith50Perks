@@ -12,12 +12,15 @@
       "item": "minecraft:fire_charge"
     },
     "G": {
-      "item": "minecraft:orange_dye"
+      "item": "minecraft:purple_dye"
+    },
+    "X": {
+      "item": "fiftyperksmod:element115_crystal"
     }
   },
   "pattern": [
-    "DED",
-    "EGE",
+    "DGD",
+    "EXE",
     "DFD"
   ],
   "result": {

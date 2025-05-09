@@ -13,11 +13,14 @@
     },
     "R": {
       "item": "minecraft:red_dye"
+    },
+    "X": {
+      "item": "fiftyperksmod:element115_crystal"
     }
   },
   "pattern": [
-    "DED",
-    "ERE",
+    "DRD",
+    "EXE",
     "DCD"
   ],
   "result": {

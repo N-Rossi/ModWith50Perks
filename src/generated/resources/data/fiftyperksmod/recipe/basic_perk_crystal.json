@@ -3,22 +3,19 @@
   "category": "misc",
   "key": {
     "D": {
-      "item": "fiftyperksmod:basic_perk_crystal"
-    },
-    "E": {
-      "item": "fiftyperksmod:element115_ingot"
+      "item": "minecraft:diamond"
     },
     "G": {
       "tag": "c:glass_blocks"
     }
   },
   "pattern": [
-    "GEG",
-    "EDE",
-    "GEG"
+    " D ",
+    "DGD",
+    " D "
   ],
   "result": {
     "count": 1,
-    "id": "fiftyperksmod:element115_crystal"
+    "id": "fiftyperksmod:basic_perk_crystal"
   }
 }

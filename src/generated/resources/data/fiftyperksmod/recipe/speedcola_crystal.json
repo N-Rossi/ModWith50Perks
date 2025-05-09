@@ -13,11 +13,14 @@
     },
     "S": {
       "item": "minecraft:sugar"
+    },
+    "X": {
+      "item": "fiftyperksmod:element115_crystal"
     }
   },
   "pattern": [
-    "DED",
-    "EGE",
+    "DGD",
+    "EXE",
     "DSD"
   ],
   "result": {

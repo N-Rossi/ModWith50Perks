@@ -3,6 +3,7 @@ package com.cyber.FiftyPerksMod.datagen;
 import com.cyber.FiftyPerksMod.FiftyPerksMod;
 import com.cyber.FiftyPerksMod.block.ModBlocks;
 import com.cyber.FiftyPerksMod.item.ModItems;
+import com.cyber.FiftyPerksMod.recipe.PerkHolderUpgradeRecipe;
 import com.cyber.FiftyPerksMod.recipe.PerkStorageRecipe;
 import com.cyber.FiftyPerksMod.recipe.RemovePerkRecipe;
 import io.netty.util.internal.SuppressJava6Requirement;
@@ -65,14 +66,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('L', Items.LEATHER)
                 .unlockedBy("has_element115", has(ModItems.ELEMENT115_INGOT)).save(recipeOutput);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.PERK_HOLDER_TIER2.get())
-                .pattern("ELE")
-                .pattern("LPL")
-                .pattern("ELE")
-                .define('E', ModBlocks.ELEMENT115_BLOCK.get())
-                .define('P', ModItems.PERK_HOLDER.get())
-                .define('L', Items.LEATHER)
-                .unlockedBy("has_element115", has(ModItems.PERK_HOLDER)).save(recipeOutput);
+//        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.PERK_HOLDER_TIER2.get())
+//                .pattern("ELE")
+//                .pattern("LPL")
+//                .pattern("ELE")
+//                .define('E', ModBlocks.ELEMENT115_BLOCK.get())
+//                .define('P', ModItems.PERK_HOLDER.get())
+//                .define('L', Items.LEATHER)
+//                .unlockedBy("has_element115", has(ModItems.PERK_HOLDER)).save(recipeOutput);
 
         /** Crystals */
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ELEMENT115_CRYSTAL.get())
@@ -354,6 +355,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         /** Recipe for Perk Holder (Removing perks) */
         SpecialRecipeBuilder.special(RemovePerkRecipe::new)
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(FiftyPerksMod.MOD_ID, "remove_perk"));
+
+        /** Recipe for Perk Holder Upgrades */
+        SpecialRecipeBuilder.special(PerkHolderUpgradeRecipe::new)
+                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(FiftyPerksMod.MOD_ID, "perk_holder_upgrade"));
     }
 
     protected static void oreSmelting(RecipeOutput recipeOutput, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult,

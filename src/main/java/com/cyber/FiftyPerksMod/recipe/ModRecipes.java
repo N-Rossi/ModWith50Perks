@@ -3,13 +3,18 @@ package com.cyber.FiftyPerksMod.recipe;
 import com.cyber.FiftyPerksMod.FiftyPerksMod;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.crafting.RecipeSerializer;
+import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.item.crafting.SimpleCraftingRecipeSerializer;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
+
 public class ModRecipes {
     public static final DeferredRegister<RecipeSerializer<?>> RECIPE_SERIALIZERS =
             DeferredRegister.create(Registries.RECIPE_SERIALIZER, FiftyPerksMod.MOD_ID);
+
+    public static final DeferredRegister<RecipeType<?>> TYPES =
+            DeferredRegister.create(Registries.RECIPE_TYPE, FiftyPerksMod.MOD_ID);
 
     public static final DeferredHolder<RecipeSerializer<?>, RecipeSerializer<PerkStorageRecipe>> PERK_STORAGE =
             RECIPE_SERIALIZERS.register("perk_storage", () ->
@@ -21,7 +26,16 @@ public class ModRecipes {
             RECIPE_SERIALIZERS.register("perk_holder_upgrade", () ->
                     new SimpleCraftingRecipeSerializer<>(PerkHolderUpgradeRecipe::new));
 
+    public static final DeferredHolder<RecipeType<?>, RecipeType<PerkHolderUpgradeRecipe>> PERK_HOLDER_UPGRADE_TYPE =
+            TYPES.register("perk_holder_upgrade", () -> new RecipeType<PerkHolderUpgradeRecipe>() {
+                @Override
+                public String toString() {
+                    return "perk_holder_upgrade";
+                }
+            });
+
     public static void register(net.neoforged.bus.api.IEventBus eventBus) {
         RECIPE_SERIALIZERS.register(eventBus);
+        TYPES.register(eventBus);
     }
 }

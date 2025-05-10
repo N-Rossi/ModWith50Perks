@@ -1,6 +1,7 @@
 package com.cyber.FiftyPerksMod;
 
 import com.cyber.FiftyPerksMod.block.ModBlocks;
+import com.cyber.FiftyPerksMod.compat.JEIFiftyPerksModPlugin;
 import com.cyber.FiftyPerksMod.effect.ModEffects;
 import com.cyber.FiftyPerksMod.item.ModCreativeModeTabs;
 import com.cyber.FiftyPerksMod.item.ModItems;

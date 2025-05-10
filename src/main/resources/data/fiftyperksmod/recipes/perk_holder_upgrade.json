@@ -1,0 +1,14 @@
+{
+  "type": "fiftyperksmod:perk_holder_upgrade",
+  "ingredients": [
+    {
+      "item": "fiftyperksmod:perk_holder"
+    },
+    {
+      "item": "minecraft:diamond"
+    }
+  ],
+  "result": {
+    "item": "fiftyperksmod:perk_holder_tier_2"
+  }
+}

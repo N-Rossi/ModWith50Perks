@@ -43,6 +43,14 @@ public class ModDataComponents {
                             .build()
             );
 
+    public static final DeferredHolder<DataComponentType<?>, DataComponentType<Boolean>> PERK_HOLDER_UPGRADED =
+            DATA_COMPONENTS.register("perk_holder_upgraded", () ->
+                    DataComponentType.<Boolean>builder()
+                            .persistent(Codec.BOOL)
+                            .networkSynchronized(ByteBufCodecs.BOOL)
+                            .build()
+            );
+
     public static void register(IEventBus eventBus) {
         DATA_COMPONENTS.register(eventBus);
     }

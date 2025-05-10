@@ -11,6 +11,11 @@ public class Tier2PerkHolderItem extends BasicPerkHolderItem{
 
     @Override
     protected ResourceLocation getDoubleTapModifierId() {
-        return ResourceLocation.fromNamespaceAndPath(FiftyPerksMod.MOD_ID, "doubletap_attack_speed_advanced");
+        return ResourceLocation.fromNamespaceAndPath(FiftyPerksMod.MOD_ID, "doubletap_attack_speed");
+    }
+
+    @Override
+    protected ResourceLocation getStrongholdModifierId() {
+        return ResourceLocation.fromNamespaceAndPath(FiftyPerksMod.MOD_ID, "stronghold_armor_toughness");
     }
 }

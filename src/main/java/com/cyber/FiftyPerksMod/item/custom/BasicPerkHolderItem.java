@@ -2,6 +2,7 @@ package com.cyber.FiftyPerksMod.item.custom;
 
 import com.cyber.FiftyPerksMod.FiftyPerksMod;
 import com.cyber.FiftyPerksMod.effect.ModEffects;
+import com.cyber.FiftyPerksMod.recipe.PerkHolderUpgradeRecipe;
 import com.cyber.FiftyPerksMod.recipe.RemovePerkRecipe;
 import com.cyber.FiftyPerksMod.util.ModDataComponents;
 import com.cyber.FiftyPerksMod.util.ModTags;
@@ -24,6 +25,7 @@ import net.neoforged.neoforge.items.ItemStackHandler;
 import top.theillusivec4.curios.api.SlotContext;
 import top.theillusivec4.curios.api.type.capability.ICurioItem;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public abstract class BasicPerkHolderItem extends Item implements ICurioItem {
@@ -31,6 +33,7 @@ public abstract class BasicPerkHolderItem extends Item implements ICurioItem {
     private final int slotcount;
 
     protected abstract ResourceLocation getDoubleTapModifierId();
+    protected abstract ResourceLocation getStrongholdModifierId();
 
     protected BasicPerkHolderItem(Properties properties, int slotcount) {
         super(properties);
@@ -70,6 +73,11 @@ public abstract class BasicPerkHolderItem extends Item implements ICurioItem {
     public void onCraftedBy(ItemStack stack, Level level, Player player) {
         super.onCraftedBy(stack, level, player);
 
+        checkPerkRemoval(level, stack, player);
+        checkUpgradeCraft(level, stack, player);
+    }
+
+    private void checkPerkRemoval(Level level, ItemStack stack, Player player) {
         if (!level.isClientSide && Boolean.TRUE.equals(stack.get(ModDataComponents.PERK_WAS_REMOVED))) {
             ItemStack removed = RemovePerkRecipe.REMOVED_PERK.get();
             if (removed != null && !removed.isEmpty()) {
@@ -77,6 +85,18 @@ public abstract class BasicPerkHolderItem extends Item implements ICurioItem {
             }
             RemovePerkRecipe.REMOVED_PERK.remove(); // Clean it up
             stack.remove(ModDataComponents.PERK_WAS_REMOVED); // Clean flag
+        }
+    }
+
+    private void checkUpgradeCraft(Level level, ItemStack stack, Player player) {
+        if (!level.isClientSide && Boolean.TRUE.equals(stack.get(ModDataComponents.PERK_HOLDER_UPGRADED))) {
+            for (ItemStack perk : PerkHolderUpgradeRecipe.DROPPED_PERKS.get()) {
+                if (!perk.isEmpty()) {
+                    player.drop(perk.copy(), false);
+                }
+            }
+            PerkHolderUpgradeRecipe.DROPPED_PERKS.remove();
+            stack.remove(ModDataComponents.PERK_HOLDER_UPGRADED); // Clean flag
         }
     }
 
@@ -175,12 +195,28 @@ public abstract class BasicPerkHolderItem extends Item implements ICurioItem {
                         player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 210, 0, true, false));
                     }
                 }
+//                case "fiftyperksmod:stronghold_perk" -> {
+//                    MobEffectInstance currentEffect = player.getEffect(ModEffects.STRONGHOLD_PERK_EFFECT);
+//                    if (currentEffect == null || currentEffect.getDuration() <= 15) {
+//                        player.addEffect(new MobEffectInstance(ModEffects.STRONGHOLD_PERK_EFFECT, 210, 0, true, false));
+//                    }
+//                }
                 case "fiftyperksmod:doubletap_perk" -> {
                     AttributeInstance attackSpeed = player.getAttribute(Attributes.ATTACK_SPEED);
                     if(attackSpeed != null && attackSpeed.getModifier(getDoubleTapModifierId()) == null) {
                         attackSpeed.addTransientModifier(new AttributeModifier(
                                 getDoubleTapModifierId(),
                                 2,
+                                AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL
+                        ));
+                    }
+                }
+                case "fiftyperksmod:stronghold_perk" -> {
+                    AttributeInstance toughness = player.getAttribute(Attributes.ARMOR_TOUGHNESS);
+                    if(toughness != null && toughness.getModifier(getStrongholdModifierId()) == null) {
+                        toughness.addTransientModifier(new AttributeModifier(
+                                getStrongholdModifierId(),
+                                1.25,
                                 AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL
                         ));
                     }
@@ -203,9 +239,15 @@ public abstract class BasicPerkHolderItem extends Item implements ICurioItem {
         ICurioItem.super.onUnequip(slotContext, newStack, stack);
         Player player = (Player) slotContext.entity();
 
+        /** Double Tap */
         AttributeInstance attackSpeed = player.getAttribute(Attributes.ATTACK_SPEED);
         if (attackSpeed != null && attackSpeed.getModifier(getDoubleTapModifierId()) != null) {
             attackSpeed.removeModifier(getDoubleTapModifierId());
+        }
+        /** Stone Cold Stronghold */
+        AttributeInstance toughness = player.getAttribute(Attributes.ARMOR_TOUGHNESS);
+        if (toughness != null && toughness.getModifier(getStrongholdModifierId()) != null) {
+            toughness.removeModifier(getStrongholdModifierId());
         }
     }
 

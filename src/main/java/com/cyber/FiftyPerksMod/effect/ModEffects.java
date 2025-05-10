@@ -21,7 +21,9 @@ public class ModEffects {
                             ResourceLocation.fromNamespaceAndPath(FiftyPerksMod.MOD_ID, "slimey"), -0.25f,
                             AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL));
     public static final Holder<MobEffect> JUG_PERK_EFFECT = MOB_EFFECTS.register("jug_perk",
-            () -> new JugEffect(MobEffectCategory.NEUTRAL, 0xff2222));
+            () -> new JugEffect(MobEffectCategory.BENEFICIAL, 0xff2222));
+    public static final Holder<MobEffect> STRONGHOLD_PERK_EFFECT = MOB_EFFECTS.register("stronghold_perk",
+            () -> new ToughnessEffect(MobEffectCategory.BENEFICIAL, 0x70591a));
 
 
     public static void register(IEventBus eventBus) {

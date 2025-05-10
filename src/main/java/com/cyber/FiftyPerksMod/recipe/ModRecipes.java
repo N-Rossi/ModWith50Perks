@@ -1,15 +1,11 @@
 package com.cyber.FiftyPerksMod.recipe;
 
 import com.cyber.FiftyPerksMod.FiftyPerksMod;
-import com.cyber.FiftyPerksMod.recipe.PerkStorageRecipe;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.RecipeSerializer;
-import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.item.crafting.SimpleCraftingRecipeSerializer;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
-import net.neoforged.neoforge.registries.NeoForgeRegistries;
 
 public class ModRecipes {
     public static final DeferredRegister<RecipeSerializer<?>> RECIPE_SERIALIZERS =
@@ -21,6 +17,9 @@ public class ModRecipes {
     public static final DeferredHolder<RecipeSerializer<?>, RecipeSerializer<RemovePerkRecipe>> REMOVE_PERK =
             RECIPE_SERIALIZERS.register("remove_perk", () ->
                     new SimpleCraftingRecipeSerializer<>(RemovePerkRecipe::new));
+    public static final DeferredHolder<RecipeSerializer<?>, RecipeSerializer<PerkHolderUpgradeRecipe>> PERK_HOLDER_UPGRADE =
+            RECIPE_SERIALIZERS.register("perk_holder_upgrade", () ->
+                    new SimpleCraftingRecipeSerializer<>(PerkHolderUpgradeRecipe::new));
 
     public static void register(net.neoforged.bus.api.IEventBus eventBus) {
         RECIPE_SERIALIZERS.register(eventBus);

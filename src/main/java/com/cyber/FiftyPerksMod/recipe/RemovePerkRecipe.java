@@ -4,16 +4,12 @@ import com.cyber.FiftyPerksMod.item.custom.BasicPerkHolderItem;
 import com.cyber.FiftyPerksMod.util.ModDataComponents;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.CraftingBookCategory;
 import net.minecraft.world.item.crafting.CraftingInput;
 import net.minecraft.world.item.crafting.CustomRecipe;
-import net.minecraft.world.item.crafting.CraftingBookCategory;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.Level;
 import net.neoforged.neoforge.items.ItemStackHandler;
-
-import java.util.HashMap;
-import java.util.Map;
-import java.util.UUID;
 
 
 public class RemovePerkRecipe extends CustomRecipe {

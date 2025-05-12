@@ -1,6 +1,7 @@
 package com.cyber.FiftyPerksMod.block.entity;
 
 import com.cyber.FiftyPerksMod.item.ModItems;
+import com.cyber.FiftyPerksMod.item.custom.BasicPerkHolderItem;
 import com.cyber.FiftyPerksMod.recipe.ModRecipes;
 import com.cyber.FiftyPerksMod.recipe.UpgradeStationRecipe;
 import com.cyber.FiftyPerksMod.recipe.UpgradeStationRecipeInput;
@@ -130,12 +131,40 @@ public class UpgradeStationBlockEntity extends BlockEntity implements MenuProvid
 
     private void craftItem() {
         Optional<RecipeHolder<UpgradeStationRecipe>> recipe = getCurrentRecipe();
-        ItemStack output = recipe.get().value().output();
+        if (recipe.isEmpty()) return;
 
-        itemHandler.extractItem(INPUT_SLOT_1, 1, false);
-        itemHandler.extractItem(INPUT_SLOT_2, 1, false);
-        itemHandler.setStackInSlot(OUTPUT_SLOT, new ItemStack(output.getItem(),
-                itemHandler.getStackInSlot(OUTPUT_SLOT).getCount() + output.getCount()));
+        ItemStack input1 = itemHandler.getStackInSlot(INPUT_SLOT_1); // Tier 1 Perk Holder
+        ItemStack input2 = itemHandler.getStackInSlot(INPUT_SLOT_2); // Upgrade Ingredient
+        ItemStack result = new ItemStack(recipe.get().value().output().getItem()); // Tier 2 Perk Holder
+
+        // Copy perks from old holder to new one
+        if (input1.getItem() instanceof BasicPerkHolderItem oldItem &&
+                result.getItem() instanceof BasicPerkHolderItem newItem) {
+
+            // Load old handler from input
+            ItemStackHandler oldHandler = oldItem.getHandler(input1, level.registryAccess());
+
+            // Load new handler (usually has more slots)
+            ItemStackHandler newHandler = newItem.getHandler(result, level.registryAccess());
+
+            // Copy perks
+            for (int i = 0; i < oldHandler.getSlots(); i++) {
+                ItemStack perk = oldHandler.getStackInSlot(i);
+                if (!perk.isEmpty()) {
+                    newHandler.setStackInSlot(i, perk.copy()); // Copy for safety
+                }
+            }
+
+            // Save new handler data to the result stack
+            newItem.saveHandler(result, newHandler, level.registryAccess());
+        }
+
+        // Place result into the output slot
+        itemHandler.setStackInSlot(OUTPUT_SLOT, result);
+
+        // Consume the inputs
+        input1.shrink(1);
+        input2.shrink(1);
     }
 
     private boolean hasRecipe() {

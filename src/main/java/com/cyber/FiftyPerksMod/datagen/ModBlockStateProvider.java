@@ -15,6 +15,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
         blockWithItem(ModBlocks.ELEMENT115_BLOCK);
+        blockWithItem(ModBlocks.UPGRADE_STATION);
         blockWithItem(ModBlocks.RAW_ELEMENT115_BLOCK);
         blockWithItem(ModBlocks.ELEMENT115_ORE);
         blockWithItem(ModBlocks.NETHER_ELEMENT115_ORE);

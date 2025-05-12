@@ -1,11 +1,13 @@
 {
   "creativetab.fiftyperksmod.fifty_perks_tab": "Mod With 50 Perks",
 
+
   "block.fiftyperksmod.element115_block": "Block of Element 115",
   "block.fiftyperksmod.raw_element115_block": "Raw Block of Element 115",
   "block.fiftyperksmod.element115_ore": "Element 115 Ore",
   "block.fiftyperksmod.nether_element115_ore": "Nether Element 115 Ore",
   "block.fiftyperksmod.deepslate_element115_ore": "Deepslate Element 115 Ore",
+  "block.fiftyperksmod.upgrade_station": "Upgrade Station",
 
   "item.fiftyperksmod.element115_ingot": "Element 115 Ingot",
   "item.fiftyperksmod.raw_element115": "Raw Element 115",

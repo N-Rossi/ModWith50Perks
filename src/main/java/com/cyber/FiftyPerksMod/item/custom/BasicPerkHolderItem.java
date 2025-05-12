@@ -2,7 +2,6 @@ package com.cyber.FiftyPerksMod.item.custom;
 
 import com.cyber.FiftyPerksMod.FiftyPerksMod;
 import com.cyber.FiftyPerksMod.effect.ModEffects;
-import com.cyber.FiftyPerksMod.recipe.PerkHolderUpgradeRecipe;
 import com.cyber.FiftyPerksMod.recipe.RemovePerkRecipe;
 import com.cyber.FiftyPerksMod.util.ModDataComponents;
 import com.cyber.FiftyPerksMod.util.ModTags;
@@ -74,7 +73,7 @@ public abstract class BasicPerkHolderItem extends Item implements ICurioItem {
         super.onCraftedBy(stack, level, player);
 
         checkPerkRemoval(level, stack, player);
-        checkUpgradeCraft(level, stack, player);
+//        checkUpgradeCraft(level, stack, player);
     }
 
     private void checkPerkRemoval(Level level, ItemStack stack, Player player) {
@@ -88,17 +87,17 @@ public abstract class BasicPerkHolderItem extends Item implements ICurioItem {
         }
     }
 
-    private void checkUpgradeCraft(Level level, ItemStack stack, Player player) {
-        if (!level.isClientSide && Boolean.TRUE.equals(stack.get(ModDataComponents.PERK_HOLDER_UPGRADED))) {
-            for (ItemStack perk : PerkHolderUpgradeRecipe.DROPPED_PERKS.get()) {
-                if (!perk.isEmpty()) {
-                    player.drop(perk.copy(), false);
-                }
-            }
-            PerkHolderUpgradeRecipe.DROPPED_PERKS.remove();
-            stack.remove(ModDataComponents.PERK_HOLDER_UPGRADED); // Clean flag
-        }
-    }
+//    private void checkUpgradeCraft(Level level, ItemStack stack, Player player) {
+//        if (!level.isClientSide && Boolean.TRUE.equals(stack.get(ModDataComponents.PERK_HOLDER_UPGRADED))) {
+//            for (ItemStack perk : PerkHolderUpgradeRecipe.DROPPED_PERKS.get()) {
+//                if (!perk.isEmpty()) {
+//                    player.drop(perk.copy(), false);
+//                }
+//            }
+//            PerkHolderUpgradeRecipe.DROPPED_PERKS.remove();
+//            stack.remove(ModDataComponents.PERK_HOLDER_UPGRADED); // Clean flag
+//        }
+//    }
 
     @Override
     public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {

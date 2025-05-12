@@ -145,12 +145,25 @@ public class UpgradeStationBlockEntity extends BlockEntity implements MenuProvid
     }
 
     private boolean hasRecipe() {
-        ItemStack output = new ItemStack(ModItems.PERK_HOLDER_TIER2.get(), 1);
 
-        return itemHandler.getStackInSlot(INPUT_SLOT_1).is(ModItems.PERK_HOLDER) &&
-                itemHandler.getStackInSlot(INPUT_SLOT_2).is(ModItems.ELEMENT115_CRYSTAL.get()) &&
-                canInsertAmountIntoOutputSlot(output.getCount()) &&
-                canInsertItemIntoOutputSlot(output);
+        if(itemHandler.getStackInSlot(INPUT_SLOT_1).is(ModItems.PERK_HOLDER)) {
+            ItemStack output = new ItemStack(ModItems.PERK_HOLDER_TIER2.get(), 1);
+
+            return itemHandler.getStackInSlot(INPUT_SLOT_1).is(ModItems.PERK_HOLDER) &&
+                    itemHandler.getStackInSlot(INPUT_SLOT_2).is(ModItems.ELEMENT115_CRYSTAL.get()) &&
+                    canInsertAmountIntoOutputSlot(output.getCount()) &&
+                    canInsertItemIntoOutputSlot(output);
+        } else if(itemHandler.getStackInSlot(INPUT_SLOT_1).is(ModItems.PERK_HOLDER_TIER2)) {
+            ItemStack output = new ItemStack(ModItems.PERK_HOLDER_TIER3.get(), 1);
+
+            return itemHandler.getStackInSlot(INPUT_SLOT_1).is(ModItems.PERK_HOLDER_TIER2) &&
+                    itemHandler.getStackInSlot(INPUT_SLOT_2).is(ModItems.ELEMENT115_CRYSTAL.get()) &&
+                    canInsertAmountIntoOutputSlot(output.getCount()) &&
+                    canInsertItemIntoOutputSlot(output);
+        }
+        return false;
+
+
     }
 
     private boolean canInsertItemIntoOutputSlot(ItemStack output) {

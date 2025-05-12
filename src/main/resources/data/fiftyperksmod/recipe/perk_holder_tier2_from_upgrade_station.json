@@ -1,0 +1,10 @@
+{
+  "type": "fiftyperksmod:upgrade_station",
+  "ingredient": {
+    "item": "fiftyperksmod:perk_holder",
+    "item": "fiftyperksmod:element115_crystal"
+  },
+  "result": {
+    "id": "fiftyperksmod:perk_holder_tier2"
+  }
+}

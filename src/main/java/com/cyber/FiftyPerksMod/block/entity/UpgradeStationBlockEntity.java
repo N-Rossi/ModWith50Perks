@@ -1,6 +1,9 @@
 package com.cyber.FiftyPerksMod.block.entity;
 
 import com.cyber.FiftyPerksMod.item.ModItems;
+import com.cyber.FiftyPerksMod.recipe.ModRecipes;
+import com.cyber.FiftyPerksMod.recipe.UpgradeStationRecipe;
+import com.cyber.FiftyPerksMod.recipe.UpgradeStationRecipeInput;
 import com.cyber.FiftyPerksMod.screen.custom.UpgradeStationMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.HolderLookup;
@@ -17,11 +20,14 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ContainerData;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.RecipeHolder;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.neoforge.items.ItemStackHandler;
 import org.jetbrains.annotations.Nullable;
+
+import java.util.Optional;
 
 public class UpgradeStationBlockEntity extends BlockEntity implements MenuProvider {
     public final ItemStackHandler itemHandler = new ItemStackHandler(3) {
@@ -123,12 +129,29 @@ public class UpgradeStationBlockEntity extends BlockEntity implements MenuProvid
     }
 
     private void craftItem() {
-        ItemStack output = new ItemStack(ModItems.PERK_HOLDER_TIER2.get(), 1);
+        Optional<RecipeHolder<UpgradeStationRecipe>> recipe = getCurrentRecipe();
+        ItemStack output = recipe.get().value().output();
+//        ItemStack output = new ItemStack(ModItems.PERK_HOLDER_TIER2.get(), 1);
 
         itemHandler.extractItem(INPUT_SLOT_1, 1, false);
         itemHandler.extractItem(INPUT_SLOT_2, 1, false);
         itemHandler.setStackInSlot(OUTPUT_SLOT, new ItemStack(output.getItem(),
                 itemHandler.getStackInSlot(OUTPUT_SLOT).getCount() + output.getCount()));
+    }
+
+    private boolean hasRecipe() {
+        Optional<RecipeHolder<UpgradeStationRecipe>> recipe = getCurrentRecipe();
+        if(recipe.isEmpty()) {
+            return false;
+        }
+
+        ItemStack output = recipe.get().value().output();
+        return canInsertAmountIntoOutputSlot(output.getCount()) && canInsertItemIntoOutputSlot(output);
+    }
+
+    private Optional<RecipeHolder<UpgradeStationRecipe>> getCurrentRecipe() {
+        return this.level.getRecipeManager()
+                .getRecipeFor(ModRecipes.UPGRADE_STATION_TYPE.get(), new UpgradeStationRecipeInput(itemHandler.getStackInSlot(INPUT_SLOT_1)), level);
     }
 
     private void resetProgress() {
@@ -144,27 +167,27 @@ public class UpgradeStationBlockEntity extends BlockEntity implements MenuProvid
         progress++;
     }
 
-    private boolean hasRecipe() {
-
-        if(itemHandler.getStackInSlot(INPUT_SLOT_1).is(ModItems.PERK_HOLDER)) {
-            ItemStack output = new ItemStack(ModItems.PERK_HOLDER_TIER2.get(), 1);
-
-            return itemHandler.getStackInSlot(INPUT_SLOT_1).is(ModItems.PERK_HOLDER) &&
-                    itemHandler.getStackInSlot(INPUT_SLOT_2).is(ModItems.ELEMENT115_CRYSTAL.get()) &&
-                    canInsertAmountIntoOutputSlot(output.getCount()) &&
-                    canInsertItemIntoOutputSlot(output);
-        } else if(itemHandler.getStackInSlot(INPUT_SLOT_1).is(ModItems.PERK_HOLDER_TIER2)) {
-            ItemStack output = new ItemStack(ModItems.PERK_HOLDER_TIER3.get(), 1);
-
-            return itemHandler.getStackInSlot(INPUT_SLOT_1).is(ModItems.PERK_HOLDER_TIER2) &&
-                    itemHandler.getStackInSlot(INPUT_SLOT_2).is(ModItems.ELEMENT115_CRYSTAL.get()) &&
-                    canInsertAmountIntoOutputSlot(output.getCount()) &&
-                    canInsertItemIntoOutputSlot(output);
-        }
-        return false;
-
-
-    }
+//    private boolean hasRecipe() {
+//
+//        if(itemHandler.getStackInSlot(INPUT_SLOT_1).is(ModItems.PERK_HOLDER)) {
+//            ItemStack output = new ItemStack(ModItems.PERK_HOLDER_TIER2.get(), 1);
+//
+//            return itemHandler.getStackInSlot(INPUT_SLOT_1).is(ModItems.PERK_HOLDER) &&
+//                    itemHandler.getStackInSlot(INPUT_SLOT_2).is(ModItems.ELEMENT115_CRYSTAL.get()) &&
+//                    canInsertAmountIntoOutputSlot(output.getCount()) &&
+//                    canInsertItemIntoOutputSlot(output);
+//        } else if(itemHandler.getStackInSlot(INPUT_SLOT_1).is(ModItems.PERK_HOLDER_TIER2)) {
+//            ItemStack output = new ItemStack(ModItems.PERK_HOLDER_TIER3.get(), 1);
+//
+//            return itemHandler.getStackInSlot(INPUT_SLOT_1).is(ModItems.PERK_HOLDER_TIER2) &&
+//                    itemHandler.getStackInSlot(INPUT_SLOT_2).is(ModItems.ELEMENT115_CRYSTAL.get()) &&
+//                    canInsertAmountIntoOutputSlot(output.getCount()) &&
+//                    canInsertItemIntoOutputSlot(output);
+//        }
+//        return false;
+//
+//
+//    }
 
     private boolean canInsertItemIntoOutputSlot(ItemStack output) {
         return itemHandler.getStackInSlot(OUTPUT_SLOT).isEmpty() ||

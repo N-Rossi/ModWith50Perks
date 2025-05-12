@@ -24,7 +24,7 @@ import net.neoforged.neoforge.items.ItemStackHandler;
 import org.jetbrains.annotations.Nullable;
 
 public class UpgradeStationBlockEntity extends BlockEntity implements MenuProvider {
-    public final ItemStackHandler itemHandler = new ItemStackHandler(2) {
+    public final ItemStackHandler itemHandler = new ItemStackHandler(3) {
         @Override
         protected void onContentsChanged(int slot) {
             setChanged();
@@ -34,8 +34,9 @@ public class UpgradeStationBlockEntity extends BlockEntity implements MenuProvid
         }
     };
 
-    private static final int INPUT_SLOT = 0;
-    private static final int OUTPUT_SLOT = 1;
+    private static final int INPUT_SLOT_1 = 0;
+    private static final int INPUT_SLOT_2 = 1;
+    private static final int OUTPUT_SLOT = 2;
 
     protected final ContainerData data;
     private int progress = 0;
@@ -43,6 +44,7 @@ public class UpgradeStationBlockEntity extends BlockEntity implements MenuProvid
 
     public UpgradeStationBlockEntity(BlockPos pos, BlockState blockState) {
         super(ModBlockEntities.UPGRADE_STATION_BE.get(), pos, blockState);
+
         data = new ContainerData() {
             @Override
             public int get(int i) {
@@ -123,7 +125,8 @@ public class UpgradeStationBlockEntity extends BlockEntity implements MenuProvid
     private void craftItem() {
         ItemStack output = new ItemStack(ModItems.PERK_HOLDER_TIER2.get(), 1);
 
-        itemHandler.extractItem(INPUT_SLOT, 1, false);
+        itemHandler.extractItem(INPUT_SLOT_1, 1, false);
+        itemHandler.extractItem(INPUT_SLOT_2, 1, false);
         itemHandler.setStackInSlot(OUTPUT_SLOT, new ItemStack(output.getItem(),
                 itemHandler.getStackInSlot(OUTPUT_SLOT).getCount() + output.getCount()));
     }
@@ -142,10 +145,14 @@ public class UpgradeStationBlockEntity extends BlockEntity implements MenuProvid
     }
 
     private boolean hasRecipe() {
+        
+
         ItemStack output = new ItemStack(ModItems.PERK_HOLDER_TIER2.get(), 1);
 
-        return itemHandler.getStackInSlot(INPUT_SLOT).is(ModItems.PERK_HOLDER) &&
-                canInsertAmountIntoOutputSlot(output.getCount()) && canInsertItemIntoOutputSlot(output);
+        return itemHandler.getStackInSlot(INPUT_SLOT_1).is(ModItems.PERK_HOLDER) &&
+                itemHandler.getStackInSlot(INPUT_SLOT_2).is(ModItems.ELEMENT115_CRYSTAL.get()) &&
+                canInsertAmountIntoOutputSlot(output.getCount()) &&
+                canInsertItemIntoOutputSlot(output);
     }
 
     private boolean canInsertItemIntoOutputSlot(ItemStack output) {

@@ -131,7 +131,6 @@ public class UpgradeStationBlockEntity extends BlockEntity implements MenuProvid
     private void craftItem() {
         Optional<RecipeHolder<UpgradeStationRecipe>> recipe = getCurrentRecipe();
         ItemStack output = recipe.get().value().output();
-//        ItemStack output = new ItemStack(ModItems.PERK_HOLDER_TIER2.get(), 1);
 
         itemHandler.extractItem(INPUT_SLOT_1, 1, false);
         itemHandler.extractItem(INPUT_SLOT_2, 1, false);
@@ -166,28 +165,6 @@ public class UpgradeStationBlockEntity extends BlockEntity implements MenuProvid
     private void increaseCraftingProgress() {
         progress++;
     }
-
-//    private boolean hasRecipe() {
-//
-//        if(itemHandler.getStackInSlot(INPUT_SLOT_1).is(ModItems.PERK_HOLDER)) {
-//            ItemStack output = new ItemStack(ModItems.PERK_HOLDER_TIER2.get(), 1);
-//
-//            return itemHandler.getStackInSlot(INPUT_SLOT_1).is(ModItems.PERK_HOLDER) &&
-//                    itemHandler.getStackInSlot(INPUT_SLOT_2).is(ModItems.ELEMENT115_CRYSTAL.get()) &&
-//                    canInsertAmountIntoOutputSlot(output.getCount()) &&
-//                    canInsertItemIntoOutputSlot(output);
-//        } else if(itemHandler.getStackInSlot(INPUT_SLOT_1).is(ModItems.PERK_HOLDER_TIER2)) {
-//            ItemStack output = new ItemStack(ModItems.PERK_HOLDER_TIER3.get(), 1);
-//
-//            return itemHandler.getStackInSlot(INPUT_SLOT_1).is(ModItems.PERK_HOLDER_TIER2) &&
-//                    itemHandler.getStackInSlot(INPUT_SLOT_2).is(ModItems.ELEMENT115_CRYSTAL.get()) &&
-//                    canInsertAmountIntoOutputSlot(output.getCount()) &&
-//                    canInsertItemIntoOutputSlot(output);
-//        }
-//        return false;
-//
-//
-//    }
 
     private boolean canInsertItemIntoOutputSlot(ItemStack output) {
         return itemHandler.getStackInSlot(OUTPUT_SLOT).isEmpty() ||

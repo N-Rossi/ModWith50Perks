@@ -13,14 +13,15 @@ import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.Level;
 
-public record UpgradeStationRecipe(Ingredient inputItem, ItemStack output) implements Recipe<UpgradeStationRecipeInput> {
+public record UpgradeStationRecipe(Ingredient inputItem1, Ingredient inputItem2, ItemStack output) implements Recipe<UpgradeStationRecipeInput> {
     // inputItem & output ==> Read From JSON File!
     // GrowthChamberRecipeInput --> INVENTORY of the Block Entity
 
     @Override
     public NonNullList<Ingredient> getIngredients() {
         NonNullList<Ingredient> list = NonNullList.create();
-        list.add(inputItem);
+        list.add(inputItem1);
+        list.add(inputItem2);
         return list;
     }
 
@@ -30,7 +31,7 @@ public record UpgradeStationRecipe(Ingredient inputItem, ItemStack output) imple
             return false;
         }
 
-        return inputItem.test(upgradeStationRecipeInput.getItem(0));
+        return inputItem1.test(upgradeStationRecipeInput.getItem(0)) && inputItem2.test(upgradeStationRecipeInput.getItem(1));
     }
 
     @Override
@@ -60,15 +61,18 @@ public record UpgradeStationRecipe(Ingredient inputItem, ItemStack output) imple
 
     public static class Serializer implements RecipeSerializer<UpgradeStationRecipe> {
         public static final MapCodec<UpgradeStationRecipe> CODEC = RecordCodecBuilder.mapCodec(inst -> inst.group(
-                Ingredient.CODEC_NONEMPTY.fieldOf("ingredient").forGetter(UpgradeStationRecipe::inputItem),
+                Ingredient.CODEC_NONEMPTY.fieldOf("ingredient1").forGetter(UpgradeStationRecipe::inputItem1),
+                Ingredient.CODEC_NONEMPTY.fieldOf("ingredient2").forGetter(UpgradeStationRecipe::inputItem2),
                 ItemStack.CODEC.fieldOf("result").forGetter(UpgradeStationRecipe::output)
         ).apply(inst, UpgradeStationRecipe::new));
 
         public static final StreamCodec<RegistryFriendlyByteBuf, UpgradeStationRecipe> STREAM_CODEC =
                 StreamCodec.composite(
-                        Ingredient.CONTENTS_STREAM_CODEC, UpgradeStationRecipe::inputItem,
+                        Ingredient.CONTENTS_STREAM_CODEC, UpgradeStationRecipe::inputItem1,
+                        Ingredient.CONTENTS_STREAM_CODEC, UpgradeStationRecipe::inputItem2,
                         ItemStack.STREAM_CODEC, UpgradeStationRecipe::output,
-                        UpgradeStationRecipe::new);
+                        UpgradeStationRecipe::new
+                );
 
         @Override
         public MapCodec<UpgradeStationRecipe> codec() {

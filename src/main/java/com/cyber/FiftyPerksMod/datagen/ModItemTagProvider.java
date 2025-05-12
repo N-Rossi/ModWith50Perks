@@ -22,6 +22,7 @@ public class ModItemTagProvider extends ItemTagsProvider {
     protected void addTags(HolderLookup.Provider provider) {
         tag(ModTags.Items.PERK_HOLDER_TAG)
                 .add(ModItems.PERK_HOLDER.get())
+                .add(ModItems.PERK_HOLDER_TIER3.get())
                 .add(ModItems.PERK_HOLDER_TIER2.get());
 
         tag(ModTags.Items.CRYSTALS_TAG)

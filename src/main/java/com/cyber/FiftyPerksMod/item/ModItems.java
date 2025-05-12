@@ -4,6 +4,7 @@ import com.cyber.FiftyPerksMod.FiftyPerksMod;
 import com.cyber.FiftyPerksMod.item.custom.PerkHolderItem;
 import com.cyber.FiftyPerksMod.item.custom.PerkItem;
 import com.cyber.FiftyPerksMod.item.custom.Tier2PerkHolderItem;
+import com.cyber.FiftyPerksMod.item.custom.Tier3PerkHolderItem;
 import net.minecraft.world.item.Item;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
@@ -34,6 +35,7 @@ public class ModItems {
     /** Perk Holders */
     public static final DeferredItem<Item> PERK_HOLDER = ITEMS.register("perk_holder", () -> new PerkHolderItem(new Item.Properties()));
     public static final DeferredItem<Item> PERK_HOLDER_TIER2 = ITEMS.register("perk_holder_tier2", () -> new Tier2PerkHolderItem(new Item.Properties()));
+    public static final DeferredItem<Item> PERK_HOLDER_TIER3 = ITEMS.register("perk_holder_tier3", () -> new Tier3PerkHolderItem(new Item.Properties()));
 
     /** Perks */
     public static final DeferredItem<Item> JUGGERNOG_PERK = ITEMS.register("juggernog_perk", () -> new PerkItem(new Item.Properties(), "Extra Health"));

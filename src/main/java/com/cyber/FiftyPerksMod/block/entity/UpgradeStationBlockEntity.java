@@ -145,8 +145,6 @@ public class UpgradeStationBlockEntity extends BlockEntity implements MenuProvid
     }
 
     private boolean hasRecipe() {
-        
-
         ItemStack output = new ItemStack(ModItems.PERK_HOLDER_TIER2.get(), 1);
 
         return itemHandler.getStackInSlot(INPUT_SLOT_1).is(ModItems.PERK_HOLDER) &&

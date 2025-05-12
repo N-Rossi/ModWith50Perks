@@ -150,7 +150,7 @@ public class UpgradeStationBlockEntity extends BlockEntity implements MenuProvid
 
     private Optional<RecipeHolder<UpgradeStationRecipe>> getCurrentRecipe() {
         return this.level.getRecipeManager()
-                .getRecipeFor(ModRecipes.UPGRADE_STATION_TYPE.get(), new UpgradeStationRecipeInput(itemHandler.getStackInSlot(INPUT_SLOT_1)), level);
+                .getRecipeFor(ModRecipes.UPGRADE_STATION_TYPE.get(), new UpgradeStationRecipeInput(itemHandler.getStackInSlot(INPUT_SLOT_1), itemHandler.getStackInSlot(INPUT_SLOT_2)), level);
     }
 
     private void resetProgress() {

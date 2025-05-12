@@ -29,7 +29,7 @@ public class UpgradeStationRecipeCategory implements IRecipeCategory<UpgradeStat
     private final IDrawable icon;
 
     public UpgradeStationRecipeCategory(IGuiHelper helper) {
-        this.background = helper.createDrawable(TEXTURE,0 ,0, 176, 85);
+        this.background = helper.createDrawable(TEXTURE,25 ,10, 120, 60);
         this.icon = helper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(ModBlocks.UPGRADE_STATION));
     }
 
@@ -55,9 +55,9 @@ public class UpgradeStationRecipeCategory implements IRecipeCategory<UpgradeStat
 
     @Override
     public void setRecipe(IRecipeLayoutBuilder builder, UpgradeStationRecipe recipe, IFocusGroup focuses) {
-        builder.addSlot(RecipeIngredientRole.INPUT, 31, 34).addIngredients(recipe.getIngredients().get(0));
-        builder.addSlot(RecipeIngredientRole.INPUT, 54, 34).addIngredients(recipe.getIngredients().get(1));
+        builder.addSlot(RecipeIngredientRole.INPUT, 6, 24).addIngredients(recipe.getIngredients().get(0));
+        builder.addSlot(RecipeIngredientRole.INPUT, 29, 24).addIngredients(recipe.getIngredients().get(1));
 
-        builder.addSlot(RecipeIngredientRole.OUTPUT, 104, 34).addItemStack(recipe.getResultItem(null));
+        builder.addSlot(RecipeIngredientRole.OUTPUT, 79, 24).addItemStack(recipe.getResultItem(null));
     }
 }

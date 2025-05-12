@@ -17,9 +17,6 @@ public class ModRecipes {
     public static final DeferredHolder<RecipeSerializer<?>, RecipeSerializer<RemovePerkRecipe>> REMOVE_PERK =
             RECIPE_SERIALIZERS.register("remove_perk", () ->
                     new SimpleCraftingRecipeSerializer<>(RemovePerkRecipe::new));
-    public static final DeferredHolder<RecipeSerializer<?>, RecipeSerializer<PerkHolderUpgradeRecipe>> PERK_HOLDER_UPGRADE =
-            RECIPE_SERIALIZERS.register("perk_holder_upgrade", () ->
-                    new SimpleCraftingRecipeSerializer<>(PerkHolderUpgradeRecipe::new));
 
     public static void register(net.neoforged.bus.api.IEventBus eventBus) {
         RECIPE_SERIALIZERS.register(eventBus);

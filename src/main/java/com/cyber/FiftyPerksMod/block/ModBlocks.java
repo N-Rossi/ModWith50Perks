@@ -1,6 +1,7 @@
 package com.cyber.FiftyPerksMod.block;
 
 import com.cyber.FiftyPerksMod.FiftyPerksMod;
+import com.cyber.FiftyPerksMod.block.custom.UpgradeStationBlock;
 import com.cyber.FiftyPerksMod.item.ModItems;
 import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.util.valueproviders.UniformInt;
@@ -23,6 +24,7 @@ public class ModBlocks {
     /**    use .noLootTable if item should not drop anything upon breaking */
 
     public static final DeferredBlock<Block> ELEMENT115_BLOCK = registerBlock("element115_block", () -> new Block(BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops().sound(SoundType.METAL)));
+    public static final DeferredBlock<Block> UPGRADE_STATION = registerBlock("upgrade_station", () -> new UpgradeStationBlock(BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
     public static final DeferredBlock<Block> RAW_ELEMENT115_BLOCK = registerBlock("raw_element115_block", () -> new Block(BlockBehaviour.Properties.of().strength(5F, 6F).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
 

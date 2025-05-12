@@ -28,6 +28,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
     @Override
     protected void generate() {
         dropSelf(ModBlocks.ELEMENT115_BLOCK.get());
+        dropSelf(ModBlocks.UPGRADE_STATION.get());
         dropSelf(ModBlocks.RAW_ELEMENT115_BLOCK.get());
 
         add(ModBlocks.ELEMENT115_ORE.get(),

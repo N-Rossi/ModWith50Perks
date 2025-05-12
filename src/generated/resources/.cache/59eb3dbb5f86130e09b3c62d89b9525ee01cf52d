@@ -1,6 +1,7 @@
-// 1.21.1	2025-05-07T20:39:28.9015679	Loot Tables
+// 1.21.1	2025-05-11T21:32:32.2614093	Loot Tables
 b49ac312b85c17926a5489d262a1ba1555a4fd8d data/fiftyperksmod/loot_table/blocks/deepslate_element115_ore.json
 12f73ce5ffd411bb040acbfdc465317edf9304c1 data/fiftyperksmod/loot_table/blocks/element115_block.json
 c2e0769a176b7c873e7c71c727b9a5039cd89ae1 data/fiftyperksmod/loot_table/blocks/element115_ore.json
 9e9b58d8691b6a086de119e568726873aec7820d data/fiftyperksmod/loot_table/blocks/nether_element115_ore.json
 c21cd94561a6e81f0f080e1ea45614ce911a621b data/fiftyperksmod/loot_table/blocks/raw_element115_block.json
+2bbf2005741eedb669c2e7ee2abcb23e7508cd68 data/fiftyperksmod/loot_table/blocks/upgrade_station.json

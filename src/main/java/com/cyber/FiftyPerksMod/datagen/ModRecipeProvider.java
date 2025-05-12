@@ -3,10 +3,8 @@ package com.cyber.FiftyPerksMod.datagen;
 import com.cyber.FiftyPerksMod.FiftyPerksMod;
 import com.cyber.FiftyPerksMod.block.ModBlocks;
 import com.cyber.FiftyPerksMod.item.ModItems;
-import com.cyber.FiftyPerksMod.recipe.PerkHolderUpgradeRecipe;
 import com.cyber.FiftyPerksMod.recipe.PerkStorageRecipe;
 import com.cyber.FiftyPerksMod.recipe.RemovePerkRecipe;
-import io.netty.util.internal.SuppressJava6Requirement;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
@@ -355,10 +353,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         /** Recipe for Perk Holder (Removing perks) */
         SpecialRecipeBuilder.special(RemovePerkRecipe::new)
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(FiftyPerksMod.MOD_ID, "remove_perk"));
-
-        /** Recipe for Perk Holder Upgrades */
-        SpecialRecipeBuilder.special(PerkHolderUpgradeRecipe::new)
-                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(FiftyPerksMod.MOD_ID, "perk_holder_upgrade"));
     }
 
     protected static void oreSmelting(RecipeOutput recipeOutput, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult,

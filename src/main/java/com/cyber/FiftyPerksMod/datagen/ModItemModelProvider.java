@@ -19,6 +19,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         /** Perk Holders */
         basicItem(ModItems.PERK_HOLDER.get());
         basicItem(ModItems.PERK_HOLDER_TIER2.get());
+        basicItem(ModItems.PERK_HOLDER_TIER3.get());
 
         /** Crystals */
         basicItem(ModItems.ELEMENT115_CRYSTAL.get());

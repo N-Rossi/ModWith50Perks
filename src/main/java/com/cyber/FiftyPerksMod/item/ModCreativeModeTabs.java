@@ -28,6 +28,8 @@ public class ModCreativeModeTabs {
 
                         output.accept(ModItems.PERK_HOLDER);
                         output.accept(ModItems.PERK_HOLDER_TIER2);
+                        output.accept(ModItems.PERK_HOLDER_TIER3);
+                        output.accept(ModBlocks.UPGRADE_STATION);
 
                         output.accept(ModItems.ELEMENT115_CRYSTAL);
                         output.accept(ModItems.BASIC_PERK_CRYSTAL);

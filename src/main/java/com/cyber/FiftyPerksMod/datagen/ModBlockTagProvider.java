@@ -24,6 +24,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.RAW_ELEMENT115_BLOCK.get())
                 .add(ModBlocks.ELEMENT115_ORE.get())
                 .add(ModBlocks.NETHER_ELEMENT115_ORE.get())
+                .add(ModBlocks.UPGRADE_STATION.get())
                 .add(ModBlocks.DEEPSLATE_ELEMENT115_ORE.get());
 
         tag(BlockTags.NEEDS_IRON_TOOL)

@@ -1,10 +1,13 @@
 package com.cyber.FiftyPerksMod;
 
 import com.cyber.FiftyPerksMod.block.ModBlocks;
+import com.cyber.FiftyPerksMod.block.entity.ModBlockEntities;
 import com.cyber.FiftyPerksMod.effect.ModEffects;
 import com.cyber.FiftyPerksMod.item.ModCreativeModeTabs;
 import com.cyber.FiftyPerksMod.item.ModItems;
 import com.cyber.FiftyPerksMod.potion.ModPotions;
+import com.cyber.FiftyPerksMod.screen.ModMenuTypes;
+import com.cyber.FiftyPerksMod.screen.custom.UpgradeStationScreen;
 import com.cyber.FiftyPerksMod.util.ModDataComponents;
 import com.cyber.FiftyPerksMod.recipe.ModRecipes;
 import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
@@ -58,6 +61,11 @@ public class FiftyPerksMod
         ModDataComponents.register(modEventBus);
         ModRecipes.register(modEventBus);
 
+        ModBlockEntities.register(modEventBus);
+
+        ModMenuTypes.register(modEventBus);
+
+
 
         modEventBus.addListener(this::addCreative);
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
@@ -88,7 +96,7 @@ public class FiftyPerksMod
 
         @SubscribeEvent
         public static void registerScreens(RegisterMenuScreensEvent event) {
-
+            event.register(ModMenuTypes.UPGRADE_STATION_MENU.get(), UpgradeStationScreen::new);
         }
     }
 }

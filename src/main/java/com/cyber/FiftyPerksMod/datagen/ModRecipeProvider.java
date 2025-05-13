@@ -54,7 +54,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         oreSmelting(recipeOutput, ELEMENT115_SMELTABLES, RecipeCategory.MISC, ModItems.ELEMENT115_INGOT.get(), 0.25f, 200, "ELEMENT115");
         oreBlasting(recipeOutput, ELEMENT115_SMELTABLES, RecipeCategory.MISC, ModItems.ELEMENT115_INGOT.get(), 0.25f, 100, "ELEMENT115");
 
-        /** Perk Holders */
+        /** Perk Holder Items */
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.PERK_HOLDER.get())
                 .pattern(" E ")
                 .pattern("LLL")
@@ -138,131 +138,132 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("DCD")
                 .define('E', ModBlocks.ELEMENT115_BLOCK.get())
                 .define('R', Items.RED_DYE)
-                .define('D', Items.DIAMOND)
+                .define('D', Blocks.DIAMOND_BLOCK)
                 .define('C', Items.NETHERITE_CHESTPLATE)
-                .define('X', ModItems.ELEMENT115_CRYSTAL.get())
+                .define('X', ModItems.ADVANCED_PERK_CRYSTAL.get())
                 .unlockedBy("has_element115_block", has(ModBlocks.ELEMENT115_BLOCK)).save(recipeOutput);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.SPEEDCOLA_CRYSTAL.get())
                 .pattern("DGD")
                 .pattern("EXE")
                 .pattern("DSD")
-                .define('E', ModBlocks.ELEMENT115_BLOCK.get())
+                .define('E', ModItems.ELEMENT115_INGOT.get())
                 .define('G', Items.LIME_DYE)
                 .define('D', Items.DIAMOND)
                 .define('S', Items.SUGAR)
-                .define('X', ModItems.ELEMENT115_CRYSTAL.get())
-                .unlockedBy("has_element115_block", has(ModBlocks.ELEMENT115_BLOCK)).save(recipeOutput);
+                .define('X', ModItems.BASIC_PERK_CRYSTAL.get())
+                .unlockedBy("has_basic_perk_crystal", has(ModItems.BASIC_PERK_CRYSTAL.get()
+                )).save(recipeOutput);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.STAMINUP_CRYSTAL.get())
                 .pattern("DGD")
                 .pattern("EXE")
                 .pattern("DPD")
-                .define('E', ModBlocks.ELEMENT115_BLOCK.get())
+                .define('E', ModItems.ELEMENT115_INGOT.get())
                 .define('G', Items.ORANGE_DYE)
                 .define('D', Items.DIAMOND)
                 .define('P', Items.NETHERITE_PICKAXE)
-                .define('X', ModItems.ELEMENT115_CRYSTAL.get())
-                .unlockedBy("has_element115_block", has(ModBlocks.ELEMENT115_BLOCK)).save(recipeOutput);
+                .define('X', ModItems.BASIC_PERK_CRYSTAL.get())
+                .unlockedBy("has_basic_perk_crystal", has(ModItems.BASIC_PERK_CRYSTAL.get())).save(recipeOutput);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.VICTORIOUSTORTOISE_CRYSTAL.get())
                 .pattern("DGD")
                 .pattern("EXE")
-                .pattern("DAD")
+                .pattern("DPD")
                 .define('E', ModBlocks.ELEMENT115_BLOCK.get())
-                .define('G', Items.LIME_DYE)
-                .define('D', Items.DIAMOND)
-                .define('A', Items.ENCHANTED_GOLDEN_APPLE)
-                .define('X', ModItems.ELEMENT115_CRYSTAL.get())
-                .unlockedBy("has_element115_block", has(ModBlocks.ELEMENT115_BLOCK)).save(recipeOutput);
+                .define('G', Items.GREEN_DYE)
+                .define('D', Items.DIAMOND_BLOCK)
+                .define('P', Items.ENCHANTED_GOLDEN_APPLE)
+                .define('X', ModItems.ADVANCED_PERK_CRYSTAL.get())
+                .unlockedBy("has_advanced_perk_crystal", has(ModItems.ADVANCED_PERK_CRYSTAL.get())).save(recipeOutput);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.DOUBLETAP_CRYSTAL.get())
                 .pattern("DGD")
                 .pattern("EXE")
-                .pattern("DND")
+                .pattern("DPD")
                 .define('E', ModBlocks.ELEMENT115_BLOCK.get())
                 .define('G', Items.ORANGE_DYE)
-                .define('D', Items.DIAMOND)
-                .define('N', Items.NETHERITE_SWORD)
-                .define('X', ModItems.ELEMENT115_CRYSTAL.get())
-                .unlockedBy("has_element115_block", has(ModBlocks.ELEMENT115_BLOCK)).save(recipeOutput);
+                .define('D', Items.DIAMOND_BLOCK)
+                .define('P', Items.NETHERITE_SWORD)
+                .define('X', ModItems.ADVANCED_PERK_CRYSTAL.get())
+                .unlockedBy("has_advanced_perk_crystal", has(ModItems.ADVANCED_PERK_CRYSTAL.get())).save(recipeOutput);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.PHDFLOPPER_CRYSTAL.get())
                 .pattern("DGD")
                 .pattern("EXE")
-                .pattern("DFD")
-                .define('E', ModBlocks.ELEMENT115_BLOCK.get())
+                .pattern("DPD")
+                .define('E', ModItems.ELEMENT115_INGOT.get())
                 .define('G', Items.PURPLE_DYE)
                 .define('D', Items.DIAMOND)
-                .define('F', Items.FIRE_CHARGE)
-                .define('X', ModItems.ELEMENT115_CRYSTAL.get())
-                .unlockedBy("has_element115_block", has(ModBlocks.ELEMENT115_BLOCK)).save(recipeOutput);
+                .define('P', Items.FIRE_CHARGE)
+                .define('X', ModItems.BASIC_PERK_CRYSTAL.get())
+                .unlockedBy("has_basic_perk_crystal", has(ModItems.BASIC_PERK_CRYSTAL.get())).save(recipeOutput);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.QUICKREVIVE_CRYSTAL.get())
                 .pattern("DGD")
                 .pattern("EXE")
-                .pattern("DFD")
+                .pattern("DPD")
                 .define('E', ModBlocks.ELEMENT115_BLOCK.get())
-                .define('G', Items.LIGHT_BLUE_DYE)
-                .define('D', Items.DIAMOND)
-                .define('F', Items.GHAST_TEAR)
-                .define('X', ModItems.ELEMENT115_CRYSTAL.get())
-                .unlockedBy("has_element115_block", has(ModBlocks.ELEMENT115_BLOCK)).save(recipeOutput);
+                .define('G', Items.CYAN_DYE)
+                .define('D', Items.DIAMOND_BLOCK)
+                .define('P', Items.GHAST_TEAR)
+                .define('X', ModItems.ADVANCED_PERK_CRYSTAL.get())
+                .unlockedBy("has_advanced_perk_crystal", has(ModItems.ADVANCED_PERK_CRYSTAL.get())).save(recipeOutput);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.WHOSWHO_CRYSTAL.get())
                 .pattern("DGD")
                 .pattern("EXE")
-                .pattern("DFD")
+                .pattern("DPD")
                 .define('E', ModBlocks.ELEMENT115_BLOCK.get())
                 .define('G', Items.CYAN_DYE)
-                .define('D', Items.DIAMOND)
-                .define('F', Blocks.LAPIS_BLOCK)
-                .define('X', ModItems.ELEMENT115_CRYSTAL.get())
-                .unlockedBy("has_element115_block", has(ModBlocks.ELEMENT115_BLOCK)).save(recipeOutput);
+                .define('D', Items.DIAMOND_BLOCK)
+                .define('P', Blocks.LAPIS_BLOCK)
+                .define('X', ModItems.ADVANCED_PERK_CRYSTAL.get())
+                .unlockedBy("has_advanced_perk_crystal", has(ModItems.ADVANCED_PERK_CRYSTAL.get())).save(recipeOutput);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.WINTERSWAIL_CRYSTAL.get())
                 .pattern("DGD")
                 .pattern("EXE")
-                .pattern("DFD")
-                .define('E', ModBlocks.ELEMENT115_BLOCK.get())
+                .pattern("DPD")
+                .define('E', ModItems.ELEMENT115_INGOT.get())
                 .define('G', Items.LIGHT_BLUE_DYE)
                 .define('D', Items.DIAMOND)
-                .define('F', Items.RABBIT_FOOT)
-                .define('X', ModItems.ELEMENT115_CRYSTAL.get())
-                .unlockedBy("has_element115_block", has(ModBlocks.ELEMENT115_BLOCK)).save(recipeOutput);
+                .define('P', Items.RABBIT_FOOT)
+                .define('X', ModItems.BASIC_PERK_CRYSTAL.get())
+                .unlockedBy("has_basic_perk_crystal", has(ModItems.BASIC_PERK_CRYSTAL.get())).save(recipeOutput);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.DEATHPERCEPTION_CRYSTAL.get())
                 .pattern("DGD")
                 .pattern("EXE")
-                .pattern("DFD")
+                .pattern("DPD")
                 .define('E', ModBlocks.ELEMENT115_BLOCK.get())
                 .define('G', Items.BROWN_DYE)
-                .define('D', Items.DIAMOND)
-                .define('F', Items.GOLDEN_CARROT)
-                .define('X', ModItems.ELEMENT115_CRYSTAL.get())
-                .unlockedBy("has_element115_block", has(ModBlocks.ELEMENT115_BLOCK)).save(recipeOutput);
+                .define('D', Items.DIAMOND_BLOCK)
+                .define('P', Items.GOLDEN_CARROT)
+                .define('X', ModItems.ADVANCED_PERK_CRYSTAL.get())
+                .unlockedBy("has_advanced_perk_crystal", has(ModItems.ADVANCED_PERK_CRYSTAL.get())).save(recipeOutput);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.DEADSHOT_CRYSTAL.get())
                 .pattern("DGD")
                 .pattern("EXE")
-                .pattern("DFD")
+                .pattern("DPD")
                 .define('E', ModBlocks.ELEMENT115_BLOCK.get())
-                .define('G', Items.GRAY_DYE)
-                .define('D', Items.DIAMOND)
-                .define('F', Items.BLAZE_ROD)
-                .define('X', ModItems.ELEMENT115_CRYSTAL.get())
-                .unlockedBy("has_element115_block", has(ModBlocks.ELEMENT115_BLOCK)).save(recipeOutput);
+                .define('G', Items.GREEN_DYE)
+                .define('D', Items.DIAMOND_BLOCK)
+                .define('P', Items.BLAZE_ROD)
+                .define('X', ModItems.ADVANCED_PERK_CRYSTAL.get())
+                .unlockedBy("has_advanced_perk_crystal", has(ModItems.ADVANCED_PERK_CRYSTAL.get())).save(recipeOutput);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.STRONGHOLD_CRYSTAL.get())
                 .pattern("DGD")
                 .pattern("EXE")
-                .pattern("DFD")
+                .pattern("DPD")
                 .define('E', ModBlocks.ELEMENT115_BLOCK.get())
-                .define('G', Items.BROWN_DYE)
-                .define('D', Items.DIAMOND)
-                .define('F', Blocks.EMERALD_BLOCK)
-                .define('X', ModItems.ELEMENT115_CRYSTAL.get())
-                .unlockedBy("has_element115_block", has(ModBlocks.ELEMENT115_BLOCK)).save(recipeOutput);
+                .define('G', Items.LIME_DYE)
+                .define('D', Items.DIAMOND_BLOCK)
+                .define('P', Items.EMERALD_BLOCK)
+                .define('X', ModItems.ADVANCED_PERK_CRYSTAL.get())
+                .unlockedBy("has_advanced_perk_crystal", has(ModItems.ADVANCED_PERK_CRYSTAL.get())).save(recipeOutput);
 
 
         /** Perk Recipes */

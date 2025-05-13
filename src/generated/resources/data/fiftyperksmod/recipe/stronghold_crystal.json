@@ -3,25 +3,25 @@
   "category": "misc",
   "key": {
     "D": {
-      "item": "minecraft:diamond"
+      "item": "minecraft:diamond_block"
     },
     "E": {
       "item": "fiftyperksmod:element115_block"
     },
-    "F": {
+    "G": {
+      "item": "minecraft:lime_dye"
+    },
+    "P": {
       "item": "minecraft:emerald_block"
     },
-    "G": {
-      "item": "minecraft:brown_dye"
-    },
     "X": {
-      "item": "fiftyperksmod:element115_crystal"
+      "item": "fiftyperksmod:advanced_perk_crystal"
     }
   },
   "pattern": [
     "DGD",
     "EXE",
-    "DFD"
+    "DPD"
   ],
   "result": {
     "count": 1,

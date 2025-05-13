@@ -3,7 +3,7 @@
   "category": "misc",
   "key": {
     "D": {
-      "item": "minecraft:diamond"
+      "item": "minecraft:diamond_block"
     },
     "E": {
       "item": "fiftyperksmod:element115_block"
@@ -11,17 +11,17 @@
     "G": {
       "item": "minecraft:orange_dye"
     },
-    "N": {
+    "P": {
       "item": "minecraft:netherite_sword"
     },
     "X": {
-      "item": "fiftyperksmod:element115_crystal"
+      "item": "fiftyperksmod:advanced_perk_crystal"
     }
   },
   "pattern": [
     "DGD",
     "EXE",
-    "DND"
+    "DPD"
   ],
   "result": {
     "count": 1,

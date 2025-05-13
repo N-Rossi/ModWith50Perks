@@ -6,7 +6,7 @@
       "item": "minecraft:netherite_chestplate"
     },
     "D": {
-      "item": "minecraft:diamond"
+      "item": "minecraft:diamond_block"
     },
     "E": {
       "item": "fiftyperksmod:element115_block"
@@ -15,7 +15,7 @@
       "item": "minecraft:red_dye"
     },
     "X": {
-      "item": "fiftyperksmod:element115_crystal"
+      "item": "fiftyperksmod:advanced_perk_crystal"
     }
   },
   "pattern": [

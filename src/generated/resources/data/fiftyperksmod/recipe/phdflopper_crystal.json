@@ -6,22 +6,22 @@
       "item": "minecraft:diamond"
     },
     "E": {
-      "item": "fiftyperksmod:element115_block"
-    },
-    "F": {
-      "item": "minecraft:fire_charge"
+      "item": "fiftyperksmod:element115_ingot"
     },
     "G": {
       "item": "minecraft:purple_dye"
     },
+    "P": {
+      "item": "minecraft:fire_charge"
+    },
     "X": {
-      "item": "fiftyperksmod:element115_crystal"
+      "item": "fiftyperksmod:basic_perk_crystal"
     }
   },
   "pattern": [
     "DGD",
     "EXE",
-    "DFD"
+    "DPD"
   ],
   "result": {
     "count": 1,

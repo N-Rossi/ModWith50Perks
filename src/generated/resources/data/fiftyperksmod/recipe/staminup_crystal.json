@@ -6,7 +6,7 @@
       "item": "minecraft:diamond"
     },
     "E": {
-      "item": "fiftyperksmod:element115_block"
+      "item": "fiftyperksmod:element115_ingot"
     },
     "G": {
       "item": "minecraft:orange_dye"
@@ -15,7 +15,7 @@
       "item": "minecraft:netherite_pickaxe"
     },
     "X": {
-      "item": "fiftyperksmod:element115_crystal"
+      "item": "fiftyperksmod:basic_perk_crystal"
     }
   },
   "pattern": [

@@ -19,6 +19,8 @@ public class ModItems {
     /** Crystals */
     public static final DeferredItem<Item> ELEMENT115_CRYSTAL = ITEMS.register("element115_crystal", () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> BASIC_PERK_CRYSTAL = ITEMS.register("basic_perk_crystal", () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> ADVANCED_PERK_CRYSTAL = ITEMS.register("advanced_perk_crystal", () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> SUPER_PERK_CRYSTAL = ITEMS.register("super_perk_crystal", () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> JUGGERNOG_CRYSTAL = ITEMS.register("juggernog_crystal", () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> SPEEDCOLA_CRYSTAL = ITEMS.register("speedcola_crystal", () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> STAMINUP_CRYSTAL = ITEMS.register("staminup_crystal", () -> new Item(new Item.Properties()));
@@ -32,10 +34,12 @@ public class ModItems {
     public static final DeferredItem<Item> DEADSHOT_CRYSTAL = ITEMS.register("deadshot_crystal", () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> STRONGHOLD_CRYSTAL = ITEMS.register("stronghold_crystal", () -> new Item(new Item.Properties()));
 
-    /** Perk Holders */
+    /** Perk Holder Items */
     public static final DeferredItem<Item> PERK_HOLDER = ITEMS.register("perk_holder", () -> new PerkHolderItem(new Item.Properties()));
     public static final DeferredItem<Item> PERK_HOLDER_TIER2 = ITEMS.register("perk_holder_tier2", () -> new Tier2PerkHolderItem(new Item.Properties()));
     public static final DeferredItem<Item> PERK_HOLDER_TIER3 = ITEMS.register("perk_holder_tier3", () -> new Tier3PerkHolderItem(new Item.Properties()));
+    public static final DeferredItem<Item> TIER2_PERK_UPGRADE_KIT = ITEMS.register("tier2_perk_upgrade_kit", () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> TIER3_PERK_UPGRADE_KIT = ITEMS.register("tier3_perk_upgrade_kit", () -> new Item(new Item.Properties()));
 
     /** Perks */
     public static final DeferredItem<Item> JUGGERNOG_PERK = ITEMS.register("juggernog_perk", () -> new PerkItem(new Item.Properties(), "Extra Health"));

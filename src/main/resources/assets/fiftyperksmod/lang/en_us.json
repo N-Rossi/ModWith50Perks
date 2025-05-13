@@ -14,6 +14,8 @@
 
   "item.fiftyperksmod.element115_crystal": "Element 115 Crystal",
   "item.fiftyperksmod.basic_perk_crystal": "Basic Perk Crystal",
+  "item.fiftyperksmod.advanced_perk_crystal": "Advanced Perk Crystal",
+  "item.fiftyperksmod.super_perk_crystal": "Super Perk Crystal",
   "item.fiftyperksmod.juggernog_crystal": "Juggernog Crystal",
   "item.fiftyperksmod.speedcola_crystal": "Speed Cola Crystal",
   "item.fiftyperksmod.doubletap_crystal": "Double-Tap Crystal",
@@ -30,6 +32,8 @@
   "item.fiftyperksmod.perk_holder": "Perk Holder",
   "item.fiftyperksmod.perk_holder_tier2": "Tier 2 Perk Holder",
   "item.fiftyperksmod.perk_holder_tier3": "Tier 3 Perk Holder",
+  "item.fiftyperksmod.tier2_perk_upgrade_kit": "Tier 2 Perk Upgrade Kit",
+  "item.fiftyperksmod.tier3_perk_upgrade_kit": "Tier 3 Perk Upgrade Kit",
 
   "item.fiftyperksmod.juggernog_perk": "Juggernog Perk",
   "item.fiftyperksmod.speedcola_perk": "Speed Cola Perk",

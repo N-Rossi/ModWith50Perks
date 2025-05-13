@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "fiftyperksmod:element115_crystal"
+        "recipe": "fiftyperksmod:upgrade_station"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "fiftyperksmod:element115_crystal"
+      "fiftyperksmod:upgrade_station"
     ]
   }
 }

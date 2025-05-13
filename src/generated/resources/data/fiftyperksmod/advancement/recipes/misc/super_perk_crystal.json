@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_element115_ingot": {
+    "has_advanced_perk_crystal": {
       "conditions": {
         "items": [
           {
-            "items": "fiftyperksmod:element115_ingot"
+            "items": "fiftyperksmod:advanced_perk_crystal"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "fiftyperksmod:element115_crystal"
+        "recipe": "fiftyperksmod:super_perk_crystal"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_element115_ingot"
+      "has_advanced_perk_crystal"
     ]
   ],
   "rewards": {
     "recipes": [
-      "fiftyperksmod:element115_crystal"
+      "fiftyperksmod:super_perk_crystal"
     ]
   }
 }

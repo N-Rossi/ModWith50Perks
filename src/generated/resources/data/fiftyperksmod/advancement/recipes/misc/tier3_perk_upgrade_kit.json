@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "fiftyperksmod:tier3_perk_upgrade_kit"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_tier2_perk_upgrade_kit": {
+      "conditions": {
+        "items": [
+          {
+            "items": "fiftyperksmod:tier2_perk_upgrade_kit"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_tier2_perk_upgrade_kit"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "fiftyperksmod:tier3_perk_upgrade_kit"
+    ]
+  }
+}

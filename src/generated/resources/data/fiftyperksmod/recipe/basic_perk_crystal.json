@@ -2,6 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
+    "C": {
+      "item": "fiftyperksmod:element115_crystal"
+    },
     "D": {
       "item": "minecraft:diamond"
     },
@@ -10,9 +13,9 @@
     }
   },
   "pattern": [
-    " D ",
-    "DGD",
-    " D "
+    "GDG",
+    "DCD",
+    "GDG"
   ],
   "result": {
     "count": 1,

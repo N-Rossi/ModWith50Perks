@@ -4,7 +4,7 @@
     "item": "fiftyperksmod:perk_holder_tier2"
   },
   "ingredient2": {
-    "item": "fiftyperksmod:element115_crystal"
+    "item": "fiftyperksmod:tier3_perk_upgrade_kit"
   },
   "result": {
     "id": "fiftyperksmod:perk_holder_tier3"

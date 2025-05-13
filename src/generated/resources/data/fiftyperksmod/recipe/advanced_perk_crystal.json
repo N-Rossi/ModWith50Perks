@@ -2,20 +2,26 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "D": {
+    "C": {
       "item": "fiftyperksmod:basic_perk_crystal"
     },
     "E": {
       "item": "fiftyperksmod:element115_ingot"
+    },
+    "N": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "Q": {
+      "item": "minecraft:quartz"
     }
   },
   "pattern": [
-    " E ",
-    "EDE",
-    " E "
+    "ENE",
+    "QCQ",
+    "ENE"
   ],
   "result": {
     "count": 1,
-    "id": "fiftyperksmod:element115_crystal"
+    "id": "fiftyperksmod:advanced_perk_crystal"
   }
 }

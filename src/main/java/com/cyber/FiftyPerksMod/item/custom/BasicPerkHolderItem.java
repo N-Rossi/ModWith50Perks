@@ -12,6 +12,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.AttributeInstance;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
@@ -237,6 +238,22 @@ public abstract class BasicPerkHolderItem extends Item implements ICurioItem {
         }
     }
 
+    @Override
+    public boolean canEquip(SlotContext slotContext, ItemStack stack) {
+        Player player = (Player) slotContext.entity();
 
+        // Check if the player already has another perk holder equipped
+        return top.theillusivec4.curios.api.CuriosApi.getCuriosInventory(player)
+                .map(curiosInventory -> {
+                    for (var result : curiosInventory.findCurios(item -> item.getItem() instanceof BasicPerkHolderItem)) {
+                        // If the equipped item isn't the same as the one trying to equip, deny it
+                        if (!ItemStack.isSameItemSameComponents(result.stack(), stack)) {
+                            return false;
+                        }
+                    }
+                    return true; // No other perk holder found, allow equip
+                })
+                .orElse(true); // If no curios inventory is found, allow equip just in case
+    }
 
 }

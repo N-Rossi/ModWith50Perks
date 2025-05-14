@@ -8,17 +8,17 @@
     "E": {
       "item": "minecraft:emerald_block"
     },
-    "N": {
-      "item": "minecraft:netherite_block"
+    "G": {
+      "item": "minecraft:glass"
     },
     "W": {
       "item": "minecraft:water_bucket"
     }
   },
   "pattern": [
-    "ENE",
-    "CWC",
-    "CCC"
+    "EWE",
+    "GCG",
+    "GGG"
   ],
   "result": {
     "count": 1,

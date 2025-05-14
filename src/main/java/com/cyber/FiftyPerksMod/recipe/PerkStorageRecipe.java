@@ -78,6 +78,14 @@ public class PerkStorageRecipe extends CustomRecipe {
             ItemStackHandler handler = holderItem.getHandler(result, provider);
 
             for (int slot = 0; slot < handler.getSlots(); slot++) {
+                ItemStack existing = handler.getStackInSlot(slot);
+                if (!existing.isEmpty() && ItemStack.isSameItemSameComponents(existing, perkItem)) {
+                    // Perk already exists, return empty to prevent crafting
+                    return ItemStack.EMPTY;
+                }
+            }
+
+            for (int slot = 0; slot < handler.getSlots(); slot++) {
                 if (handler.getStackInSlot(slot).isEmpty()) {
                     handler.setStackInSlot(slot, perkItem.copy());
                     break;

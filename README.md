@@ -1,8 +1,6 @@
 TO DO LIST:
 =======
-- Do not allow user to add the same perk twice
 - Do not allow user to wear multiple perk holders
-- Fix ALL recipes
 - Redesign textures
 - Make all attribute perks have a custom effect (Ex. Stronghold)
 

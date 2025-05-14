@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "fiftyperksmod:item/tier2_perk_upgrade_kit"
+  }
+}

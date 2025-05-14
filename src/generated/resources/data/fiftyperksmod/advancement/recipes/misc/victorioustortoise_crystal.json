@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_element115_block": {
+    "has_advanced_perk_crystal": {
       "conditions": {
         "items": [
           {
-            "items": "fiftyperksmod:element115_block"
+            "items": "fiftyperksmod:advanced_perk_crystal"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_element115_block"
+      "has_advanced_perk_crystal"
     ]
   ],
   "rewards": {

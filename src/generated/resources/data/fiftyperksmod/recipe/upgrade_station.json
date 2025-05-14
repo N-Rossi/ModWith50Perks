@@ -2,20 +2,23 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "D": {
-      "item": "minecraft:diamond"
+    "C": {
+      "item": "minecraft:crafting_table"
     },
     "E": {
       "item": "fiftyperksmod:element115_ingot"
+    },
+    "P": {
+      "item": "minecraft:oak_planks"
     }
   },
   "pattern": [
     " E ",
-    "EDE",
-    " E "
+    "PCP",
+    "P P"
   ],
   "result": {
     "count": 1,
-    "id": "fiftyperksmod:element115_crystal"
+    "id": "fiftyperksmod:upgrade_station"
   }
 }

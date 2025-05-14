@@ -1,4 +1,5 @@
-// 1.21.1	2025-05-11T22:53:17.2183607	Item Models: fiftyperksmod
+// 1.21.1	2025-05-13T10:09:14.7911256	Item Models: fiftyperksmod
+353f6d931cc34077d45cd732cf989ba815b91e32 assets/fiftyperksmod/models/item/advanced_perk_crystal.json
 186e48384325c65d70df80d46ff7fc403e0a83cf assets/fiftyperksmod/models/item/basic_perk_crystal.json
 7ac84a54aae12138f6bad161b5a96fbdc0f2b095 assets/fiftyperksmod/models/item/deadshot_crystal.json
 3efa0b3c76dc07f33686e6cdc5d3d240d160870d assets/fiftyperksmod/models/item/deadshot_perk.json
@@ -24,6 +25,9 @@ e9401e3631402c3e6d13bd4df9a4dc58eeeeab5f assets/fiftyperksmod/models/item/stamin
 d9a00639cd558d7c99e83f7be9648981e2584844 assets/fiftyperksmod/models/item/staminup_perk.json
 93af3e831603c3544c94001dbe0efd04c740c2de assets/fiftyperksmod/models/item/stronghold_crystal.json
 12666dc5321a809c5d030d045cd7d5753a8e6396 assets/fiftyperksmod/models/item/stronghold_perk.json
+0625e376d5669fdeb9bb12f0a24d8e8e7cb0479c assets/fiftyperksmod/models/item/super_perk_crystal.json
+b83c6f4c263d7daacd426ce96559c2846a71cefc assets/fiftyperksmod/models/item/tier2_perk_upgrade_kit.json
+9ff4707c780febc6e2e8d90c95b3f82769177748 assets/fiftyperksmod/models/item/tier3_perk_upgrade_kit.json
 4eb2df1a5dbd8ee7fc17e9bdef1531e5c4c04fc1 assets/fiftyperksmod/models/item/victorioustortoise_crystal.json
 f53f674ec78c3b44f8cb089df992f7eda68b90c8 assets/fiftyperksmod/models/item/victorioustortoise_perk.json
 28894c30a88e5167d2dacf90e46840f919bcc36a assets/fiftyperksmod/models/item/whoswho_crystal.json

@@ -30,9 +30,13 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.PERK_HOLDER_TIER2);
                         output.accept(ModItems.PERK_HOLDER_TIER3);
                         output.accept(ModBlocks.UPGRADE_STATION);
+                        output.accept(ModItems.TIER2_PERK_UPGRADE_KIT);
+                        output.accept(ModItems.TIER3_PERK_UPGRADE_KIT);
 
                         output.accept(ModItems.ELEMENT115_CRYSTAL);
                         output.accept(ModItems.BASIC_PERK_CRYSTAL);
+                        output.accept(ModItems.ADVANCED_PERK_CRYSTAL);
+                        output.accept(ModItems.SUPER_PERK_CRYSTAL);
                         output.accept(ModItems.JUGGERNOG_CRYSTAL);
                         output.accept(ModItems.SPEEDCOLA_CRYSTAL);
                         output.accept(ModItems.DOUBLETAP_CRYSTAL);

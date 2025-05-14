@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "fiftyperksmod:phdflopper_crystal"
+        "recipe": "fiftyperksmod:advanced_perk_crystal"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "fiftyperksmod:phdflopper_crystal"
+      "fiftyperksmod:advanced_perk_crystal"
     ]
   }
 }

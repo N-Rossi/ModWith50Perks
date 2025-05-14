@@ -2,29 +2,26 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
+    "C": {
+      "item": "fiftyperksmod:tier2_perk_upgrade_kit"
+    },
     "D": {
       "item": "minecraft:diamond_block"
     },
     "E": {
       "item": "fiftyperksmod:element115_block"
     },
-    "G": {
-      "item": "minecraft:orange_dye"
-    },
-    "P": {
-      "item": "minecraft:netherite_sword"
-    },
-    "X": {
-      "item": "fiftyperksmod:advanced_perk_crystal"
+    "M": {
+      "item": "minecraft:emerald_block"
     }
   },
   "pattern": [
-    "DGD",
-    "EXE",
-    "DPD"
+    "EDE",
+    "MCM",
+    "EDE"
   ],
   "result": {
     "count": 1,
-    "id": "fiftyperksmod:doubletap_crystal"
+    "id": "fiftyperksmod:tier3_perk_upgrade_kit"
   }
 }

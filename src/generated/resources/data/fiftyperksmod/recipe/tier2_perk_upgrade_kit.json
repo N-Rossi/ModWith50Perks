@@ -2,29 +2,26 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
+    "C": {
+      "item": "fiftyperksmod:element115_crystal"
+    },
     "D": {
       "item": "minecraft:diamond"
     },
     "E": {
       "item": "fiftyperksmod:element115_ingot"
     },
-    "G": {
-      "item": "minecraft:light_blue_dye"
-    },
-    "P": {
-      "item": "minecraft:rabbit_foot"
-    },
-    "X": {
-      "item": "fiftyperksmod:basic_perk_crystal"
+    "M": {
+      "item": "minecraft:emerald"
     }
   },
   "pattern": [
-    "DGD",
-    "EXE",
-    "DPD"
+    "EDE",
+    "MCM",
+    "EDE"
   ],
   "result": {
     "count": 1,
-    "id": "fiftyperksmod:winterswail_crystal"
+    "id": "fiftyperksmod:tier2_perk_upgrade_kit"
   }
 }

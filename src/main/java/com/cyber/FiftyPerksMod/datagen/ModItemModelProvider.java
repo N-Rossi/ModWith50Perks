@@ -16,14 +16,18 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.ELEMENT115_INGOT.get());
         basicItem(ModItems.RAW_ELEMENT115.get());
 
-        /** Perk Holders */
+        /** Perk Holder Items */
         basicItem(ModItems.PERK_HOLDER.get());
         basicItem(ModItems.PERK_HOLDER_TIER2.get());
         basicItem(ModItems.PERK_HOLDER_TIER3.get());
+        basicItem(ModItems.TIER2_PERK_UPGRADE_KIT.get());
+        basicItem(ModItems.TIER3_PERK_UPGRADE_KIT.get());
 
         /** Crystals */
         basicItem(ModItems.ELEMENT115_CRYSTAL.get());
         basicItem(ModItems.BASIC_PERK_CRYSTAL.get());
+        basicItem(ModItems.ADVANCED_PERK_CRYSTAL.get());
+        basicItem(ModItems.SUPER_PERK_CRYSTAL.get());
         basicItem(ModItems.JUGGERNOG_CRYSTAL.get());
         basicItem(ModItems.SPEEDCOLA_CRYSTAL.get());
         basicItem(ModItems.STAMINUP_CRYSTAL.get());

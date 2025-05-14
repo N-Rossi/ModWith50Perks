@@ -6,7 +6,7 @@
       "item": "minecraft:diamond"
     },
     "E": {
-      "item": "fiftyperksmod:element115_block"
+      "item": "fiftyperksmod:element115_ingot"
     },
     "G": {
       "item": "minecraft:lime_dye"
@@ -15,7 +15,7 @@
       "item": "minecraft:sugar"
     },
     "X": {
-      "item": "fiftyperksmod:element115_crystal"
+      "item": "fiftyperksmod:basic_perk_crystal"
     }
   },
   "pattern": [

@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_basic_perk_crystal": {
+    "has_element115_crystal": {
       "conditions": {
         "items": [
           {
-            "items": "fiftyperksmod:basic_perk_crystal"
+            "items": "fiftyperksmod:element115_crystal"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "fiftyperksmod:phdflopper_crystal"
+        "recipe": "fiftyperksmod:tier2_perk_upgrade_kit"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_basic_perk_crystal"
+      "has_element115_crystal"
     ]
   ],
   "rewards": {
     "recipes": [
-      "fiftyperksmod:phdflopper_crystal"
+      "fiftyperksmod:tier2_perk_upgrade_kit"
     ]
   }
 }

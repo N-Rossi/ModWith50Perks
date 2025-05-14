@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "fiftyperksmod:advanced_perk_crystal"
+    },
+    "E": {
+      "item": "fiftyperksmod:element115_block"
+    },
+    "N": {
+      "item": "minecraft:dragon_breath"
+    },
+    "Q": {
+      "item": "minecraft:nether_star"
+    }
+  },
+  "pattern": [
+    "ENE",
+    "QCQ",
+    "ENE"
+  ],
+  "result": {
+    "count": 1,
+    "id": "fiftyperksmod:super_perk_crystal"
+  }
+}
